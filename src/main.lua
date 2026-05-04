@@ -9,7 +9,7 @@ function KSLib:GetInfo()
 		library = "KoalaScripts",
 		version = { major = 2, minor = 0, patch = 1 },
 		uiversion = 2,
-		builder = "https://raw.githubusercontent.com/KoalaGuy-100/Koala-Hacks/refs/heads/main/src/Builder.lua",
+		builder = "https://raw.githubusercontent.com/KoalaGuyy/Koala-Library/refs/heads/main/src/builder.lua",
 		executorstested = {
 			velocity = 0,
 		}
@@ -17,7 +17,7 @@ function KSLib:GetInfo()
 	}
 end
 
-local Builder = loadstring(game:HttpGet("https://raw.githubusercontent.com/KoalaGuy-100/Koala-Hacks/refs/heads/main/src/Builder.lua"))()
+local Builder = loadstring(game:HttpGet("https://raw.githubusercontent.com/KoalaGuyy/Koala-Library/refs/heads/main/src/builder.lua"))()
 local DumpFolder = nil
 
 -- # For Initialization:
