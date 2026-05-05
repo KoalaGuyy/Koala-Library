@@ -17,7 +17,7 @@ function KSLib:GetInfo()
 	}
 end
 
-local Builder = loadstring(game:HttpGet("https://raw.githubusercontent.com/KoalaGuyy/Koala-Library/refs/heads/main/src/builder.lua"))()
+local Builder = nil
 local DumpFolder = nil
 
 -- # For Initialization:
@@ -29,7 +29,16 @@ function KSLib:IsReady()
 	return true
 end
 
+function KSLib:SetBuilder(NewBuilder)
+	Builder = NewBuilder
+	return
+end
+
 function KSLib:Initialize()
+	if Builder == nil then
+		Builder = loadstring(game:HttpGet("https://raw.githubusercontent.com/KoalaGuyy/Koala-Library/refs/heads/main/src/builder.lua"))()
+	end
+	
 	if KSLib:IsReady() then
 		error("KSLib is already initialized.", 2)
 	end
