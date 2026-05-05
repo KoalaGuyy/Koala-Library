@@ -8,4 +8,4 @@ You may find a documentation for the UI library by clicking [this](https://githu
 
 If you found any issues with any of the scripts please report it immediately in [here](https://github.com/KoalaGuyy/Koala-Library/issues)
 
-<a href="https://github.com/KoalaGuy-100/Koala-Hacks/blob/main/LICENSE"><img src="https://img.shields.io/badge/Apache%202.0-License-yellow.svg" alt="Apache 2.0 License"/>
+<a href="LICENSE"><img src="https://img.shields.io/badge/Apache%202.0-License-yellow.svg" alt="Apache 2.0 License"/>
