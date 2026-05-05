@@ -22,7 +22,8 @@ Returns a table of information about the library. It does not need the library t
 
 **Notes:**
 
-- The array in executorstested returns a table with the name of executors tested as the keys of the table with a value of 0-2
+- `KSLib:GetInfo()` does not need KSLib to be initialized at first.
+- The array in executorstested returns a table with the name of executors tested as the keys of the table with a value of 0-2.
 - The values of executorstested has this format: 0: works & tested; 1: not working, will be fixed in a patch; 2: not working, has a chance to be fixed in another major or minor version.
 
 <br>
