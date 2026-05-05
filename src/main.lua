@@ -12,6 +12,7 @@ function KSLib:GetInfo()
 		builder = "https://raw.githubusercontent.com/KoalaGuyy/Koala-Library/refs/heads/main/src/builder.lua",
 		executorstested = {
 			velocity = 0,
+			delta = 0,
 		}
 		-- for executors tested: val: 0 <- working & tested, 1 <- not working & soon to be supported (for a patch), 2 <- not working & not going to be supported in the same major & minor version.
 	}
@@ -30,7 +31,9 @@ function KSLib:IsReady()
 end
 
 function KSLib:SetBuilder(NewBuilder)
-	Builder = NewBuilder
+	if not KSLib:IsReady() then
+		Builder = NewBuilder
+	end
 	return
 end
 
