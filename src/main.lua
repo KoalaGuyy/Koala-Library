@@ -7,7 +7,7 @@ LibUI.__index = LibUI
 function KSLib:GetInfo()
 	return {
 		library = "KoalaScripts",
-		version = { major = 2, minor = 0, patch = 1 },
+		version = { major = 2, minor = 0, patch = 0 },
 		uiversion = 2,
 		builder = "https://raw.githubusercontent.com/KoalaGuyy/Koala-Library/refs/heads/main/src/builder.lua",
 		executorstested = {
