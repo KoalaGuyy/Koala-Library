@@ -189,11 +189,11 @@ NewTab:Update()
 
 **Config of the Function:**
 
-| Elements        | Description                                                                             | Default Value     |
-| --------------- | ---------------------------------------------------------------------------------------- | ----------------- |
-| ID              | The identiifier of the Action or the property of `NewTab:NewActionInput().Instance.Name` | `"Action"`        |
-| Description     | The name of the action displayed to the user                                             | `"Input"`         |
-| PlaceholderText | If there is no input the PlaceholderText will be shown instead                           | `"Input Text..."` |
+| Elements        | Type   | Description                                                                              | Default Value     |
+| --------------- | ------ | ---------------------------------------------------------------------------------------- | ----------------- |
+| ID              | String | The identiifier of the Action or the property of `NewTab:NewActionInput().Instance.Name` | `"Action"`        |
+| Description     | String | The name of the action displayed to the user                                             | `"Input"`         |
+| PlaceholderText | String | If there is no input the PlaceholderText will be shown instead                           | `"Input Text..."` |
 
 **Returned Value of the Function: (Array)**
 
@@ -235,11 +235,11 @@ end)
 
 **Config of the Function:**
 
-| Elements        | Description                                                                         | Default Value                |
-| ----------- | --------------------------------------------------------------------------------------- | ---------------------------- |
-| ID          | The identifier of the Action or the property of `NewTab:NewActionInput().Instance.Name` | `"Action"`                   |
-| Description | The name of the action displayed to the user                                            | `"Input"`                    |
-| Icon        | The image displayed on the action                                                       | `"rbxassetid://18352620579"` |
+| Elements    | Type   | Description                                                                                | Default Value                |
+| ----------- | ------ | ------------------------------------------------------------------------------------------ | ---------------------------- |
+| ID          | String | The identifier of the Action or the property of `NewTab:NewActionActivate().Instance.Name` | `"Action"`                   |
+| Description | String | The name of the action displayed to the user                                               | `"Input"`                    |
+| Icon        | String | The image displayed on the action                                                          | `"rbxassetid://18352620579"` |
 
 **Returned Value of the Function: (Array)**
 
@@ -279,11 +279,11 @@ Creates a toggle action that users can turn on or off.
  
 **Config of the Function:**
  
-| Elements    | Description                                                                              | Default Value                |
-| ----------- | ---------------------------------------------------------------------------------------- | ---------------------------- |
-| ID          | The identifier of the Action or the property of `NewTab:NewActionToggle().Instance.Name` | `"Action"`                   |
-| Description | The name of the action displayed to the user                                             | `"Input"`                    |
-| Icon        | The image displayed on the toggle area                                                   | `"rbxassetid://18352620579"` |
+| Elements    | Type   | Description                                                                              | Default Value                |
+| ----------- | ------ |----------------------------------------------------------------------------------------- | ---------------------------- |
+| ID          | String | The identifier of the Action or the property of `NewTab:NewActionToggle().Instance.Name` | `"Action"`                   |
+| Description | String |The name of the action displayed to the user                                              | `"Input"`                    |
+| Icon        | String |The image displayed on the toggle area                                                    | `"rbxassetid://18352620579"` |
  
 **Returned Value of the Function: (Array)**
  
@@ -347,8 +347,8 @@ Creates a slider action, where users can set slide the slider to a range of numb
  
 **Config of the Function:**
  
-| Elements         | Type   | Description                                                                             | Default Value |
-| ---------------- | ------ | --------------------------------------------------------------------------------------- | ------------- |
+| Elements         | Type   | Description                                                                              | Default Value |
+| ---------------- | ------ | ---------------------------------------------------------------------------------------- | ------------- |
 | ID               | String | The identifier of the Action or the property of `NewTab:NewActionSlider().Instance.Name` | `"Action"`    |
 | Description      | String | The name of the action displayed to the user                                             | `"Input"`     |
 | MinValue         | Number | The minimum value the slider can reach                                                   | `0`           |
@@ -360,13 +360,13 @@ Creates a slider action, where users can set slide the slider to a range of numb
  
 **Returned Value of the Function: (Array)**
  
-| Elements                    | Type     | Description                                                              |
-| --------------------------- | -------- | ------------------------------------------------------------------------ |
-| Config                      | Array    | Refer to "Config of the Function", consists the configuration of the UI  |
-| Instance                    | Instance | The instance of the action or the ingame roblox object                   |
-| :Update()                   | Function | Updates to the new configurations of the action                          |
-| :OnInputChanged(`Function`) | Function | Runs the argument "`Function`" when the slider percentage changes        |
-| :GetSliderPercentage()      | Function | Returns the current position of the slider as a percentage (0 to 1)     |
+| Elements                    | Type     | Description                                                                 |
+| --------------------------- | -------- | --------------------------------------------------------------------------- |
+| Config                      | Array    | Refer to "Config of the Function", consists the configuration of the UI     |
+| Instance                    | Instance | The instance of the action or the ingame roblox object                      |
+| :Update()                   | Function | Updates to the new configurations of the action                             |
+| :OnInputChanged(`Function`) | Function | Runs the argument "`Function`" when the slider percentage changes           |
+| :GetSliderPercentage()      | Function | Returns the current position of the slider as a percentage (0 to 1)         |
 | :GetSliderAmount()          | Function | Returns the current value of the slider within the configured min/max range |
  
 **Example Use:**
