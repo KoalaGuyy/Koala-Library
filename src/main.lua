@@ -74,6 +74,7 @@ function KSLib.New(Config)
 	KSLibUI.Instance.Main.TabArea.Tabs.KH_TemplateTab:Destroy()
 	KSLibUI.Instance.Main.TabSelection.KH_TemplateTab:Destroy()
 	KSLibUI.Instance.Main.TabArea.TabInfoArea.WindowOptions.Minimize.Modal = true
+	KSLibUI.Instance.ButtonActivation.UIDragDetector.Enabled = false
 	
 	KSLibUI.CurrentTab = nil
 	
