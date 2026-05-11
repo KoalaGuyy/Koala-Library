@@ -7,7 +7,7 @@ Koala UI Library is a UI Library that makes users interaction easier. This docum
   
   **Added:**
 
-  - None
+ - None
 
   **Changed:**
 
