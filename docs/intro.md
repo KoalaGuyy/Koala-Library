@@ -3,15 +3,15 @@
 Koala UI Library is a UI Library that makes users interaction easier. This documentation is a guide to use the library.
 
 <details>
-  <summary>Changelog from v2.0.0 to v2.0.1</summary>
+  <summary>Changelog from v2.0.1 to v2.0.2</summary>
   
   **Added:**
 
- - None
+  - None
 
   **Changed:**
 
-  - Changed Builder to Include UISizeConstraints for better Mobile Support by Increasing Size of the UI
+  - Fixed UIDragDetector affecting the Button to open the UI
 
   **Removed:**
   
