@@ -13,11 +13,12 @@ function KSLib:GetInfo(): {library: string, version: {number}, uiversion: number
 	}
 end
 
-local Builder = loadstring(game:HttpGet("https://raw.githubusercontent.com/KoalaGuyy/Koala-Library/refs/heads/main/src/Builder/BuilderController.lua"))()
+local Builder = require(script.Parent.Builder.BuilderController)
 
 local DumpLocation = game.Players.LocalPlayer.PlayerScripts
 local UILocation = game.Players.LocalPlayer.PlayerGui
 local DumpFolder = DumpLocation:FindFirstChild("$KSLibDUMP")
+local SavedUILoading = nil
 local Services = {}
 
 -- @, NAME: Initialization, DESCRIPTION: Initializes the Library, ID: YnHp3L7c
@@ -94,6 +95,7 @@ function KSLib:Initialize(NewDumpLocation: Instance?, InstaLoad: boolean?, NewUI
 		ScreenGuiLoad:Destroy()
 		DumpFolder:AddTag("HadLoaded")
 	else
+		SavedUILoading = ScreenGuiLoad
 		DumpFolder:AddTag("InstaLoadFalse")
 	end
 	
@@ -134,8 +136,8 @@ function KSLib:ReadyUp(FileName)
 			v.Instance.Enabled = true
 		end
 		
-		if DumpLocation:FindFirstChild("KSLibLoadingView") then
-			DumpLocation.KSLibLoadingView:Destroy()
+		if SavedUILoading then
+			SavedUILoading:Destroy()
 		end
 	end
 end
