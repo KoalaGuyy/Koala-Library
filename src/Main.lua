@@ -13,7 +13,7 @@ function KSLib:GetInfo(): {library: string, version: {number}, uiversion: number
 	}
 end
 
-local Builder = loadstring(game:HttpGet("https://raw.githubusercontent.com/KoalaGuyy/Koala-Library/refs/heads/main/src/Builder/BuilderController.lua"))()
+local Builder = require(script.Parent.Builder.BuilderController)
 
 local DumpLocation = game.Players.LocalPlayer.PlayerGui
 local DumpFolder = DumpLocation:FindFirstChild("$KSLibDUMP")
@@ -1404,7 +1404,7 @@ function TabActions:NewActionSlider(Config: NewActionToggleConfig)
 		
 		repeat
 			task.wait()
-			Amount = ((NewObject.Instance.SlideArea.SlideButton.Position.X.Scale / Threshold) * NewObject.Config.MaxValue) + NewObject.Config.MinValue
+			Amount = ((NewObject.Instance.SlideArea.SlideButton.Position.X.Scale / Threshold) * (NewObject.Config.MaxValue - NewObject.Config.MinValue)) + NewObject.Config.MinValue
 			if not NewObject.Config.AllowDecimal then
 				Amount = math.round(Amount)
 			else
