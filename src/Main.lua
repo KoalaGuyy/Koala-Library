@@ -1338,7 +1338,7 @@ function TabActions:NewActionSlider(Config: NewActionToggleConfig)
 	NewObject.Config.MinValue = NewObject.Config.MinValue or 0
 	NewObject.Config.MaxValue = NewObject.Config.MaxValue or 100
 	NewObject.Config.DoNotSnap = NewObject.Config.DoNotSnap or false
-	NewObject.Config.DefaultValue = NewObject.Config.DefaultValue or 50
+	NewObject.Config.DefaultValue = NewObject.Config.DefaultValue or NewObject.Config.MinValue
 	NewObject.Config.BypassInputMax = NewObject.Config.BypassInputMax or false
 	NewObject.Config.BypassInputMin = NewObject.Config.BypassInputMin or false
 	NewObject.Config.PlaceholderText = NewObject.Config.PlaceholderText
