@@ -2,943 +2,943 @@ local I2ScrBuilder = {}
 
 function I2ScrBuilder:Build(I2ScrEOFLocation: Instance)
 
-	-- Time Taken: 0.12025689999995848s, Name: Main, Class: Frame, Variable: I2ScrEOFMainEOF1791id4121 
-	local I2ScrEOFMainEOF1791id4121 = Instance.new("Frame", I2ScrEOFLocation)
-	I2ScrEOFMainEOF1791id4121.AnchorPoint = Vector2.new(0.5, 0.5)
-	I2ScrEOFMainEOF1791id4121.BackgroundColor3 = Color3.new(0.176471, 0.176471, 0.176471)
-	I2ScrEOFMainEOF1791id4121.BackgroundTransparency = 0.5
-	I2ScrEOFMainEOF1791id4121.BorderColor3 = Color3.new(0, 0, 0)
-	I2ScrEOFMainEOF1791id4121.BorderSizePixel = 0
-	I2ScrEOFMainEOF1791id4121.Name = "Main"
-	I2ScrEOFMainEOF1791id4121.Position = UDim2.new(0.5, 0, 0.5, 0)
-	I2ScrEOFMainEOF1791id4121.Size = UDim2.new(0.351999998, 0, 0.416999996, 0)
-
-	-- Time Taken: 0.016816500000004453s, Name: UICorner, Class: UICorner, Variable: I2ScrEOFUICornerEOF4429id8234 
-	local I2ScrEOFUICornerEOF4429id8234 = Instance.new("UICorner", I2ScrEOFMainEOF1791id4121)
-	I2ScrEOFUICornerEOF4429id8234.CornerRadius = UDim.new(0.0500000007, 0)
-
-	-- Time Taken: 0.08645439999963855s, Name: TabArea, Class: Frame, Variable: I2ScrEOFTabAreaEOF5270id4458 
-	local I2ScrEOFTabAreaEOF5270id4458 = Instance.new("Frame", I2ScrEOFMainEOF1791id4121)
-	I2ScrEOFTabAreaEOF5270id4458.BackgroundColor3 = Color3.new(0, 0, 0)
-	I2ScrEOFTabAreaEOF5270id4458.BorderColor3 = Color3.new(0, 0, 0)
-	I2ScrEOFTabAreaEOF5270id4458.BorderSizePixel = 0
-	I2ScrEOFTabAreaEOF5270id4458.Name = "TabArea"
-	I2ScrEOFTabAreaEOF5270id4458.Position = UDim2.new(0.333333343, 0, 0, 0)
-	I2ScrEOFTabAreaEOF5270id4458.Size = UDim2.new(0.666666687, 0, 1, 0)
-
-	-- Time Taken: 0.017767399999911504s, Name: UICorner, Class: UICorner, Variable: I2ScrEOFUICornerEOF3721id4867 
-	local I2ScrEOFUICornerEOF3721id4867 = Instance.new("UICorner", I2ScrEOFTabAreaEOF5270id4458)
-	I2ScrEOFUICornerEOF3721id4867.CornerRadius = UDim.new(0.0500000007, 0)
-
-	-- Time Taken: 0.010273000000097454s, Name: Borders, Class: Folder, Variable: I2ScrEOFBordersEOF7567id5543 
-	local I2ScrEOFBordersEOF7567id5543 = Instance.new("Folder", I2ScrEOFTabAreaEOF5270id4458)
-	I2ScrEOFBordersEOF7567id5543.Name = "Borders"
-
-	-- Time Taken: 0.0792042999999012s, Name: TopLeftCornerBorder, Class: Frame, Variable: I2ScrEOFTopLeftCornerBorderEOF9133id8981 
-	local I2ScrEOFTopLeftCornerBorderEOF9133id8981 = Instance.new("Frame", I2ScrEOFBordersEOF7567id5543)
-	I2ScrEOFTopLeftCornerBorderEOF9133id8981.BackgroundColor3 = Color3.new(0, 0, 0)
-	I2ScrEOFTopLeftCornerBorderEOF9133id8981.BorderColor3 = Color3.new(0, 0, 0)
-	I2ScrEOFTopLeftCornerBorderEOF9133id8981.BorderSizePixel = 0
-	I2ScrEOFTopLeftCornerBorderEOF9133id8981.Name = "TopLeftCornerBorder"
-	I2ScrEOFTopLeftCornerBorderEOF9133id8981.Size = UDim2.new(0.0500000007, 0, 0.0500000007, 0)
-
-	-- Time Taken: 0.09421350000002349s, Name: BottomLeftCornerBorder, Class: Frame, Variable: I2ScrEOFBottomLeftCornerBorderEOF1100id3321 
-	local I2ScrEOFBottomLeftCornerBorderEOF1100id3321 = Instance.new("Frame", I2ScrEOFBordersEOF7567id5543)
-	I2ScrEOFBottomLeftCornerBorderEOF1100id3321.BackgroundColor3 = Color3.new(0, 0, 0)
-	I2ScrEOFBottomLeftCornerBorderEOF1100id3321.BorderColor3 = Color3.new(0, 0, 0)
-	I2ScrEOFBottomLeftCornerBorderEOF1100id3321.BorderSizePixel = 0
-	I2ScrEOFBottomLeftCornerBorderEOF1100id3321.Name = "BottomLeftCornerBorder"
-	I2ScrEOFBottomLeftCornerBorderEOF1100id3321.Position = UDim2.new(0, 0, 0.949999988, 0)
-	I2ScrEOFBottomLeftCornerBorderEOF1100id3321.Size = UDim2.new(0.0500000007, 0, 0.0500000007, 0)
-
-	-- Time Taken: 0.0774933999998666s, Name: Frame, Class: Frame, Variable: I2ScrEOFFrameEOF7460id8922 
-	local I2ScrEOFFrameEOF7460id8922 = Instance.new("Frame", I2ScrEOFBordersEOF7567id5543)
-	I2ScrEOFFrameEOF7460id8922.BackgroundColor3 = Color3.new(0.0980392, 0.0980392, 0.0980392)
-	I2ScrEOFFrameEOF7460id8922.BorderColor3 = Color3.new(0.176471, 0.176471, 0.176471)
-	I2ScrEOFFrameEOF7460id8922.BorderSizePixel = 0
-	I2ScrEOFFrameEOF7460id8922.Position = UDim2.new(0, 0, 0.112999998, 0)
-	I2ScrEOFFrameEOF7460id8922.Size = UDim2.new(1, 0, 0.00666666683, 0)
-
-	-- Time Taken: 0.08999430000017128s, Name: TabInfoArea, Class: Frame, Variable: I2ScrEOFTabInfoAreaEOF2951id5377 
-	local I2ScrEOFTabInfoAreaEOF2951id5377 = Instance.new("Frame", I2ScrEOFTabAreaEOF5270id4458)
-	I2ScrEOFTabInfoAreaEOF2951id5377.BackgroundColor3 = Color3.new(1, 1, 1)
-	I2ScrEOFTabInfoAreaEOF2951id5377.BackgroundTransparency = 1
-	I2ScrEOFTabInfoAreaEOF2951id5377.BorderColor3 = Color3.new(0, 0, 0)
-	I2ScrEOFTabInfoAreaEOF2951id5377.BorderSizePixel = 0
-	I2ScrEOFTabInfoAreaEOF2951id5377.Name = "TabInfoArea"
-	I2ScrEOFTabInfoAreaEOF2951id5377.Size = UDim2.new(1, 0, 0.109999999, 0)
-
-	-- Time Taken: 0.08573820000037813s, Name: WindowOptions, Class: Frame, Variable: I2ScrEOFWindowOptionsEOF7369id2156 
-	local I2ScrEOFWindowOptionsEOF7369id2156 = Instance.new("Frame", I2ScrEOFTabInfoAreaEOF2951id5377)
-	I2ScrEOFWindowOptionsEOF7369id2156.BackgroundColor3 = Color3.new(0.0980392, 0.0980392, 0.0980392)
-	I2ScrEOFWindowOptionsEOF7369id2156.BorderColor3 = Color3.new(0, 0, 0)
-	I2ScrEOFWindowOptionsEOF7369id2156.BorderSizePixel = 0
-	I2ScrEOFWindowOptionsEOF7369id2156.Name = "WindowOptions"
-	I2ScrEOFWindowOptionsEOF7369id2156.Position = UDim2.new(0.836666644, 0, 0.181818187, 0)
-	I2ScrEOFWindowOptionsEOF7369id2156.Size = UDim2.new(0.13333334, 0, 0.606060624, 0)
-
-	-- Time Taken: 0.015666900000042006s, Name: UICorner, Class: UICorner, Variable: I2ScrEOFUICornerEOF8942id9288 
-	local I2ScrEOFUICornerEOF8942id9288 = Instance.new("UICorner", I2ScrEOFWindowOptionsEOF7369id2156)
-	I2ScrEOFUICornerEOF8942id9288.CornerRadius = UDim.new(0.400000006, 0)
-
-	-- Time Taken: 0.20760509999968235s, Name: Minimize, Class: TextButton, Variable: I2ScrEOFMinimizeEOF1955id577 
-	local I2ScrEOFMinimizeEOF1955id577 = Instance.new("TextButton", I2ScrEOFWindowOptionsEOF7369id2156)
-	I2ScrEOFMinimizeEOF1955id577.BackgroundColor3 = Color3.new(1, 1, 1)
-	I2ScrEOFMinimizeEOF1955id577.BackgroundTransparency = 1
-	I2ScrEOFMinimizeEOF1955id577.BorderColor3 = Color3.new(0, 0, 0)
-	I2ScrEOFMinimizeEOF1955id577.BorderSizePixel = 0
-	I2ScrEOFMinimizeEOF1955id577.Name = "Minimize"
-	I2ScrEOFMinimizeEOF1955id577.Position = UDim2.new(0.100000001, 0, 0.150000006, 0)
-	I2ScrEOFMinimizeEOF1955id577.Size = UDim2.new(0.375, 0, 0.75, 0)
-	I2ScrEOFMinimizeEOF1955id577.FontFace = Font.new("rbxasset://fonts/families/Roboto.json", Enum.FontWeight.Bold, Enum.FontStyle.Normal)
-	I2ScrEOFMinimizeEOF1955id577.Text = "–"
-	I2ScrEOFMinimizeEOF1955id577.TextColor3 = Color3.new(1, 1, 1)
-	I2ScrEOFMinimizeEOF1955id577.TextScaled = true
-	I2ScrEOFMinimizeEOF1955id577.TextSize = 14
-	I2ScrEOFMinimizeEOF1955id577.TextWrapped = true
-
-	-- Time Taken: 0.2197982999996384s, Name: DestroyButton, Class: TextButton, Variable: I2ScrEOFDestroyButtonEOF4424id2381 
-	local I2ScrEOFDestroyButtonEOF4424id2381 = Instance.new("TextButton", I2ScrEOFWindowOptionsEOF7369id2156)
-	I2ScrEOFDestroyButtonEOF4424id2381.BackgroundColor3 = Color3.new(1, 1, 1)
-	I2ScrEOFDestroyButtonEOF4424id2381.BackgroundTransparency = 1
-	I2ScrEOFDestroyButtonEOF4424id2381.BorderColor3 = Color3.new(0, 0, 0)
-	I2ScrEOFDestroyButtonEOF4424id2381.BorderSizePixel = 0
-	I2ScrEOFDestroyButtonEOF4424id2381.Modal = true
-	I2ScrEOFDestroyButtonEOF4424id2381.Name = "DestroyButton"
-	I2ScrEOFDestroyButtonEOF4424id2381.Position = UDim2.new(0.5, 0, 0.150000006, 0)
-	I2ScrEOFDestroyButtonEOF4424id2381.Size = UDim2.new(0.375, 0, 0.75, 0)
-	I2ScrEOFDestroyButtonEOF4424id2381.FontFace = Font.new("rbxasset://fonts/families/Roboto.json", Enum.FontWeight.Bold, Enum.FontStyle.Normal)
-	I2ScrEOFDestroyButtonEOF4424id2381.Text = "X"
-	I2ScrEOFDestroyButtonEOF4424id2381.TextColor3 = Color3.new(1, 1, 1)
-	I2ScrEOFDestroyButtonEOF4424id2381.TextScaled = true
-	I2ScrEOFDestroyButtonEOF4424id2381.TextSize = 14
-	I2ScrEOFDestroyButtonEOF4424id2381.TextWrapped = true
-
-	-- Time Taken: 0.015816599999880054s, Name: UIAspectRatioConstraint, Class: UIAspectRatioConstraint, Variable: I2ScrEOFUIAspectRatioConstraintEOF3003id1690 
-	local I2ScrEOFUIAspectRatioConstraintEOF3003id1690 = Instance.new("UIAspectRatioConstraint", I2ScrEOFWindowOptionsEOF7369id2156)
-	I2ScrEOFUIAspectRatioConstraintEOF3003id1690.AspectRatio = 2
-
-	-- Time Taken: 0.23533789999987675s, Name: TabTitle, Class: TextLabel, Variable: I2ScrEOFTabTitleEOF8371id1155 
-	local I2ScrEOFTabTitleEOF8371id1155 = Instance.new("TextLabel", I2ScrEOFTabInfoAreaEOF2951id5377)
-	I2ScrEOFTabTitleEOF8371id1155.BackgroundColor3 = Color3.new(1, 1, 1)
-	I2ScrEOFTabTitleEOF8371id1155.BackgroundTransparency = 1
-	I2ScrEOFTabTitleEOF8371id1155.BorderColor3 = Color3.new(0, 0, 0)
-	I2ScrEOFTabTitleEOF8371id1155.BorderSizePixel = 0
-	I2ScrEOFTabTitleEOF8371id1155.Name = "TabTitle"
-	I2ScrEOFTabTitleEOF8371id1155.Position = UDim2.new(0.0233151298, 0, 0.272679955, 0)
-	I2ScrEOFTabTitleEOF8371id1155.Size = UDim2.new(0.757000029, 0, 0.454515159, 0)
-	I2ScrEOFTabTitleEOF8371id1155.FontFace = Font.new("rbxasset://fonts/families/Roboto.json", Enum.FontWeight.Regular, Enum.FontStyle.Normal)
-	I2ScrEOFTabTitleEOF8371id1155.RichText = true
-	I2ScrEOFTabTitleEOF8371id1155.Text = "Koala Hacks Template Tab"
-	I2ScrEOFTabTitleEOF8371id1155.TextColor3 = Color3.new(1, 1, 1)
-	I2ScrEOFTabTitleEOF8371id1155.TextScaled = true
-	I2ScrEOFTabTitleEOF8371id1155.TextSize = 14
-	I2ScrEOFTabTitleEOF8371id1155.TextWrapped = true
-	I2ScrEOFTabTitleEOF8371id1155.TextXAlignment = Enum.TextXAlignment.Left
-
-	-- Time Taken: 0.12326409999946009s, Name: ConfigButton, Class: ImageButton, Variable: I2ScrEOFConfigButtonEOF9292id5717 
-	local I2ScrEOFConfigButtonEOF9292id5717 = Instance.new("ImageButton", I2ScrEOFTabInfoAreaEOF2951id5377)
-	I2ScrEOFConfigButtonEOF9292id5717.AnchorPoint = Vector2.new(0, 0.5)
-	I2ScrEOFConfigButtonEOF9292id5717.BackgroundColor3 = Color3.new(0.0980392, 0.0980392, 0.0980392)
-	I2ScrEOFConfigButtonEOF9292id5717.BorderColor3 = Color3.new(0, 0, 0)
-	I2ScrEOFConfigButtonEOF9292id5717.BorderSizePixel = 0
-	I2ScrEOFConfigButtonEOF9292id5717.Name = "ConfigButton"
-	I2ScrEOFConfigButtonEOF9292id5717.Position = UDim2.new(0.75, 0, 0.5, 0)
-	I2ScrEOFConfigButtonEOF9292id5717.Size = UDim2.new(0.0667060167, 0, 0.606418371, 0)
-	I2ScrEOFConfigButtonEOF9292id5717.Image = "rbxassetid://13300915301"
-
-	-- Time Taken: 0.01707399999986592s, Name: UICorner, Class: UICorner, Variable: I2ScrEOFUICornerEOF4724id1749 
-	local I2ScrEOFUICornerEOF4724id1749 = Instance.new("UICorner", I2ScrEOFConfigButtonEOF9292id5717)
-	I2ScrEOFUICornerEOF4724id1749.CornerRadius = UDim.new(0.200000003, 0)
-
-	-- Time Taken: 0s, Name: UIAspectRatioConstraint, Class: UIAspectRatioConstraint, Variable: I2ScrEOFUIAspectRatioConstraintEOF6495id9564 
-	local I2ScrEOFUIAspectRatioConstraintEOF6495id9564 = Instance.new("UIAspectRatioConstraint", I2ScrEOFConfigButtonEOF9292id5717)
-
-	-- Time Taken: 0.0010296000000380445s, Name: Tabs, Class: Folder, Variable: I2ScrEOFTabsEOF9510id1626 
-	local I2ScrEOFTabsEOF9510id1626 = Instance.new("Folder", I2ScrEOFTabAreaEOF5270id4458)
-	I2ScrEOFTabsEOF9510id1626.Name = "Tabs"
-
-	-- Time Taken: 0.23990120000030402s, Name: KS_TemplateTab, Class: ScrollingFrame, Variable: I2ScrEOFKS_TemplateTabEOF6325id2448 
-	local I2ScrEOFKS_TemplateTabEOF6325id2448 = Instance.new("ScrollingFrame", I2ScrEOFTabsEOF9510id1626)
-	I2ScrEOFKS_TemplateTabEOF6325id2448.Active = true
-	I2ScrEOFKS_TemplateTabEOF6325id2448.BackgroundColor3 = Color3.new(1, 1, 1)
-	I2ScrEOFKS_TemplateTabEOF6325id2448.BackgroundTransparency = 1
-	I2ScrEOFKS_TemplateTabEOF6325id2448.BorderColor3 = Color3.new(0, 0, 0)
-	I2ScrEOFKS_TemplateTabEOF6325id2448.BorderSizePixel = 0
-	I2ScrEOFKS_TemplateTabEOF6325id2448.Name = "KS_TemplateTab"
-	I2ScrEOFKS_TemplateTabEOF6325id2448.Position = UDim2.new(0, 0, 0.116666667, 0)
-	I2ScrEOFKS_TemplateTabEOF6325id2448.Size = UDim2.new(1, 0, 0.883333325, 0)
-	I2ScrEOFKS_TemplateTabEOF6325id2448.BottomImage = "http://www.roblox.com/asset/?id=10995799876"
-	I2ScrEOFKS_TemplateTabEOF6325id2448.CanvasSize = UDim2.new(0, 0, 0, 350)
-	I2ScrEOFKS_TemplateTabEOF6325id2448.MidImage = "http://www.roblox.com/asset/?id=10995799876"
-	I2ScrEOFKS_TemplateTabEOF6325id2448.ScrollBarImageColor3 = Color3.new(0.490196, 0.490196, 0.490196)
-	I2ScrEOFKS_TemplateTabEOF6325id2448.ScrollBarThickness = 3
-	I2ScrEOFKS_TemplateTabEOF6325id2448.ScrollingDirection = Enum.ScrollingDirection.Y
-	I2ScrEOFKS_TemplateTabEOF6325id2448.TopImage = "http://www.roblox.com/asset/?id=10995799876"
-
-	-- Time Taken: 0.04835319999983767s, Name: UIListLayout, Class: UIListLayout, Variable: I2ScrEOFUIListLayoutEOF1381id4070 
-	local I2ScrEOFUIListLayoutEOF1381id4070 = Instance.new("UIListLayout", I2ScrEOFKS_TemplateTabEOF6325id2448)
-	I2ScrEOFUIListLayoutEOF1381id4070.Padding = UDim.new(0, 8)
-	I2ScrEOFUIListLayoutEOF1381id4070.SortOrder = Enum.SortOrder.LayoutOrder
-	I2ScrEOFUIListLayoutEOF1381id4070.HorizontalAlignment = Enum.HorizontalAlignment.Center
-
-	-- Time Taken: 0.056025899999895046s, Name: Padding, Class: Frame, Variable: I2ScrEOFPaddingEOF6309id876 
-	local I2ScrEOFPaddingEOF6309id876 = Instance.new("Frame", I2ScrEOFKS_TemplateTabEOF6325id2448)
-	I2ScrEOFPaddingEOF6309id876.BackgroundColor3 = Color3.new(1, 1, 1)
-	I2ScrEOFPaddingEOF6309id876.BorderColor3 = Color3.new(0, 0, 0)
-	I2ScrEOFPaddingEOF6309id876.BorderSizePixel = 0
-	I2ScrEOFPaddingEOF6309id876.Name = "Padding"
-
-	-- Time Taken: 0.0830716999996639s, Name: ActionActivate, Class: Frame, Variable: I2ScrEOFActionActivateEOF7539id9004 
-	local I2ScrEOFActionActivateEOF7539id9004 = Instance.new("Frame", I2ScrEOFKS_TemplateTabEOF6325id2448)
-	I2ScrEOFActionActivateEOF7539id9004:SetAttribute("ObjectType", "ActionActivate")
-	I2ScrEOFActionActivateEOF7539id9004.BackgroundColor3 = Color3.new(0.0980392, 0.0980392, 0.0980392)
-	I2ScrEOFActionActivateEOF7539id9004.BorderColor3 = Color3.new(0, 0, 0)
-	I2ScrEOFActionActivateEOF7539id9004.BorderSizePixel = 0
-	I2ScrEOFActionActivateEOF7539id9004.Name = "ActionActivate"
-	I2ScrEOFActionActivateEOF7539id9004.Position = UDim2.new(0.333333343, 0, 0.177358493, 0)
-	I2ScrEOFActionActivateEOF7539id9004.Size = UDim2.new(0.949999988, 0, 0, 30)
-
-	-- Time Taken: 0.016456100000141305s, Name: UICorner, Class: UICorner, Variable: I2ScrEOFUICornerEOF9419id4623 
-	local I2ScrEOFUICornerEOF9419id4623 = Instance.new("UICorner", I2ScrEOFActionActivateEOF7539id9004)
-	I2ScrEOFUICornerEOF9419id4623.CornerRadius = UDim.new(0.200000003, 0)
-
-	-- Time Taken: 0.15256040000053872s, Name: Icon, Class: ImageLabel, Variable: I2ScrEOFIconEOF265id4254 
-	local I2ScrEOFIconEOF265id4254 = Instance.new("ImageLabel", I2ScrEOFActionActivateEOF7539id9004)
-	I2ScrEOFIconEOF265id4254.AnchorPoint = Vector2.new(0, 0.5)
-	I2ScrEOFIconEOF265id4254.BackgroundColor3 = Color3.new(1, 1, 1)
-	I2ScrEOFIconEOF265id4254.BackgroundTransparency = 1
-	I2ScrEOFIconEOF265id4254.BorderColor3 = Color3.new(0, 0, 0)
-	I2ScrEOFIconEOF265id4254.BorderSizePixel = 0
-	I2ScrEOFIconEOF265id4254.Name = "Icon"
-	I2ScrEOFIconEOF265id4254.Position = UDim2.new(0.00999999978, 0, 0.5, 0)
-	I2ScrEOFIconEOF265id4254.Size = UDim2.new(0.104999997, 0, 0.850000024, 0)
-	I2ScrEOFIconEOF265id4254.Image = "rbxassetid://18352620579"
-
-	-- Time Taken: 0.016119799999842144s, Name: UIAspectRatioConstraint, Class: UIAspectRatioConstraint, Variable: I2ScrEOFUIAspectRatioConstraintEOF1742id3883 
-	local I2ScrEOFUIAspectRatioConstraintEOF1742id3883 = Instance.new("UIAspectRatioConstraint", I2ScrEOFIconEOF265id4254)
-	I2ScrEOFUIAspectRatioConstraintEOF1742id3883.DominantAxis = Enum.DominantAxis.Height
-
-	-- Time Taken: 0.2391283999997995s, Name: Label, Class: TextLabel, Variable: I2ScrEOFLabelEOF8961id7951 
-	local I2ScrEOFLabelEOF8961id7951 = Instance.new("TextLabel", I2ScrEOFActionActivateEOF7539id9004)
-	I2ScrEOFLabelEOF8961id7951.BackgroundColor3 = Color3.new(0.0588235, 0.0588235, 0.0588235)
-	I2ScrEOFLabelEOF8961id7951.BackgroundTransparency = 1
-	I2ScrEOFLabelEOF8961id7951.BorderColor3 = Color3.new(0, 0, 0)
-	I2ScrEOFLabelEOF8961id7951.BorderSizePixel = 0
-	I2ScrEOFLabelEOF8961id7951.Name = "Label"
-	I2ScrEOFLabelEOF8961id7951.Position = UDim2.new(0.129824564, 0, 0.166666657, 0)
-	I2ScrEOFLabelEOF8961id7951.Size = UDim2.new(0.870175421, 0, 0.666666627, 0)
-	I2ScrEOFLabelEOF8961id7951.FontFace = Font.new("rbxasset://fonts/families/Roboto.json", Enum.FontWeight.Regular, Enum.FontStyle.Normal)
-	I2ScrEOFLabelEOF8961id7951.Text = "Activate"
-	I2ScrEOFLabelEOF8961id7951.TextColor3 = Color3.new(1, 1, 1)
-	I2ScrEOFLabelEOF8961id7951.TextScaled = true
-	I2ScrEOFLabelEOF8961id7951.TextSize = 14
-	I2ScrEOFLabelEOF8961id7951.TextStrokeTransparency = 0
-	I2ScrEOFLabelEOF8961id7951.TextWrapped = true
-	I2ScrEOFLabelEOF8961id7951.TextXAlignment = Enum.TextXAlignment.Left
-
-	-- Time Taken: 0.15164549999985866s, Name: Activate, Class: TextButton, Variable: I2ScrEOFActivateEOF182id2868 
-	local I2ScrEOFActivateEOF182id2868 = Instance.new("TextButton", I2ScrEOFActionActivateEOF7539id9004)
-	I2ScrEOFActivateEOF182id2868.BackgroundColor3 = Color3.new(1, 1, 1)
-	I2ScrEOFActivateEOF182id2868.BackgroundTransparency = 1
-	I2ScrEOFActivateEOF182id2868.BorderColor3 = Color3.new(0, 0, 0)
-	I2ScrEOFActivateEOF182id2868.BorderSizePixel = 0
-	I2ScrEOFActivateEOF182id2868.Name = "Activate"
-	I2ScrEOFActivateEOF182id2868.Size = UDim2.new(1, 0, 1, 0)
-	I2ScrEOFActivateEOF182id2868.FontFace = Font.new("rbxasset://fonts/families/SourceSansPro.json", Enum.FontWeight.Regular, Enum.FontStyle.Normal)
-	I2ScrEOFActivateEOF182id2868.TextColor3 = Color3.new(0, 0, 0)
-	I2ScrEOFActivateEOF182id2868.TextSize = 14
-	I2ScrEOFActivateEOF182id2868.TextTransparency = 1
-
-	-- Time Taken: 0.03296449999993456s, Name: UIAspectRatioConstraint, Class: UIAspectRatioConstraint, Variable: I2ScrEOFUIAspectRatioConstraintEOF8781id9600 
-	local I2ScrEOFUIAspectRatioConstraintEOF8781id9600 = Instance.new("UIAspectRatioConstraint", I2ScrEOFActionActivateEOF7539id9004)
-	I2ScrEOFUIAspectRatioConstraintEOF8781id9600.AspectRatio = 9.494396209716797
-	I2ScrEOFUIAspectRatioConstraintEOF8781id9600.AspectType = Enum.AspectType.ScaleWithParentSize
-
-	-- Time Taken: 0.09774689999994735s, Name: ActionColorPick, Class: Frame, Variable: I2ScrEOFActionColorPickEOF194id676 
-	local I2ScrEOFActionColorPickEOF194id676 = Instance.new("Frame", I2ScrEOFKS_TemplateTabEOF6325id2448)
-	I2ScrEOFActionColorPickEOF194id676:SetAttribute("Value", Color3.new(1, 1, 1))
-	I2ScrEOFActionColorPickEOF194id676:SetAttribute("ObjectType", "ActionColorPick")
-	I2ScrEOFActionColorPickEOF194id676.BackgroundColor3 = Color3.new(0.0980392, 0.0980392, 0.0980392)
-	I2ScrEOFActionColorPickEOF194id676.BorderColor3 = Color3.new(0, 0, 0)
-	I2ScrEOFActionColorPickEOF194id676.BorderSizePixel = 0
-	I2ScrEOFActionColorPickEOF194id676.Name = "ActionColorPick"
-	I2ScrEOFActionColorPickEOF194id676.Position = UDim2.new(0.333333343, 0, 0.177358493, 0)
-	I2ScrEOFActionColorPickEOF194id676.Size = UDim2.new(0.949999988, 0, 0, 30)
-
-	-- Time Taken: 0.017073600000003353s, Name: UICorner, Class: UICorner, Variable: I2ScrEOFUICornerEOF2336id9747 
-	local I2ScrEOFUICornerEOF2336id9747 = Instance.new("UICorner", I2ScrEOFActionColorPickEOF194id676)
-	I2ScrEOFUICornerEOF2336id9747.CornerRadius = UDim.new(0.200000003, 0)
-
-	-- Time Taken: 0.2403852999996161s, Name: Label, Class: TextLabel, Variable: I2ScrEOFLabelEOF8884id6207 
-	local I2ScrEOFLabelEOF8884id6207 = Instance.new("TextLabel", I2ScrEOFActionColorPickEOF194id676)
-	I2ScrEOFLabelEOF8884id6207.BackgroundColor3 = Color3.new(0.0588235, 0.0588235, 0.0588235)
-	I2ScrEOFLabelEOF8884id6207.BackgroundTransparency = 1
-	I2ScrEOFLabelEOF8884id6207.BorderColor3 = Color3.new(0, 0, 0)
-	I2ScrEOFLabelEOF8884id6207.BorderSizePixel = 0
-	I2ScrEOFLabelEOF8884id6207.Name = "Label"
-	I2ScrEOFLabelEOF8884id6207.Position = UDim2.new(0.129824489, 0, 0.166666314, 0)
-	I2ScrEOFLabelEOF8884id6207.Size = UDim2.new(0.870175421, 0, 0.666666627, 0)
-	I2ScrEOFLabelEOF8884id6207.FontFace = Font.new("rbxasset://fonts/families/Roboto.json", Enum.FontWeight.Regular, Enum.FontStyle.Normal)
-	I2ScrEOFLabelEOF8884id6207.Text = "Color Pick"
-	I2ScrEOFLabelEOF8884id6207.TextColor3 = Color3.new(1, 1, 1)
-	I2ScrEOFLabelEOF8884id6207.TextScaled = true
-	I2ScrEOFLabelEOF8884id6207.TextSize = 14
-	I2ScrEOFLabelEOF8884id6207.TextStrokeTransparency = 0
-	I2ScrEOFLabelEOF8884id6207.TextWrapped = true
-	I2ScrEOFLabelEOF8884id6207.TextXAlignment = Enum.TextXAlignment.Left
-
-	-- Time Taken: 0.15220690000001014s, Name: Activate, Class: TextButton, Variable: I2ScrEOFActivateEOF5360id7778 
-	local I2ScrEOFActivateEOF5360id7778 = Instance.new("TextButton", I2ScrEOFActionColorPickEOF194id676)
-	I2ScrEOFActivateEOF5360id7778.BackgroundColor3 = Color3.new(1, 1, 1)
-	I2ScrEOFActivateEOF5360id7778.BackgroundTransparency = 1
-	I2ScrEOFActivateEOF5360id7778.BorderColor3 = Color3.new(0, 0, 0)
-	I2ScrEOFActivateEOF5360id7778.BorderSizePixel = 0
-	I2ScrEOFActivateEOF5360id7778.Name = "Activate"
-	I2ScrEOFActivateEOF5360id7778.Size = UDim2.new(1, 0, 1, 0)
-	I2ScrEOFActivateEOF5360id7778.FontFace = Font.new("rbxasset://fonts/families/SourceSansPro.json", Enum.FontWeight.Regular, Enum.FontStyle.Normal)
-	I2ScrEOFActivateEOF5360id7778.TextColor3 = Color3.new(0, 0, 0)
-	I2ScrEOFActivateEOF5360id7778.TextSize = 14
-	I2ScrEOFActivateEOF5360id7778.TextTransparency = 1
-
-	-- Time Taken: 0.10446639999986473s, Name: Icon, Class: ImageLabel, Variable: I2ScrEOFIconEOF3125id2537 
-	local I2ScrEOFIconEOF3125id2537 = Instance.new("ImageLabel", I2ScrEOFActionColorPickEOF194id676)
-	I2ScrEOFIconEOF3125id2537.BackgroundColor3 = Color3.new(1, 1, 1)
-	I2ScrEOFIconEOF3125id2537.BorderColor3 = Color3.new(0, 0, 0)
-	I2ScrEOFIconEOF3125id2537.BorderSizePixel = 0
-	I2ScrEOFIconEOF3125id2537.Name = "Icon"
-	I2ScrEOFIconEOF3125id2537.Position = UDim2.new(0.0250000004, 0, 0.133000001, 0)
-	I2ScrEOFIconEOF3125id2537.Size = UDim2.new(0.0700000003, 0, 0.666000009, 0)
-	I2ScrEOFIconEOF3125id2537.Image = "rbxassetid://105955025341798"
-
-	-- Time Taken: 0.015476499999977023s, Name: UICorner, Class: UICorner, Variable: I2ScrEOFUICornerEOF2713id6038 
-	local I2ScrEOFUICornerEOF2713id6038 = Instance.new("UICorner", I2ScrEOFIconEOF3125id2537)
-	I2ScrEOFUICornerEOF2713id6038.CornerRadius = UDim.new(0.200000003, 0)
-
-	-- Time Taken: 0.035171900000023015s, Name: UIAspectRatioConstraint, Class: UIAspectRatioConstraint, Variable: I2ScrEOFUIAspectRatioConstraintEOF9497id4839 
-	local I2ScrEOFUIAspectRatioConstraintEOF9497id4839 = Instance.new("UIAspectRatioConstraint", I2ScrEOFActionColorPickEOF194id676)
-	I2ScrEOFUIAspectRatioConstraintEOF9497id4839.AspectRatio = 9.494396209716797
-	I2ScrEOFUIAspectRatioConstraintEOF9497id4839.AspectType = Enum.AspectType.ScaleWithParentSize
-
-	-- Time Taken: 0.08630760000005466s, Name: ActionToggle, Class: Frame, Variable: I2ScrEOFActionToggleEOF5478id2844 
-	local I2ScrEOFActionToggleEOF5478id2844 = Instance.new("Frame", I2ScrEOFKS_TemplateTabEOF6325id2448)
-	I2ScrEOFActionToggleEOF5478id2844:SetAttribute("Value", false)
-	I2ScrEOFActionToggleEOF5478id2844:SetAttribute("ObjectType", "ActionToggle")
-	I2ScrEOFActionToggleEOF5478id2844.BackgroundColor3 = Color3.new(0.0980392, 0.0980392, 0.0980392)
-	I2ScrEOFActionToggleEOF5478id2844.BorderColor3 = Color3.new(0, 0, 0)
-	I2ScrEOFActionToggleEOF5478id2844.BorderSizePixel = 0
-	I2ScrEOFActionToggleEOF5478id2844.Name = "ActionToggle"
-	I2ScrEOFActionToggleEOF5478id2844.Position = UDim2.new(0.333333343, 0, 0.177358493, 0)
-	I2ScrEOFActionToggleEOF5478id2844.Size = UDim2.new(0.949999988, 0, 0, 30)
-
-	-- Time Taken: 0.01798159999998461s, Name: UICorner, Class: UICorner, Variable: I2ScrEOFUICornerEOF5092id4370 
-	local I2ScrEOFUICornerEOF5092id4370 = Instance.new("UICorner", I2ScrEOFActionToggleEOF5478id2844)
-	I2ScrEOFUICornerEOF5092id4370.CornerRadius = UDim.new(0.200000003, 0)
-
-	-- Time Taken: 0.08802379999997356s, Name: ToggleArea, Class: Frame, Variable: I2ScrEOFToggleAreaEOF7912id6003 
-	local I2ScrEOFToggleAreaEOF7912id6003 = Instance.new("Frame", I2ScrEOFActionToggleEOF5478id2844)
-	I2ScrEOFToggleAreaEOF7912id6003.BackgroundColor3 = Color3.new(0.0588235, 0.0588235, 0.0588235)
-	I2ScrEOFToggleAreaEOF7912id6003.BorderColor3 = Color3.new(0, 0, 0)
-	I2ScrEOFToggleAreaEOF7912id6003.BorderSizePixel = 0
-	I2ScrEOFToggleAreaEOF7912id6003.Name = "ToggleArea"
-	I2ScrEOFToggleAreaEOF7912id6003.Position = UDim2.new(0.0175575763, 0, 0.133437574, 0)
-	I2ScrEOFToggleAreaEOF7912id6003.Size = UDim2.new(0.140350878, 0, 0.666666627, 0)
-
-	-- Time Taken: 0.01679910000007112s, Name: UICorner, Class: UICorner, Variable: I2ScrEOFUICornerEOF1860id1351 
-	local I2ScrEOFUICornerEOF1860id1351 = Instance.new("UICorner", I2ScrEOFToggleAreaEOF7912id6003)
-	I2ScrEOFUICornerEOF1860id1351.CornerRadius = UDim.new(0.200000003, 0)
-
-	-- Time Taken: 0.10274020000019846s, Name: Icon, Class: ImageLabel, Variable: I2ScrEOFIconEOF4470id9722 
-	local I2ScrEOFIconEOF4470id9722 = Instance.new("ImageLabel", I2ScrEOFToggleAreaEOF7912id6003)
-	I2ScrEOFIconEOF4470id9722.BackgroundColor3 = Color3.new(1, 0.34902, 0.34902)
-	I2ScrEOFIconEOF4470id9722.BorderColor3 = Color3.new(0, 0, 0)
-	I2ScrEOFIconEOF4470id9722.BorderSizePixel = 0
-	I2ScrEOFIconEOF4470id9722.Name = "Icon"
-	I2ScrEOFIconEOF4470id9722.Position = UDim2.new(0.0500000007, 0, 0, 0)
-	I2ScrEOFIconEOF4470id9722.Size = UDim2.new(0.5, 0, 1, 0)
-	I2ScrEOFIconEOF4470id9722.Image = "rbxassetid://18352620579"
-
-	-- Time Taken: 0.01643540000009125s, Name: UICorner, Class: UICorner, Variable: I2ScrEOFUICornerEOF1601id9466 
-	local I2ScrEOFUICornerEOF1601id9466 = Instance.new("UICorner", I2ScrEOFIconEOF4470id9722)
-	I2ScrEOFUICornerEOF1601id9466.CornerRadius = UDim.new(0.200000003, 0)
-
-	-- Time Taken: 0.23463139999989835s, Name: Label, Class: TextLabel, Variable: I2ScrEOFLabelEOF3254id2514 
-	local I2ScrEOFLabelEOF3254id2514 = Instance.new("TextLabel", I2ScrEOFActionToggleEOF5478id2844)
-	I2ScrEOFLabelEOF3254id2514.BackgroundColor3 = Color3.new(0.0588235, 0.0588235, 0.0588235)
-	I2ScrEOFLabelEOF3254id2514.BackgroundTransparency = 1
-	I2ScrEOFLabelEOF3254id2514.BorderColor3 = Color3.new(0, 0, 0)
-	I2ScrEOFLabelEOF3254id2514.BorderSizePixel = 0
-	I2ScrEOFLabelEOF3254id2514.Name = "Label"
-	I2ScrEOFLabelEOF3254id2514.Position = UDim2.new(0.180105492, 0, 0.166666657, 0)
-	I2ScrEOFLabelEOF3254id2514.Size = UDim2.new(0.817543864, 0, 0.666666627, 0)
-	I2ScrEOFLabelEOF3254id2514.FontFace = Font.new("rbxasset://fonts/families/Roboto.json", Enum.FontWeight.Regular, Enum.FontStyle.Normal)
-	I2ScrEOFLabelEOF3254id2514.Text = "Toggle"
-	I2ScrEOFLabelEOF3254id2514.TextColor3 = Color3.new(1, 1, 1)
-	I2ScrEOFLabelEOF3254id2514.TextScaled = true
-	I2ScrEOFLabelEOF3254id2514.TextSize = 14
-	I2ScrEOFLabelEOF3254id2514.TextStrokeTransparency = 0
-	I2ScrEOFLabelEOF3254id2514.TextWrapped = true
-	I2ScrEOFLabelEOF3254id2514.TextXAlignment = Enum.TextXAlignment.Left
-
-	-- Time Taken: 0.15625760000011724s, Name: Activate, Class: TextButton, Variable: I2ScrEOFActivateEOF4079id793 
-	local I2ScrEOFActivateEOF4079id793 = Instance.new("TextButton", I2ScrEOFActionToggleEOF5478id2844)
-	I2ScrEOFActivateEOF4079id793.BackgroundColor3 = Color3.new(1, 1, 1)
-	I2ScrEOFActivateEOF4079id793.BackgroundTransparency = 1
-	I2ScrEOFActivateEOF4079id793.BorderColor3 = Color3.new(0, 0, 0)
-	I2ScrEOFActivateEOF4079id793.BorderSizePixel = 0
-	I2ScrEOFActivateEOF4079id793.Name = "Activate"
-	I2ScrEOFActivateEOF4079id793.Size = UDim2.new(1, 0, 1, 0)
-	I2ScrEOFActivateEOF4079id793.FontFace = Font.new("rbxasset://fonts/families/SourceSansPro.json", Enum.FontWeight.Regular, Enum.FontStyle.Normal)
-	I2ScrEOFActivateEOF4079id793.TextColor3 = Color3.new(0, 0, 0)
-	I2ScrEOFActivateEOF4079id793.TextSize = 14
-	I2ScrEOFActivateEOF4079id793.TextTransparency = 1
-
-	-- Time Taken: 0.03350710000017898s, Name: UIAspectRatioConstraint, Class: UIAspectRatioConstraint, Variable: I2ScrEOFUIAspectRatioConstraintEOF6878id1820 
-	local I2ScrEOFUIAspectRatioConstraintEOF6878id1820 = Instance.new("UIAspectRatioConstraint", I2ScrEOFActionToggleEOF5478id2844)
-	I2ScrEOFUIAspectRatioConstraintEOF6878id1820.AspectRatio = 9.494000434875488
-	I2ScrEOFUIAspectRatioConstraintEOF6878id1820.AspectType = Enum.AspectType.ScaleWithParentSize
-
-	-- Time Taken: 0.08867609999992965s, Name: ActionInput, Class: Frame, Variable: I2ScrEOFActionInputEOF2496id5098 
-	local I2ScrEOFActionInputEOF2496id5098 = Instance.new("Frame", I2ScrEOFKS_TemplateTabEOF6325id2448)
-	I2ScrEOFActionInputEOF2496id5098:SetAttribute("ObjectType", "ActionInput")
-	I2ScrEOFActionInputEOF2496id5098.BackgroundColor3 = Color3.new(0.0980392, 0.0980392, 0.0980392)
-	I2ScrEOFActionInputEOF2496id5098.BorderColor3 = Color3.new(0, 0, 0)
-	I2ScrEOFActionInputEOF2496id5098.BorderSizePixel = 0
-	I2ScrEOFActionInputEOF2496id5098.Name = "ActionInput"
-	I2ScrEOFActionInputEOF2496id5098.Position = UDim2.new(0.333333343, 0, 0.177358493, 0)
-	I2ScrEOFActionInputEOF2496id5098.Size = UDim2.new(0.949999988, 0, 0, 30)
-
-	-- Time Taken: 0.017155400000092413s, Name: UICorner, Class: UICorner, Variable: I2ScrEOFUICornerEOF8208id3535 
-	local I2ScrEOFUICornerEOF8208id3535 = Instance.new("UICorner", I2ScrEOFActionInputEOF2496id5098)
-	I2ScrEOFUICornerEOF8208id3535.CornerRadius = UDim.new(0.200000003, 0)
-
-	-- Time Taken: 0.2392512000003535s, Name: Label, Class: TextLabel, Variable: I2ScrEOFLabelEOF4326id5737 
-	local I2ScrEOFLabelEOF4326id5737 = Instance.new("TextLabel", I2ScrEOFActionInputEOF2496id5098)
-	I2ScrEOFLabelEOF4326id5737.BackgroundColor3 = Color3.new(0.0588235, 0.0588235, 0.0588235)
-	I2ScrEOFLabelEOF4326id5737.BackgroundTransparency = 1
-	I2ScrEOFLabelEOF4326id5737.BorderColor3 = Color3.new(0, 0, 0)
-	I2ScrEOFLabelEOF4326id5737.BorderSizePixel = 0
-	I2ScrEOFLabelEOF4326id5737.Name = "Label"
-	I2ScrEOFLabelEOF4326id5737.Position = UDim2.new(0.394267023, 0, 0.166666314, 0)
-	I2ScrEOFLabelEOF4326id5737.Size = UDim2.new(0.58468163, 0, 0.666666567, 0)
-	I2ScrEOFLabelEOF4326id5737.FontFace = Font.new("rbxasset://fonts/families/Roboto.json", Enum.FontWeight.Regular, Enum.FontStyle.Normal)
-	I2ScrEOFLabelEOF4326id5737.Text = "Input"
-	I2ScrEOFLabelEOF4326id5737.TextColor3 = Color3.new(1, 1, 1)
-	I2ScrEOFLabelEOF4326id5737.TextScaled = true
-	I2ScrEOFLabelEOF4326id5737.TextSize = 14
-	I2ScrEOFLabelEOF4326id5737.TextStrokeTransparency = 0
-	I2ScrEOFLabelEOF4326id5737.TextWrapped = true
-	I2ScrEOFLabelEOF4326id5737.TextXAlignment = Enum.TextXAlignment.Left
-
-	-- Time Taken: 0.2598769999999604s, Name: Input, Class: TextBox, Variable: I2ScrEOFInputEOF5397id2864 
-	local I2ScrEOFInputEOF5397id2864 = Instance.new("TextBox", I2ScrEOFActionInputEOF2496id5098)
-	I2ScrEOFInputEOF5397id2864.BackgroundColor3 = Color3.new(0.0588235, 0.0588235, 0.0588235)
-	I2ScrEOFInputEOF5397id2864.BorderColor3 = Color3.new(0, 0, 0)
-	I2ScrEOFInputEOF5397id2864.BorderSizePixel = 0
-	I2ScrEOFInputEOF5397id2864.Name = "Input"
-	I2ScrEOFInputEOF5397id2864.Position = UDim2.new(0.024575904, 0, 0.133116871, 0)
-	I2ScrEOFInputEOF5397id2864.Size = UDim2.new(0.351084292, 0, 0.667060196, 0)
-	I2ScrEOFInputEOF5397id2864.FontFace = Font.new("rbxasset://fonts/families/Roboto.json", Enum.FontWeight.Regular, Enum.FontStyle.Normal)
-	I2ScrEOFInputEOF5397id2864.PlaceholderColor3 = Color3.new(0.7, 0.7, 0.7)
-	I2ScrEOFInputEOF5397id2864.PlaceholderText = "Input Text..."
-	I2ScrEOFInputEOF5397id2864.Text = ""
-	I2ScrEOFInputEOF5397id2864.TextColor3 = Color3.new(1, 1, 1)
-	I2ScrEOFInputEOF5397id2864.TextScaled = true
-	I2ScrEOFInputEOF5397id2864.TextSize = 14
-	I2ScrEOFInputEOF5397id2864.TextStrokeTransparency = 0
-	I2ScrEOFInputEOF5397id2864.TextWrapped = true
-	I2ScrEOFInputEOF5397id2864.TextXAlignment = Enum.TextXAlignment.Left
-
-	-- Time Taken: 0.017236800000091534s, Name: UICorner, Class: UICorner, Variable: I2ScrEOFUICornerEOF2830id5505 
-	local I2ScrEOFUICornerEOF2830id5505 = Instance.new("UICorner", I2ScrEOFInputEOF5397id2864)
-	I2ScrEOFUICornerEOF2830id5505.CornerRadius = UDim.new(0.200000003, 0)
-
-	-- Time Taken: 0.03254289999995308s, Name: UIAspectRatioConstraint, Class: UIAspectRatioConstraint, Variable: I2ScrEOFUIAspectRatioConstraintEOF4102id2875 
-	local I2ScrEOFUIAspectRatioConstraintEOF4102id2875 = Instance.new("UIAspectRatioConstraint", I2ScrEOFActionInputEOF2496id5098)
-	I2ScrEOFUIAspectRatioConstraintEOF4102id2875.AspectRatio = 9.494396209716797
-	I2ScrEOFUIAspectRatioConstraintEOF4102id2875.AspectType = Enum.AspectType.ScaleWithParentSize
-
-	-- Time Taken: 0.08314219999988381s, Name: ActionSlider, Class: Frame, Variable: I2ScrEOFActionSliderEOF5616id6271 
-	local I2ScrEOFActionSliderEOF5616id6271 = Instance.new("Frame", I2ScrEOFKS_TemplateTabEOF6325id2448)
-	I2ScrEOFActionSliderEOF5616id6271:SetAttribute("Value", 0)
-	I2ScrEOFActionSliderEOF5616id6271:SetAttribute("ObjectType", "ActionSlider")
-	I2ScrEOFActionSliderEOF5616id6271:SetAttribute("Percentage", 0)
-	I2ScrEOFActionSliderEOF5616id6271.BackgroundColor3 = Color3.new(0.0980392, 0.0980392, 0.0980392)
-	I2ScrEOFActionSliderEOF5616id6271.BorderColor3 = Color3.new(0, 0, 0)
-	I2ScrEOFActionSliderEOF5616id6271.BorderSizePixel = 0
-	I2ScrEOFActionSliderEOF5616id6271.Name = "ActionSlider"
-	I2ScrEOFActionSliderEOF5616id6271.Position = UDim2.new(0.333333343, 0, 0.177358493, 0)
-	I2ScrEOFActionSliderEOF5616id6271.Size = UDim2.new(0.949999988, 0, 0, 30)
-
-	-- Time Taken: 0.016978999999992084s, Name: UICorner, Class: UICorner, Variable: I2ScrEOFUICornerEOF82id2230 
-	local I2ScrEOFUICornerEOF82id2230 = Instance.new("UICorner", I2ScrEOFActionSliderEOF5616id6271)
-	I2ScrEOFUICornerEOF82id2230.CornerRadius = UDim.new(0.200000003, 0)
-
-	-- Time Taken: 0.24203209999973296s, Name: Label, Class: TextLabel, Variable: I2ScrEOFLabelEOF837id1308 
-	local I2ScrEOFLabelEOF837id1308 = Instance.new("TextLabel", I2ScrEOFActionSliderEOF5616id6271)
-	I2ScrEOFLabelEOF837id1308.BackgroundColor3 = Color3.new(0.0588235, 0.0588235, 0.0588235)
-	I2ScrEOFLabelEOF837id1308.BackgroundTransparency = 1
-	I2ScrEOFLabelEOF837id1308.BorderColor3 = Color3.new(0, 0, 0)
-	I2ScrEOFLabelEOF837id1308.BorderSizePixel = 0
-	I2ScrEOFLabelEOF837id1308.Name = "Label"
-	I2ScrEOFLabelEOF837id1308.Position = UDim2.new(0.459791481, 0, 0.166666314, 0)
-	I2ScrEOFLabelEOF837id1308.Size = UDim2.new(0.519156992, 0, 0.666666567, 0)
-	I2ScrEOFLabelEOF837id1308.FontFace = Font.new("rbxasset://fonts/families/Roboto.json", Enum.FontWeight.Regular, Enum.FontStyle.Normal)
-	I2ScrEOFLabelEOF837id1308.Text = "Slider"
-	I2ScrEOFLabelEOF837id1308.TextColor3 = Color3.new(1, 1, 1)
-	I2ScrEOFLabelEOF837id1308.TextScaled = true
-	I2ScrEOFLabelEOF837id1308.TextSize = 14
-	I2ScrEOFLabelEOF837id1308.TextStrokeTransparency = 0
-	I2ScrEOFLabelEOF837id1308.TextWrapped = true
-	I2ScrEOFLabelEOF837id1308.TextXAlignment = Enum.TextXAlignment.Left
-
-	-- Time Taken: 0.10068369999976312s, Name: SlideArea, Class: Frame, Variable: I2ScrEOFSlideAreaEOF9112id753 
-	local I2ScrEOFSlideAreaEOF9112id753 = Instance.new("Frame", I2ScrEOFActionSliderEOF5616id6271)
-	I2ScrEOFSlideAreaEOF9112id753.BackgroundColor3 = Color3.new(0, 1, 1)
-	I2ScrEOFSlideAreaEOF9112id753.BackgroundTransparency = 1
-	I2ScrEOFSlideAreaEOF9112id753.BorderColor3 = Color3.new(0, 0, 0)
-	I2ScrEOFSlideAreaEOF9112id753.BorderSizePixel = 0
-	I2ScrEOFSlideAreaEOF9112id753.Name = "SlideArea"
-	I2ScrEOFSlideAreaEOF9112id753.Position = UDim2.new(0.0249999706, 0, 0.132999808, 0)
-	I2ScrEOFSlideAreaEOF9112id753.Size = UDim2.new(0.265663385, 0, 0.666999996, 0)
-
-	-- Time Taken: 0.1040899000004174s, Name: SlideBar, Class: Frame, Variable: I2ScrEOFSlideBarEOF1956id5936 
-	local I2ScrEOFSlideBarEOF1956id5936 = Instance.new("Frame", I2ScrEOFSlideAreaEOF9112id753)
-	I2ScrEOFSlideBarEOF1956id5936.AnchorPoint = Vector2.new(0.5, 0.5)
-	I2ScrEOFSlideBarEOF1956id5936.BackgroundColor3 = Color3.new(0, 0.478431, 0.478431)
-	I2ScrEOFSlideBarEOF1956id5936.BorderColor3 = Color3.new(0, 0, 0)
-	I2ScrEOFSlideBarEOF1956id5936.BorderSizePixel = 0
-	I2ScrEOFSlideBarEOF1956id5936.Name = "SlideBar"
-	I2ScrEOFSlideBarEOF1956id5936.Position = UDim2.new(0.5, 0, 0.5, 0)
-	I2ScrEOFSlideBarEOF1956id5936.Size = UDim2.new(0.899999976, 0, 0.150000006, 0)
-
-	-- Time Taken: 0.017029200000024503s, Name: UICorner, Class: UICorner, Variable: I2ScrEOFUICornerEOF5501id8611 
-	local I2ScrEOFUICornerEOF5501id8611 = Instance.new("UICorner", I2ScrEOFSlideBarEOF1956id5936)
-	I2ScrEOFUICornerEOF5501id8611.CornerRadius = UDim.new(1, 0)
-
-	-- Time Taken: 0.0834645999998429s, Name: FillBar, Class: Frame, Variable: I2ScrEOFFillBarEOF3956id3597 
-	local I2ScrEOFFillBarEOF3956id3597 = Instance.new("Frame", I2ScrEOFSlideAreaEOF9112id753)
-	I2ScrEOFFillBarEOF3956id3597.AnchorPoint = Vector2.new(0.5, 0.5)
-	I2ScrEOFFillBarEOF3956id3597.BackgroundColor3 = Color3.new(0, 1, 1)
-	I2ScrEOFFillBarEOF3956id3597.BorderColor3 = Color3.new(0, 0, 0)
-	I2ScrEOFFillBarEOF3956id3597.BorderSizePixel = 0
-	I2ScrEOFFillBarEOF3956id3597.Name = "FillBar"
-	I2ScrEOFFillBarEOF3956id3597.Position = UDim2.new(0, 0, 0.5, 0)
-
-	-- Time Taken: 0.017303599999877406s, Name: UICorner, Class: UICorner, Variable: I2ScrEOFUICornerEOF6826id8796 
-	local I2ScrEOFUICornerEOF6826id8796 = Instance.new("UICorner", I2ScrEOFFillBarEOF3956id3597)
-	I2ScrEOFUICornerEOF6826id8796.CornerRadius = UDim.new(1, 0)
-
-	-- Time Taken: 0.18103270000005978s, Name: SlideButton, Class: TextButton, Variable: I2ScrEOFSlideButtonEOF7133id9409 
-	local I2ScrEOFSlideButtonEOF7133id9409 = Instance.new("TextButton", I2ScrEOFSlideAreaEOF9112id753)
-	I2ScrEOFSlideButtonEOF7133id9409.AnchorPoint = Vector2.new(0, 0.5)
-	I2ScrEOFSlideButtonEOF7133id9409.BackgroundColor3 = Color3.new(0, 1, 1)
-	I2ScrEOFSlideButtonEOF7133id9409.BorderColor3 = Color3.new(0, 0, 0)
-	I2ScrEOFSlideButtonEOF7133id9409.BorderSizePixel = 0
-	I2ScrEOFSlideButtonEOF7133id9409.Name = "SlideButton"
-	I2ScrEOFSlideButtonEOF7133id9409.Position = UDim2.new(3.57627869e-07, 0, 0.5, 0)
-	I2ScrEOFSlideButtonEOF7133id9409.Size = UDim2.new(0.131970271, 0, 0.499350637, 0)
-	I2ScrEOFSlideButtonEOF7133id9409.FontFace = Font.new("rbxasset://fonts/families/SourceSansPro.json", Enum.FontWeight.Regular, Enum.FontStyle.Normal)
-	I2ScrEOFSlideButtonEOF7133id9409.TextColor3 = Color3.new(0, 0, 0)
-	I2ScrEOFSlideButtonEOF7133id9409.TextSize = 14
-	I2ScrEOFSlideButtonEOF7133id9409.TextTransparency = 1
-
-	-- Time Taken: 0.01622840000004544s, Name: UICorner, Class: UICorner, Variable: I2ScrEOFUICornerEOF2377id5940 
-	local I2ScrEOFUICornerEOF2377id5940 = Instance.new("UICorner", I2ScrEOFSlideButtonEOF7133id9409)
-	I2ScrEOFUICornerEOF2377id5940.CornerRadius = UDim.new(1, 0)
-
-	-- Time Taken: 0.08023279999997612s, Name: UIDragDetector, Class: UIDragDetector, Variable: I2ScrEOFUIDragDetectorEOF2275id2894 
-	local I2ScrEOFUIDragDetectorEOF2275id2894 = Instance.new("UIDragDetector", I2ScrEOFSlideButtonEOF7133id9409)
-	I2ScrEOFUIDragDetectorEOF2275id2894.BoundingBehavior = Enum.UIDragDetectorBoundingBehavior.EntireObject
-	I2ScrEOFUIDragDetectorEOF2275id2894.BoundingUI = I2ScrEOFSlideAreaEOF9112id753
-	I2ScrEOFUIDragDetectorEOF2275id2894.DragStyle = Enum.UIDragDetectorDragStyle.TranslateLine
-	I2ScrEOFUIDragDetectorEOF2275id2894.ResponseStyle = Enum.UIDragDetectorResponseStyle.Scale
-	I2ScrEOFUIDragDetectorEOF2275id2894.SelectionModeDragSpeed = UDim2.new(0, 0, 0, 0)
-
-	-- Time Taken: 0.2347332000001643s, Name: Input, Class: TextBox, Variable: I2ScrEOFInputEOF4208id8262 
-	local I2ScrEOFInputEOF4208id8262 = Instance.new("TextBox", I2ScrEOFActionSliderEOF5616id6271)
-	I2ScrEOFInputEOF4208id8262.BackgroundColor3 = Color3.new(0.0588235, 0.0588235, 0.0588235)
-	I2ScrEOFInputEOF4208id8262.BorderColor3 = Color3.new(0, 0, 0)
-	I2ScrEOFInputEOF4208id8262.BorderSizePixel = 0
-	I2ScrEOFInputEOF4208id8262.Name = "Input"
-	I2ScrEOFInputEOF4208id8262.Position = UDim2.new(0.294910848, 0, 0.166469872, 0)
-	I2ScrEOFInputEOF4208id8262.Size = UDim2.new(0.141565129, 0, 0.667060196, 0)
-	I2ScrEOFInputEOF4208id8262.FontFace = Font.new("rbxasset://fonts/families/Roboto.json", Enum.FontWeight.Regular, Enum.FontStyle.Normal)
-	I2ScrEOFInputEOF4208id8262.PlaceholderColor3 = Color3.new(0.7, 0.7, 0.7)
-	I2ScrEOFInputEOF4208id8262.PlaceholderText = "Input Number..."
-	I2ScrEOFInputEOF4208id8262.Text = ""
-	I2ScrEOFInputEOF4208id8262.TextColor3 = Color3.new(1, 1, 1)
-	I2ScrEOFInputEOF4208id8262.TextScaled = true
-	I2ScrEOFInputEOF4208id8262.TextSize = 14
-	I2ScrEOFInputEOF4208id8262.TextStrokeTransparency = 0
-	I2ScrEOFInputEOF4208id8262.TextWrapped = true
-
-	-- Time Taken: 0.01666320000003907s, Name: UICorner, Class: UICorner, Variable: I2ScrEOFUICornerEOF8560id9494 
-	local I2ScrEOFUICornerEOF8560id9494 = Instance.new("UICorner", I2ScrEOFInputEOF4208id8262)
-	I2ScrEOFUICornerEOF8560id9494.CornerRadius = UDim.new(0.200000003, 0)
-
-	-- Time Taken: 0.03345379999996112s, Name: UIAspectRatioConstraint, Class: UIAspectRatioConstraint, Variable: I2ScrEOFUIAspectRatioConstraintEOF5745id5315 
-	local I2ScrEOFUIAspectRatioConstraintEOF5745id5315 = Instance.new("UIAspectRatioConstraint", I2ScrEOFActionSliderEOF5616id6271)
-	I2ScrEOFUIAspectRatioConstraintEOF5745id5315.AspectRatio = 9.494396209716797
-	I2ScrEOFUIAspectRatioConstraintEOF5745id5315.AspectType = Enum.AspectType.ScaleWithParentSize
-
-	-- Time Taken: 0.07677440000020397s, Name: Divider, Class: Frame, Variable: I2ScrEOFDividerEOF9562id4134 
-	local I2ScrEOFDividerEOF9562id4134 = Instance.new("Frame", I2ScrEOFKS_TemplateTabEOF6325id2448)
-	I2ScrEOFDividerEOF9562id4134:SetAttribute("ObjectType", "Divider")
-	I2ScrEOFDividerEOF9562id4134.BackgroundColor3 = Color3.new(0.211765, 0.211765, 0.211765)
-	I2ScrEOFDividerEOF9562id4134.BorderColor3 = Color3.new(0, 0, 0)
-	I2ScrEOFDividerEOF9562id4134.BorderSizePixel = 0
-	I2ScrEOFDividerEOF9562id4134.Name = "Divider"
-	I2ScrEOFDividerEOF9562id4134.Size = UDim2.new(0.970000029, 0, 0, 2)
-
-	-- Time Taken: 0.09701590000031501s, Name: OutputText, Class: Frame, Variable: I2ScrEOFOutputTextEOF2043id8593 
-	local I2ScrEOFOutputTextEOF2043id8593 = Instance.new("Frame", I2ScrEOFKS_TemplateTabEOF6325id2448)
-	I2ScrEOFOutputTextEOF2043id8593:SetAttribute("ObjectType", "OutputText")
-	I2ScrEOFOutputTextEOF2043id8593.BackgroundColor3 = Color3.new(0.0980392, 0.0980392, 0.0980392)
-	I2ScrEOFOutputTextEOF2043id8593.BorderColor3 = Color3.new(0, 0, 0)
-	I2ScrEOFOutputTextEOF2043id8593.BorderSizePixel = 0
-	I2ScrEOFOutputTextEOF2043id8593.Name = "OutputText"
-	I2ScrEOFOutputTextEOF2043id8593.Position = UDim2.new(0.333333343, 0, 0.177358493, 0)
-	I2ScrEOFOutputTextEOF2043id8593.Size = UDim2.new(0.949999988, 0, 0, 30)
-
-	-- Time Taken: 0.017079799999919487s, Name: UICorner, Class: UICorner, Variable: I2ScrEOFUICornerEOF9692id1386 
-	local I2ScrEOFUICornerEOF9692id1386 = Instance.new("UICorner", I2ScrEOFOutputTextEOF2043id8593)
-	I2ScrEOFUICornerEOF9692id1386.CornerRadius = UDim.new(0.200000003, 0)
-
-	-- Time Taken: 0.25419949999945857s, Name: Label, Class: TextLabel, Variable: I2ScrEOFLabelEOF941id4177 
-	local I2ScrEOFLabelEOF941id4177 = Instance.new("TextLabel", I2ScrEOFOutputTextEOF2043id8593)
-	I2ScrEOFLabelEOF941id4177.AnchorPoint = Vector2.new(0.5, 0.5)
-	I2ScrEOFLabelEOF941id4177.BackgroundColor3 = Color3.new(0.0588235, 0.0588235, 0.0588235)
-	I2ScrEOFLabelEOF941id4177.BackgroundTransparency = 1
-	I2ScrEOFLabelEOF941id4177.BorderColor3 = Color3.new(0, 0, 0)
-	I2ScrEOFLabelEOF941id4177.BorderSizePixel = 0
-	I2ScrEOFLabelEOF941id4177.Name = "Label"
-	I2ScrEOFLabelEOF941id4177.Position = UDim2.new(0.5, 0, 0.5, 0)
-	I2ScrEOFLabelEOF941id4177.Size = UDim2.new(0.949999988, 0, 0.666999996, 0)
-	I2ScrEOFLabelEOF941id4177.FontFace = Font.new("rbxasset://fonts/families/Roboto.json", Enum.FontWeight.Regular, Enum.FontStyle.Normal)
-	I2ScrEOFLabelEOF941id4177.Text = "Text"
-	I2ScrEOFLabelEOF941id4177.TextColor3 = Color3.new(1, 1, 1)
-	I2ScrEOFLabelEOF941id4177.TextScaled = true
-	I2ScrEOFLabelEOF941id4177.TextSize = 14
-	I2ScrEOFLabelEOF941id4177.TextStrokeTransparency = 0
-	I2ScrEOFLabelEOF941id4177.TextWrapped = true
-	I2ScrEOFLabelEOF941id4177.TextXAlignment = Enum.TextXAlignment.Left
-
-	-- Time Taken: 0.16010740000001533s, Name: Activate, Class: TextButton, Variable: I2ScrEOFActivateEOF5391id2388 
-	local I2ScrEOFActivateEOF5391id2388 = Instance.new("TextButton", I2ScrEOFOutputTextEOF2043id8593)
-	I2ScrEOFActivateEOF5391id2388.BackgroundColor3 = Color3.new(1, 1, 1)
-	I2ScrEOFActivateEOF5391id2388.BackgroundTransparency = 1
-	I2ScrEOFActivateEOF5391id2388.BorderColor3 = Color3.new(0, 0, 0)
-	I2ScrEOFActivateEOF5391id2388.BorderSizePixel = 0
-	I2ScrEOFActivateEOF5391id2388.Name = "Activate"
-	I2ScrEOFActivateEOF5391id2388.Size = UDim2.new(1, 0, 1, 0)
-	I2ScrEOFActivateEOF5391id2388.FontFace = Font.new("rbxasset://fonts/families/SourceSansPro.json", Enum.FontWeight.Regular, Enum.FontStyle.Normal)
-	I2ScrEOFActivateEOF5391id2388.TextColor3 = Color3.new(0, 0, 0)
-	I2ScrEOFActivateEOF5391id2388.TextSize = 14
-	I2ScrEOFActivateEOF5391id2388.TextTransparency = 1
-
-	-- Time Taken: 0.033369199999924604s, Name: UIAspectRatioConstraint, Class: UIAspectRatioConstraint, Variable: I2ScrEOFUIAspectRatioConstraintEOF5407id7251 
-	local I2ScrEOFUIAspectRatioConstraintEOF5407id7251 = Instance.new("UIAspectRatioConstraint", I2ScrEOFOutputTextEOF2043id8593)
-	I2ScrEOFUIAspectRatioConstraintEOF5407id7251.AspectRatio = 9.494396209716797
-	I2ScrEOFUIAspectRatioConstraintEOF5407id7251.AspectType = Enum.AspectType.ScaleWithParentSize
-
-	-- Time Taken: 0.11960670000007667s, Name: Header, Class: Frame, Variable: I2ScrEOFHeaderEOF7401id1976 
-	local I2ScrEOFHeaderEOF7401id1976 = Instance.new("Frame", I2ScrEOFKS_TemplateTabEOF6325id2448)
-	I2ScrEOFHeaderEOF7401id1976:SetAttribute("ObjectType", "Header")
-	I2ScrEOFHeaderEOF7401id1976.BackgroundColor3 = Color3.new(0.0980392, 0.0980392, 0.0980392)
-	I2ScrEOFHeaderEOF7401id1976.BackgroundTransparency = 1
-	I2ScrEOFHeaderEOF7401id1976.BorderColor3 = Color3.new(0, 0, 0)
-	I2ScrEOFHeaderEOF7401id1976.BorderSizePixel = 0
-	I2ScrEOFHeaderEOF7401id1976.Name = "Header"
-	I2ScrEOFHeaderEOF7401id1976.Position = UDim2.new(0.333333343, 0, 0.177358493, 0)
-	I2ScrEOFHeaderEOF7401id1976.Size = UDim2.new(0.970000029, 0, 0, 19)
-	I2ScrEOFHeaderEOF7401id1976.ClipsDescendants = true
-
-	-- Time Taken: 0.2636569999992844s, Name: Label, Class: TextLabel, Variable: I2ScrEOFLabelEOF1424id985 
-	local I2ScrEOFLabelEOF1424id985 = Instance.new("TextLabel", I2ScrEOFHeaderEOF7401id1976)
-	I2ScrEOFLabelEOF1424id985.AnchorPoint = Vector2.new(0, 0.5)
-	I2ScrEOFLabelEOF1424id985.BackgroundColor3 = Color3.new(0.0588235, 0.0588235, 0.0588235)
-	I2ScrEOFLabelEOF1424id985.BackgroundTransparency = 1
-	I2ScrEOFLabelEOF1424id985.BorderColor3 = Color3.new(0, 0, 0)
-	I2ScrEOFLabelEOF1424id985.BorderSizePixel = 0
-	I2ScrEOFLabelEOF1424id985.Name = "Label"
-	I2ScrEOFLabelEOF1424id985.Position = UDim2.new(0.0549999997, 0, 0.5, 0)
-	I2ScrEOFLabelEOF1424id985.Size = UDim2.new(1, 0, 1, 0)
-	I2ScrEOFLabelEOF1424id985.FontFace = Font.new("rbxasset://fonts/families/Roboto.json", Enum.FontWeight.Regular, Enum.FontStyle.Normal)
-	I2ScrEOFLabelEOF1424id985.Text = " Text"
-	I2ScrEOFLabelEOF1424id985.TextColor3 = Color3.new(1, 1, 1)
-	I2ScrEOFLabelEOF1424id985.TextScaled = true
-	I2ScrEOFLabelEOF1424id985.TextSize = 14
-	I2ScrEOFLabelEOF1424id985.TextStrokeTransparency = 0
-	I2ScrEOFLabelEOF1424id985.TextWrapped = true
-	I2ScrEOFLabelEOF1424id985.TextXAlignment = Enum.TextXAlignment.Left
-
-	-- Time Taken: 0.15256139999996776s, Name: Activate, Class: TextButton, Variable: I2ScrEOFActivateEOF2992id2951 
-	local I2ScrEOFActivateEOF2992id2951 = Instance.new("TextButton", I2ScrEOFHeaderEOF7401id1976)
-	I2ScrEOFActivateEOF2992id2951.BackgroundColor3 = Color3.new(1, 1, 1)
-	I2ScrEOFActivateEOF2992id2951.BackgroundTransparency = 1
-	I2ScrEOFActivateEOF2992id2951.BorderColor3 = Color3.new(0, 0, 0)
-	I2ScrEOFActivateEOF2992id2951.BorderSizePixel = 0
-	I2ScrEOFActivateEOF2992id2951.Name = "Activate"
-	I2ScrEOFActivateEOF2992id2951.Size = UDim2.new(1, 0, 1, 0)
-	I2ScrEOFActivateEOF2992id2951.FontFace = Font.new("rbxasset://fonts/families/SourceSansPro.json", Enum.FontWeight.Regular, Enum.FontStyle.Normal)
-	I2ScrEOFActivateEOF2992id2951.TextColor3 = Color3.new(0, 0, 0)
-	I2ScrEOFActivateEOF2992id2951.TextSize = 14
-	I2ScrEOFActivateEOF2992id2951.TextTransparency = 1
-
-	-- Time Taken: 0.09921889999986888s, Name: Frame, Class: Frame, Variable: I2ScrEOFFrameEOF7633id8781 
-	local I2ScrEOFFrameEOF7633id8781 = Instance.new("Frame", I2ScrEOFHeaderEOF7401id1976)
-	I2ScrEOFFrameEOF7633id8781.AnchorPoint = Vector2.new(0, 0.5)
-	I2ScrEOFFrameEOF7633id8781.BackgroundColor3 = Color3.new(0.211765, 0.211765, 0.211765)
-	I2ScrEOFFrameEOF7633id8781.BorderColor3 = Color3.new(0, 0, 0)
-	I2ScrEOFFrameEOF7633id8781.BorderSizePixel = 0
-	I2ScrEOFFrameEOF7633id8781.Position = UDim2.new(0, 0, 0.5, 0)
-	I2ScrEOFFrameEOF7633id8781.Size = UDim2.new(0, 15, 0, 2)
-
-	-- Time Taken: 0.10946730000000571s, Name: AdjFrame, Class: Frame, Variable: I2ScrEOFAdjFrameEOF5624id8365 
-	local I2ScrEOFAdjFrameEOF5624id8365 = Instance.new("Frame", I2ScrEOFHeaderEOF7401id1976)
-	I2ScrEOFAdjFrameEOF5624id8365.AnchorPoint = Vector2.new(0, 0.5)
-	I2ScrEOFAdjFrameEOF5624id8365.BackgroundColor3 = Color3.new(0.211765, 0.211765, 0.211765)
-	I2ScrEOFAdjFrameEOF5624id8365.BorderColor3 = Color3.new(0, 0, 0)
-	I2ScrEOFAdjFrameEOF5624id8365.BorderSizePixel = 0
-	I2ScrEOFAdjFrameEOF5624id8365.Name = "AdjFrame"
-	I2ScrEOFAdjFrameEOF5624id8365.Position = UDim2.new(0.209020615, 0, 0.5, 0)
-	I2ScrEOFAdjFrameEOF5624id8365.Size = UDim2.new(1, 0, 0, 2)
-
-	-- Time Taken: 0.033455300000014176s, Name: UIAspectRatioConstraint, Class: UIAspectRatioConstraint, Variable: I2ScrEOFUIAspectRatioConstraintEOF1412id7491 
-	local I2ScrEOFUIAspectRatioConstraintEOF1412id7491 = Instance.new("UIAspectRatioConstraint", I2ScrEOFHeaderEOF7401id1976)
-	I2ScrEOFUIAspectRatioConstraintEOF1412id7491.AspectRatio = 15.306755065917969
-	I2ScrEOFUIAspectRatioConstraintEOF1412id7491.AspectType = Enum.AspectType.ScaleWithParentSize
-
-	-- Time Taken: 0.10614859999986948s, Name: ActionDropDown, Class: Frame, Variable: I2ScrEOFActionDropDownEOF8602id696 
-	local I2ScrEOFActionDropDownEOF8602id696 = Instance.new("Frame", I2ScrEOFKS_TemplateTabEOF6325id2448)
-	I2ScrEOFActionDropDownEOF8602id696:SetAttribute("Value", "")
-	I2ScrEOFActionDropDownEOF8602id696:SetAttribute("ObjectType", "ActionDropDown")
-	I2ScrEOFActionDropDownEOF8602id696.BackgroundColor3 = Color3.new(0.0980392, 0.0980392, 0.0980392)
-	I2ScrEOFActionDropDownEOF8602id696.BorderColor3 = Color3.new(0, 0, 0)
-	I2ScrEOFActionDropDownEOF8602id696.BorderSizePixel = 0
-	I2ScrEOFActionDropDownEOF8602id696.Name = "ActionDropDown"
-	I2ScrEOFActionDropDownEOF8602id696.Position = UDim2.new(0.333333343, 0, 0.177358493, 0)
-	I2ScrEOFActionDropDownEOF8602id696.Size = UDim2.new(0.949999988, 0, 0, 30)
-	I2ScrEOFActionDropDownEOF8602id696.ZIndex = 3
-
-	-- Time Taken: 0.017042299999957322s, Name: UICorner, Class: UICorner, Variable: I2ScrEOFUICornerEOF5031id8051 
-	local I2ScrEOFUICornerEOF5031id8051 = Instance.new("UICorner", I2ScrEOFActionDropDownEOF8602id696)
-	I2ScrEOFUICornerEOF5031id8051.CornerRadius = UDim.new(0.200000003, 0)
-
-	-- Time Taken: 0.25743910000028336s, Name: Label, Class: TextLabel, Variable: I2ScrEOFLabelEOF8614id6164 
-	local I2ScrEOFLabelEOF8614id6164 = Instance.new("TextLabel", I2ScrEOFActionDropDownEOF8602id696)
-	I2ScrEOFLabelEOF8614id6164.BackgroundColor3 = Color3.new(0.0588235, 0.0588235, 0.0588235)
-	I2ScrEOFLabelEOF8614id6164.BackgroundTransparency = 1
-	I2ScrEOFLabelEOF8614id6164.BorderColor3 = Color3.new(0, 0, 0)
-	I2ScrEOFLabelEOF8614id6164.BorderSizePixel = 0
-	I2ScrEOFLabelEOF8614id6164.Name = "Label"
-	I2ScrEOFLabelEOF8614id6164.Position = UDim2.new(0.394267023, 0, 0.166666314, 0)
-	I2ScrEOFLabelEOF8614id6164.Size = UDim2.new(0.58468163, 0, 0.666666567, 0)
-	I2ScrEOFLabelEOF8614id6164.ZIndex = 4
-	I2ScrEOFLabelEOF8614id6164.FontFace = Font.new("rbxasset://fonts/families/Roboto.json", Enum.FontWeight.Regular, Enum.FontStyle.Normal)
-	I2ScrEOFLabelEOF8614id6164.Text = "Drop down"
-	I2ScrEOFLabelEOF8614id6164.TextColor3 = Color3.new(1, 1, 1)
-	I2ScrEOFLabelEOF8614id6164.TextScaled = true
-	I2ScrEOFLabelEOF8614id6164.TextSize = 14
-	I2ScrEOFLabelEOF8614id6164.TextStrokeTransparency = 0
-	I2ScrEOFLabelEOF8614id6164.TextWrapped = true
-	I2ScrEOFLabelEOF8614id6164.TextXAlignment = Enum.TextXAlignment.Left
-
-	-- Time Taken: 0.2410658000001149s, Name: Activate, Class: TextButton, Variable: I2ScrEOFActivateEOF8635id1240 
-	local I2ScrEOFActivateEOF8635id1240 = Instance.new("TextButton", I2ScrEOFActionDropDownEOF8602id696)
-	I2ScrEOFActivateEOF8635id1240.AnchorPoint = Vector2.new(0, 0.5)
-	I2ScrEOFActivateEOF8635id1240.BackgroundColor3 = Color3.new(0.054902, 0.054902, 0.054902)
-	I2ScrEOFActivateEOF8635id1240.BorderColor3 = Color3.new(0, 0, 0)
-	I2ScrEOFActivateEOF8635id1240.BorderSizePixel = 0
-	I2ScrEOFActivateEOF8635id1240.Name = "Activate"
-	I2ScrEOFActivateEOF8635id1240.Position = UDim2.new(0.0250000004, 0, 0.5, 0)
-	I2ScrEOFActivateEOF8635id1240.Size = UDim2.new(0.351000011, 0, 0.666999996, 0)
-	I2ScrEOFActivateEOF8635id1240.ZIndex = 4
-	I2ScrEOFActivateEOF8635id1240.FontFace = Font.new("rbxasset://fonts/families/SourceSansPro.json", Enum.FontWeight.Regular, Enum.FontStyle.Normal)
-	I2ScrEOFActivateEOF8635id1240.Text = ""
-	I2ScrEOFActivateEOF8635id1240.TextColor3 = Color3.new(1, 1, 1)
-	I2ScrEOFActivateEOF8635id1240.TextScaled = true
-	I2ScrEOFActivateEOF8635id1240.TextSize = 14
-	I2ScrEOFActivateEOF8635id1240.TextWrapped = true
-	I2ScrEOFActivateEOF8635id1240.TextYAlignment = Enum.TextYAlignment.Top
-
-	-- Time Taken: 0.017686700000012934s, Name: UICorner, Class: UICorner, Variable: I2ScrEOFUICornerEOF7347id3864 
-	local I2ScrEOFUICornerEOF7347id3864 = Instance.new("UICorner", I2ScrEOFActivateEOF8635id1240)
-	I2ScrEOFUICornerEOF7347id3864.CornerRadius = UDim.new(0.200000003, 0)
-
-	-- Time Taken: 0.15943410000045333s, Name: Icon, Class: ImageLabel, Variable: I2ScrEOFIconEOF487id8994 
-	local I2ScrEOFIconEOF487id8994 = Instance.new("ImageLabel", I2ScrEOFActionDropDownEOF8602id696)
-	I2ScrEOFIconEOF487id8994.AnchorPoint = Vector2.new(0, 0.5)
-	I2ScrEOFIconEOF487id8994.BackgroundColor3 = Color3.new(1, 1, 1)
-	I2ScrEOFIconEOF487id8994.BackgroundTransparency = 1
-	I2ScrEOFIconEOF487id8994.BorderColor3 = Color3.new(0, 0, 0)
-	I2ScrEOFIconEOF487id8994.BorderSizePixel = 0
-	I2ScrEOFIconEOF487id8994.Name = "Icon"
-	I2ScrEOFIconEOF487id8994.Position = UDim2.new(0.0350000001, 0, 0.5, 0)
-	I2ScrEOFIconEOF487id8994.Size = UDim2.new(0.0526626445, 0, 0.500295162, 0)
-	I2ScrEOFIconEOF487id8994.ZIndex = 7
-	I2ScrEOFIconEOF487id8994.Image = "rbxassetid://4726772330"
-
-	-- Time Taken: 0.2677979000004598s, Name: Value, Class: TextLabel, Variable: I2ScrEOFValueEOF4350id3256 
-	local I2ScrEOFValueEOF4350id3256 = Instance.new("TextLabel", I2ScrEOFActionDropDownEOF8602id696)
-	I2ScrEOFValueEOF4350id3256.AnchorPoint = Vector2.new(0, 0.5)
-	I2ScrEOFValueEOF4350id3256.BackgroundColor3 = Color3.new(1, 1, 1)
-	I2ScrEOFValueEOF4350id3256.BackgroundTransparency = 1
-	I2ScrEOFValueEOF4350id3256.BorderColor3 = Color3.new(0, 0, 0)
-	I2ScrEOFValueEOF4350id3256.BorderSizePixel = 0
-	I2ScrEOFValueEOF4350id3256.Name = "Value"
-	I2ScrEOFValueEOF4350id3256.Position = UDim2.new(0.101371728, 0, 0.500000179, 0)
-	I2ScrEOFValueEOF4350id3256.Size = UDim2.new(0.274628282, 0, 0.666999996, 0)
-	I2ScrEOFValueEOF4350id3256.ZIndex = 4
-	I2ScrEOFValueEOF4350id3256.FontFace = Font.new("rbxasset://fonts/families/SourceSansPro.json", Enum.FontWeight.Regular, Enum.FontStyle.Normal)
-	I2ScrEOFValueEOF4350id3256.Text = "Value 1"
-	I2ScrEOFValueEOF4350id3256.TextColor3 = Color3.new(1, 1, 1)
-	I2ScrEOFValueEOF4350id3256.TextScaled = true
-	I2ScrEOFValueEOF4350id3256.TextSize = 14
-	I2ScrEOFValueEOF4350id3256.TextWrapped = true
-	I2ScrEOFValueEOF4350id3256.TextXAlignment = Enum.TextXAlignment.Left
-	I2ScrEOFValueEOF4350id3256.TextYAlignment = Enum.TextYAlignment.Top
-
-	-- Time Taken: 0.15619370000013078s, Name: InputArea, Class: Frame, Variable: I2ScrEOFInputAreaEOF8958id7482 
-	local I2ScrEOFInputAreaEOF8958id7482 = Instance.new("Frame", I2ScrEOFActionDropDownEOF8602id696)
-	I2ScrEOFInputAreaEOF8958id7482.AnchorPoint = Vector2.new(0, 0.5)
-	I2ScrEOFInputAreaEOF8958id7482.BackgroundColor3 = Color3.new(1, 1, 1)
-	I2ScrEOFInputAreaEOF8958id7482.BackgroundTransparency = 1
-	I2ScrEOFInputAreaEOF8958id7482.BorderColor3 = Color3.new(0, 0, 0)
-	I2ScrEOFInputAreaEOF8958id7482.BorderSizePixel = 0
-	I2ScrEOFInputAreaEOF8958id7482.Name = "InputArea"
-	I2ScrEOFInputAreaEOF8958id7482.Position = UDim2.new(0.0250000004, 0, 0.5, 0)
-	I2ScrEOFInputAreaEOF8958id7482.Size = UDim2.new(0.351000011, 0, 0.666999996, 0)
-	I2ScrEOFInputAreaEOF8958id7482.Visible = false
-	I2ScrEOFInputAreaEOF8958id7482.ZIndex = 4
-
-	-- Time Taken: 0.014680700000099023s, Name: UIListLayout, Class: UIListLayout, Variable: I2ScrEOFUIListLayoutEOF4070id8934 
-	local I2ScrEOFUIListLayoutEOF4070id8934 = Instance.new("UIListLayout", I2ScrEOFInputAreaEOF8958id7482)
-	I2ScrEOFUIListLayoutEOF4070id8934.SortOrder = Enum.SortOrder.LayoutOrder
-
-	-- Time Taken: 0.22590769999965232s, Name: Cancel, Class: TextButton, Variable: I2ScrEOFCancelEOF9534id5619 
-	local I2ScrEOFCancelEOF9534id5619 = Instance.new("TextButton", I2ScrEOFInputAreaEOF8958id7482)
-	I2ScrEOFCancelEOF9534id5619.BackgroundColor3 = Color3.new(0.196078, 0.196078, 0.196078)
-	I2ScrEOFCancelEOF9534id5619.BorderColor3 = Color3.new(0, 0, 0)
-	I2ScrEOFCancelEOF9534id5619.BorderSizePixel = 0
-	I2ScrEOFCancelEOF9534id5619.Name = "Cancel"
-	I2ScrEOFCancelEOF9534id5619.Position = UDim2.new(0.0250000004, 0, 0.5, 0)
-	I2ScrEOFCancelEOF9534id5619.Size = UDim2.new(1, 0, 1, 0)
-	I2ScrEOFCancelEOF9534id5619.ZIndex = 5
-	I2ScrEOFCancelEOF9534id5619.FontFace = Font.new("rbxasset://fonts/families/SourceSansPro.json", Enum.FontWeight.Regular, Enum.FontStyle.Normal)
-	I2ScrEOFCancelEOF9534id5619.Text = "Cancel"
-	I2ScrEOFCancelEOF9534id5619.TextColor3 = Color3.new(1, 0.341176, 0.341176)
-	I2ScrEOFCancelEOF9534id5619.TextScaled = true
-	I2ScrEOFCancelEOF9534id5619.TextSize = 14
-	I2ScrEOFCancelEOF9534id5619.TextWrapped = true
-	I2ScrEOFCancelEOF9534id5619.TextYAlignment = Enum.TextYAlignment.Top
-
-	-- Time Taken: 0.016828199999963545s, Name: UICorner, Class: UICorner, Variable: I2ScrEOFUICornerEOF9290id6812 
-	local I2ScrEOFUICornerEOF9290id6812 = Instance.new("UICorner", I2ScrEOFCancelEOF9534id5619)
-	I2ScrEOFUICornerEOF9290id6812.CornerRadius = UDim.new(0.200000003, 0)
-
-	-- Time Taken: 0.22412760000042908s, Name: Value, Class: TextButton, Variable: I2ScrEOFValueEOF1260id3689 
-	local I2ScrEOFValueEOF1260id3689 = Instance.new("TextButton", I2ScrEOFInputAreaEOF8958id7482)
-	I2ScrEOFValueEOF1260id3689:SetAttribute("Value", "")
-	I2ScrEOFValueEOF1260id3689.BackgroundColor3 = Color3.new(0.196078, 0.196078, 0.196078)
-	I2ScrEOFValueEOF1260id3689.BorderColor3 = Color3.new(0, 0, 0)
-	I2ScrEOFValueEOF1260id3689.BorderSizePixel = 0
-	I2ScrEOFValueEOF1260id3689.Name = "Value"
-	I2ScrEOFValueEOF1260id3689.Position = UDim2.new(0.0250000004, 0, 0.5, 0)
-	I2ScrEOFValueEOF1260id3689.Size = UDim2.new(1, 0, 1, 0)
-	I2ScrEOFValueEOF1260id3689.ZIndex = 8
-	I2ScrEOFValueEOF1260id3689.FontFace = Font.new("rbxasset://fonts/families/SourceSansPro.json", Enum.FontWeight.Regular, Enum.FontStyle.Normal)
-	I2ScrEOFValueEOF1260id3689.Text = "Value 1"
-	I2ScrEOFValueEOF1260id3689.TextColor3 = Color3.new(1, 1, 1)
-	I2ScrEOFValueEOF1260id3689.TextScaled = true
-	I2ScrEOFValueEOF1260id3689.TextSize = 14
-	I2ScrEOFValueEOF1260id3689.TextWrapped = true
-	I2ScrEOFValueEOF1260id3689.TextYAlignment = Enum.TextYAlignment.Top
-
-	-- Time Taken: 0.017075599999998303s, Name: UICorner, Class: UICorner, Variable: I2ScrEOFUICornerEOF5709id1165 
-	local I2ScrEOFUICornerEOF5709id1165 = Instance.new("UICorner", I2ScrEOFValueEOF1260id3689)
-	I2ScrEOFUICornerEOF5709id1165.CornerRadius = UDim.new(0.200000003, 0)
-
-	-- Time Taken: 0.03163279999989754s, Name: UIAspectRatioConstraint, Class: UIAspectRatioConstraint, Variable: I2ScrEOFUIAspectRatioConstraintEOF6204id7623 
-	local I2ScrEOFUIAspectRatioConstraintEOF6204id7623 = Instance.new("UIAspectRatioConstraint", I2ScrEOFActionDropDownEOF8602id696)
-	I2ScrEOFUIAspectRatioConstraintEOF6204id7623.AspectRatio = 9.494396209716797
-	I2ScrEOFUIAspectRatioConstraintEOF6204id7623.AspectType = Enum.AspectType.ScaleWithParentSize
-
-	-- Time Taken: 0.23852019999935692s, Name: Title, Class: TextLabel, Variable: I2ScrEOFTitleEOF4457id2758 
-	local I2ScrEOFTitleEOF4457id2758 = Instance.new("TextLabel", I2ScrEOFMainEOF1791id4121)
-	I2ScrEOFTitleEOF4457id2758.BackgroundColor3 = Color3.new(1, 1, 1)
-	I2ScrEOFTitleEOF4457id2758.BackgroundTransparency = 1
-	I2ScrEOFTitleEOF4457id2758.BorderColor3 = Color3.new(0, 0, 0)
-	I2ScrEOFTitleEOF4457id2758.BorderSizePixel = 0
-	I2ScrEOFTitleEOF4457id2758.Name = "Title"
-	I2ScrEOFTitleEOF4457id2758.Position = UDim2.new(0.0241715498, 0, 0.0226021316, 0)
-	I2ScrEOFTitleEOF4457id2758.Size = UDim2.new(0.277777791, 0, 0.0666666701, 0)
-	I2ScrEOFTitleEOF4457id2758.FontFace = Font.new("rbxasset://fonts/families/Roboto.json", Enum.FontWeight.Bold, Enum.FontStyle.Normal)
-	I2ScrEOFTitleEOF4457id2758.RichText = true
-	I2ScrEOFTitleEOF4457id2758.Text = "KHLib UI"
-	I2ScrEOFTitleEOF4457id2758.TextColor3 = Color3.new(1, 1, 1)
-	I2ScrEOFTitleEOF4457id2758.TextScaled = true
-	I2ScrEOFTitleEOF4457id2758.TextSize = 14
-	I2ScrEOFTitleEOF4457id2758.TextWrapped = true
-	I2ScrEOFTitleEOF4457id2758.TextXAlignment = Enum.TextXAlignment.Left
-
-	-- Time Taken: 0.22833639999976185s, Name: TabSelection, Class: ScrollingFrame, Variable: I2ScrEOFTabSelectionEOF9681id2708 
-	local I2ScrEOFTabSelectionEOF9681id2708 = Instance.new("ScrollingFrame", I2ScrEOFMainEOF1791id4121)
-	I2ScrEOFTabSelectionEOF9681id2708.Active = true
-	I2ScrEOFTabSelectionEOF9681id2708.BackgroundColor3 = Color3.new(1, 1, 1)
-	I2ScrEOFTabSelectionEOF9681id2708.BackgroundTransparency = 1
-	I2ScrEOFTabSelectionEOF9681id2708.BorderColor3 = Color3.new(0, 0, 0)
-	I2ScrEOFTabSelectionEOF9681id2708.BorderSizePixel = 0
-	I2ScrEOFTabSelectionEOF9681id2708.Name = "TabSelection"
-	I2ScrEOFTabSelectionEOF9681id2708.Position = UDim2.new(0, 0, 0.116999999, 0)
-	I2ScrEOFTabSelectionEOF9681id2708.Size = UDim2.new(0.333333343, 0, 0.883333325, 0)
-	I2ScrEOFTabSelectionEOF9681id2708.BottomImage = "http://www.roblox.com/asset/?id=10995799876"
-	I2ScrEOFTabSelectionEOF9681id2708.CanvasSize = UDim2.new(0, 0, 3, 0)
-	I2ScrEOFTabSelectionEOF9681id2708.MidImage = "http://www.roblox.com/asset/?id=10995799876"
-	I2ScrEOFTabSelectionEOF9681id2708.ScrollBarImageColor3 = Color3.new(0.490196, 0.490196, 0.490196)
-	I2ScrEOFTabSelectionEOF9681id2708.ScrollBarThickness = 2
-	I2ScrEOFTabSelectionEOF9681id2708.TopImage = "http://www.roblox.com/asset/?id=10995799876"
-
-	-- Time Taken: 0.047945300000037605s, Name: UIListLayout, Class: UIListLayout, Variable: I2ScrEOFUIListLayoutEOF9731id2713 
-	local I2ScrEOFUIListLayoutEOF9731id2713 = Instance.new("UIListLayout", I2ScrEOFTabSelectionEOF9681id2708)
-	I2ScrEOFUIListLayoutEOF9731id2713.Padding = UDim.new(0.0111111114, 0)
-	I2ScrEOFUIListLayoutEOF9731id2713.SortOrder = Enum.SortOrder.LayoutOrder
-	I2ScrEOFUIListLayoutEOF9731id2713.HorizontalAlignment = Enum.HorizontalAlignment.Center
-
-	-- Time Taken: 0.21124340000028496s, Name: KS_TemplateTab, Class: TextButton, Variable: I2ScrEOFKS_TemplateTabEOF4851id3164 
-	local I2ScrEOFKS_TemplateTabEOF4851id3164 = Instance.new("TextButton", I2ScrEOFTabSelectionEOF9681id2708)
-	I2ScrEOFKS_TemplateTabEOF4851id3164.BackgroundColor3 = Color3.new(1, 1, 1)
-	I2ScrEOFKS_TemplateTabEOF4851id3164.BackgroundTransparency = 0.75
-	I2ScrEOFKS_TemplateTabEOF4851id3164.BorderColor3 = Color3.new(0, 0, 0)
-	I2ScrEOFKS_TemplateTabEOF4851id3164.BorderSizePixel = 0
-	I2ScrEOFKS_TemplateTabEOF4851id3164.Name = "KS_TemplateTab"
-	I2ScrEOFKS_TemplateTabEOF4851id3164.Size = UDim2.new(0.933000028, 0, 0.0222222228, 0)
-	I2ScrEOFKS_TemplateTabEOF4851id3164.FontFace = Font.new("rbxasset://fonts/families/Roboto.json", Enum.FontWeight.Bold, Enum.FontStyle.Normal)
-	I2ScrEOFKS_TemplateTabEOF4851id3164.Text = " Template Tab"
-	I2ScrEOFKS_TemplateTabEOF4851id3164.TextColor3 = Color3.new(1, 1, 1)
-	I2ScrEOFKS_TemplateTabEOF4851id3164.TextScaled = true
-	I2ScrEOFKS_TemplateTabEOF4851id3164.TextSize = 14
-	I2ScrEOFKS_TemplateTabEOF4851id3164.TextStrokeTransparency = 9
-	I2ScrEOFKS_TemplateTabEOF4851id3164.TextWrapped = true
-
-	-- Time Taken: 0.015587099999947895s, Name: UICorner, Class: UICorner, Variable: I2ScrEOFUICornerEOF2592id4978 
-	local I2ScrEOFUICornerEOF2592id4978 = Instance.new("UICorner", I2ScrEOFKS_TemplateTabEOF4851id3164)
-	I2ScrEOFUICornerEOF2592id4978.CornerRadius = UDim.new(0.25, 0)
-
-	-- Time Taken: 0.018499699999892982s, Name: UIAspectRatioConstraint, Class: UIAspectRatioConstraint, Variable: I2ScrEOFUIAspectRatioConstraintEOF1774id7847 
-	local I2ScrEOFUIAspectRatioConstraintEOF1774id7847 = Instance.new("UIAspectRatioConstraint", I2ScrEOFMainEOF1791id4121)
-	I2ScrEOFUIAspectRatioConstraintEOF1774id7847.AspectRatio = 1.5
-
-	-- Time Taken: 0s, Name: UIDragDetector, Class: UIDragDetector, Variable: I2ScrEOFUIDragDetectorEOF2592id6659 
-	local I2ScrEOFUIDragDetectorEOF2592id6659 = Instance.new("UIDragDetector", I2ScrEOFMainEOF1791id4121)
-
-	-- Time Taken: 0.013092400000005s, Name: UISizeConstraint, Class: UISizeConstraint, Variable: I2ScrEOFUISizeConstraintEOF3303id621 
-	local I2ScrEOFUISizeConstraintEOF3303id621 = Instance.new("UISizeConstraint", I2ScrEOFMainEOF1791id4121)
-	I2ScrEOFUISizeConstraintEOF3303id621.MinSize = Vector2.new(400, 266)
-
-	-- Time Taken: 0s, Name: UIScale, Class: UIScale, Variable: I2ScrEOFUIScaleEOF5158id8950 
-	local I2ScrEOFUIScaleEOF5158id8950 = Instance.new("UIScale", I2ScrEOFMainEOF1791id4121)
+	-- Time Taken: 0.11722950000000765s, Name: Main, Class: Frame, Variable: I2ScrEOFMainEOF6129id7412 
+	local I2ScrEOFMainEOF6129id7412 = Instance.new("Frame", I2ScrEOFLocation)
+	I2ScrEOFMainEOF6129id7412.AnchorPoint = Vector2.new(0.5, 0.5)
+	I2ScrEOFMainEOF6129id7412.BackgroundColor3 = Color3.new(0.176471, 0.176471, 0.176471)
+	I2ScrEOFMainEOF6129id7412.BackgroundTransparency = 0.5
+	I2ScrEOFMainEOF6129id7412.BorderColor3 = Color3.new(0, 0, 0)
+	I2ScrEOFMainEOF6129id7412.BorderSizePixel = 0
+	I2ScrEOFMainEOF6129id7412.Name = "Main"
+	I2ScrEOFMainEOF6129id7412.Position = UDim2.new(0.5, 0, 0.5, 0)
+	I2ScrEOFMainEOF6129id7412.Size = UDim2.new(0.351999998, 0, 0.416999996, 0)
+
+	-- Time Taken: 0.013547600000009652s, Name: UICorner, Class: UICorner, Variable: I2ScrEOFUICornerEOF8901id8228 
+	local I2ScrEOFUICornerEOF8901id8228 = Instance.new("UICorner", I2ScrEOFMainEOF6129id7412)
+	I2ScrEOFUICornerEOF8901id8228.CornerRadius = UDim.new(0.0500000007, 0)
+
+	-- Time Taken: 0.08470300000001885s, Name: TabArea, Class: Frame, Variable: I2ScrEOFTabAreaEOF3649id3055 
+	local I2ScrEOFTabAreaEOF3649id3055 = Instance.new("Frame", I2ScrEOFMainEOF6129id7412)
+	I2ScrEOFTabAreaEOF3649id3055.BackgroundColor3 = Color3.new(0, 0, 0)
+	I2ScrEOFTabAreaEOF3649id3055.BorderColor3 = Color3.new(0, 0, 0)
+	I2ScrEOFTabAreaEOF3649id3055.BorderSizePixel = 0
+	I2ScrEOFTabAreaEOF3649id3055.Name = "TabArea"
+	I2ScrEOFTabAreaEOF3649id3055.Position = UDim2.new(0.333333343, 0, 0, 0)
+	I2ScrEOFTabAreaEOF3649id3055.Size = UDim2.new(0.666666687, 0, 1, 0)
+
+	-- Time Taken: 0.01603209999998967s, Name: UICorner, Class: UICorner, Variable: I2ScrEOFUICornerEOF5897id5438 
+	local I2ScrEOFUICornerEOF5897id5438 = Instance.new("UICorner", I2ScrEOFTabAreaEOF3649id3055)
+	I2ScrEOFUICornerEOF5897id5438.CornerRadius = UDim.new(0.0500000007, 0)
+
+	-- Time Taken: 0.013246400000014091s, Name: Borders, Class: Folder, Variable: I2ScrEOFBordersEOF9516id1015 
+	local I2ScrEOFBordersEOF9516id1015 = Instance.new("Folder", I2ScrEOFTabAreaEOF3649id3055)
+	I2ScrEOFBordersEOF9516id1015.Name = "Borders"
+
+	-- Time Taken: 0.07966309999997634s, Name: TopLeftCornerBorder, Class: Frame, Variable: I2ScrEOFTopLeftCornerBorderEOF4932id5777 
+	local I2ScrEOFTopLeftCornerBorderEOF4932id5777 = Instance.new("Frame", I2ScrEOFBordersEOF9516id1015)
+	I2ScrEOFTopLeftCornerBorderEOF4932id5777.BackgroundColor3 = Color3.new(0, 0, 0)
+	I2ScrEOFTopLeftCornerBorderEOF4932id5777.BorderColor3 = Color3.new(0, 0, 0)
+	I2ScrEOFTopLeftCornerBorderEOF4932id5777.BorderSizePixel = 0
+	I2ScrEOFTopLeftCornerBorderEOF4932id5777.Name = "TopLeftCornerBorder"
+	I2ScrEOFTopLeftCornerBorderEOF4932id5777.Size = UDim2.new(0.0500000007, 0, 0.0500000007, 0)
+
+	-- Time Taken: 0.09280129999999076s, Name: BottomLeftCornerBorder, Class: Frame, Variable: I2ScrEOFBottomLeftCornerBorderEOF5765id5838 
+	local I2ScrEOFBottomLeftCornerBorderEOF5765id5838 = Instance.new("Frame", I2ScrEOFBordersEOF9516id1015)
+	I2ScrEOFBottomLeftCornerBorderEOF5765id5838.BackgroundColor3 = Color3.new(0, 0, 0)
+	I2ScrEOFBottomLeftCornerBorderEOF5765id5838.BorderColor3 = Color3.new(0, 0, 0)
+	I2ScrEOFBottomLeftCornerBorderEOF5765id5838.BorderSizePixel = 0
+	I2ScrEOFBottomLeftCornerBorderEOF5765id5838.Name = "BottomLeftCornerBorder"
+	I2ScrEOFBottomLeftCornerBorderEOF5765id5838.Position = UDim2.new(0, 0, 0.949999988, 0)
+	I2ScrEOFBottomLeftCornerBorderEOF5765id5838.Size = UDim2.new(0.0500000007, 0, 0.0500000007, 0)
+
+	-- Time Taken: 0.07937099999998054s, Name: Frame, Class: Frame, Variable: I2ScrEOFFrameEOF835id4268 
+	local I2ScrEOFFrameEOF835id4268 = Instance.new("Frame", I2ScrEOFBordersEOF9516id1015)
+	I2ScrEOFFrameEOF835id4268.BackgroundColor3 = Color3.new(0.0980392, 0.0980392, 0.0980392)
+	I2ScrEOFFrameEOF835id4268.BorderColor3 = Color3.new(0.176471, 0.176471, 0.176471)
+	I2ScrEOFFrameEOF835id4268.BorderSizePixel = 0
+	I2ScrEOFFrameEOF835id4268.Position = UDim2.new(0, 0, 0.112999998, 0)
+	I2ScrEOFFrameEOF835id4268.Size = UDim2.new(1, 0, 0.00666666683, 0)
+
+	-- Time Taken: 0.09275579999999195s, Name: TabInfoArea, Class: Frame, Variable: I2ScrEOFTabInfoAreaEOF5574id1199 
+	local I2ScrEOFTabInfoAreaEOF5574id1199 = Instance.new("Frame", I2ScrEOFTabAreaEOF3649id3055)
+	I2ScrEOFTabInfoAreaEOF5574id1199.BackgroundColor3 = Color3.new(1, 1, 1)
+	I2ScrEOFTabInfoAreaEOF5574id1199.BackgroundTransparency = 1
+	I2ScrEOFTabInfoAreaEOF5574id1199.BorderColor3 = Color3.new(0, 0, 0)
+	I2ScrEOFTabInfoAreaEOF5574id1199.BorderSizePixel = 0
+	I2ScrEOFTabInfoAreaEOF5574id1199.Name = "TabInfoArea"
+	I2ScrEOFTabInfoAreaEOF5574id1199.Size = UDim2.new(1, 0, 0.109999999, 0)
+
+	-- Time Taken: 0.09161249999996812s, Name: WindowOptions, Class: Frame, Variable: I2ScrEOFWindowOptionsEOF926id5183 
+	local I2ScrEOFWindowOptionsEOF926id5183 = Instance.new("Frame", I2ScrEOFTabInfoAreaEOF5574id1199)
+	I2ScrEOFWindowOptionsEOF926id5183.BackgroundColor3 = Color3.new(0.0980392, 0.0980392, 0.0980392)
+	I2ScrEOFWindowOptionsEOF926id5183.BorderColor3 = Color3.new(0, 0, 0)
+	I2ScrEOFWindowOptionsEOF926id5183.BorderSizePixel = 0
+	I2ScrEOFWindowOptionsEOF926id5183.Name = "WindowOptions"
+	I2ScrEOFWindowOptionsEOF926id5183.Position = UDim2.new(0.836666644, 0, 0.181818187, 0)
+	I2ScrEOFWindowOptionsEOF926id5183.Size = UDim2.new(0.13333334, 0, 0.606060624, 0)
+
+	-- Time Taken: 0.01661529999998379s, Name: UICorner, Class: UICorner, Variable: I2ScrEOFUICornerEOF3458id593 
+	local I2ScrEOFUICornerEOF3458id593 = Instance.new("UICorner", I2ScrEOFWindowOptionsEOF926id5183)
+	I2ScrEOFUICornerEOF3458id593.CornerRadius = UDim.new(0.400000006, 0)
+
+	-- Time Taken: 0.20200669999999832s, Name: Minimize, Class: TextButton, Variable: I2ScrEOFMinimizeEOF2460id1718 
+	local I2ScrEOFMinimizeEOF2460id1718 = Instance.new("TextButton", I2ScrEOFWindowOptionsEOF926id5183)
+	I2ScrEOFMinimizeEOF2460id1718.BackgroundColor3 = Color3.new(1, 1, 1)
+	I2ScrEOFMinimizeEOF2460id1718.BackgroundTransparency = 1
+	I2ScrEOFMinimizeEOF2460id1718.BorderColor3 = Color3.new(0, 0, 0)
+	I2ScrEOFMinimizeEOF2460id1718.BorderSizePixel = 0
+	I2ScrEOFMinimizeEOF2460id1718.Name = "Minimize"
+	I2ScrEOFMinimizeEOF2460id1718.Position = UDim2.new(0.100000001, 0, 0.150000006, 0)
+	I2ScrEOFMinimizeEOF2460id1718.Size = UDim2.new(0.375, 0, 0.75, 0)
+	I2ScrEOFMinimizeEOF2460id1718.FontFace = Font.new("rbxasset://fonts/families/Roboto.json", Enum.FontWeight.Bold, Enum.FontStyle.Normal)
+	I2ScrEOFMinimizeEOF2460id1718.Text = "–"
+	I2ScrEOFMinimizeEOF2460id1718.TextColor3 = Color3.new(1, 1, 1)
+	I2ScrEOFMinimizeEOF2460id1718.TextScaled = true
+	I2ScrEOFMinimizeEOF2460id1718.TextSize = 14
+	I2ScrEOFMinimizeEOF2460id1718.TextWrapped = true
+
+	-- Time Taken: 0.2233374000000481s, Name: DestroyButton, Class: TextButton, Variable: I2ScrEOFDestroyButtonEOF9018id9247 
+	local I2ScrEOFDestroyButtonEOF9018id9247 = Instance.new("TextButton", I2ScrEOFWindowOptionsEOF926id5183)
+	I2ScrEOFDestroyButtonEOF9018id9247.BackgroundColor3 = Color3.new(1, 1, 1)
+	I2ScrEOFDestroyButtonEOF9018id9247.BackgroundTransparency = 1
+	I2ScrEOFDestroyButtonEOF9018id9247.BorderColor3 = Color3.new(0, 0, 0)
+	I2ScrEOFDestroyButtonEOF9018id9247.BorderSizePixel = 0
+	I2ScrEOFDestroyButtonEOF9018id9247.Modal = true
+	I2ScrEOFDestroyButtonEOF9018id9247.Name = "DestroyButton"
+	I2ScrEOFDestroyButtonEOF9018id9247.Position = UDim2.new(0.5, 0, 0.150000006, 0)
+	I2ScrEOFDestroyButtonEOF9018id9247.Size = UDim2.new(0.375, 0, 0.75, 0)
+	I2ScrEOFDestroyButtonEOF9018id9247.FontFace = Font.new("rbxasset://fonts/families/Roboto.json", Enum.FontWeight.Bold, Enum.FontStyle.Normal)
+	I2ScrEOFDestroyButtonEOF9018id9247.Text = "X"
+	I2ScrEOFDestroyButtonEOF9018id9247.TextColor3 = Color3.new(1, 1, 1)
+	I2ScrEOFDestroyButtonEOF9018id9247.TextScaled = true
+	I2ScrEOFDestroyButtonEOF9018id9247.TextSize = 14
+	I2ScrEOFDestroyButtonEOF9018id9247.TextWrapped = true
+
+	-- Time Taken: 0.017760499999980084s, Name: UIAspectRatioConstraint, Class: UIAspectRatioConstraint, Variable: I2ScrEOFUIAspectRatioConstraintEOF6813id4909 
+	local I2ScrEOFUIAspectRatioConstraintEOF6813id4909 = Instance.new("UIAspectRatioConstraint", I2ScrEOFWindowOptionsEOF926id5183)
+	I2ScrEOFUIAspectRatioConstraintEOF6813id4909.AspectRatio = 2
+
+	-- Time Taken: 0.23144369999994296s, Name: TabTitle, Class: TextLabel, Variable: I2ScrEOFTabTitleEOF9032id2936 
+	local I2ScrEOFTabTitleEOF9032id2936 = Instance.new("TextLabel", I2ScrEOFTabInfoAreaEOF5574id1199)
+	I2ScrEOFTabTitleEOF9032id2936.BackgroundColor3 = Color3.new(1, 1, 1)
+	I2ScrEOFTabTitleEOF9032id2936.BackgroundTransparency = 1
+	I2ScrEOFTabTitleEOF9032id2936.BorderColor3 = Color3.new(0, 0, 0)
+	I2ScrEOFTabTitleEOF9032id2936.BorderSizePixel = 0
+	I2ScrEOFTabTitleEOF9032id2936.Name = "TabTitle"
+	I2ScrEOFTabTitleEOF9032id2936.Position = UDim2.new(0.0233151298, 0, 0.272679955, 0)
+	I2ScrEOFTabTitleEOF9032id2936.Size = UDim2.new(0.757000029, 0, 0.454515159, 0)
+	I2ScrEOFTabTitleEOF9032id2936.FontFace = Font.new("rbxasset://fonts/families/Roboto.json", Enum.FontWeight.Regular, Enum.FontStyle.Normal)
+	I2ScrEOFTabTitleEOF9032id2936.RichText = true
+	I2ScrEOFTabTitleEOF9032id2936.Text = "Koala Hacks Template Tab"
+	I2ScrEOFTabTitleEOF9032id2936.TextColor3 = Color3.new(1, 1, 1)
+	I2ScrEOFTabTitleEOF9032id2936.TextScaled = true
+	I2ScrEOFTabTitleEOF9032id2936.TextSize = 14
+	I2ScrEOFTabTitleEOF9032id2936.TextWrapped = true
+	I2ScrEOFTabTitleEOF9032id2936.TextXAlignment = Enum.TextXAlignment.Left
+
+	-- Time Taken: 0.12730309999994915s, Name: ConfigButton, Class: ImageButton, Variable: I2ScrEOFConfigButtonEOF9414id9930 
+	local I2ScrEOFConfigButtonEOF9414id9930 = Instance.new("ImageButton", I2ScrEOFTabInfoAreaEOF5574id1199)
+	I2ScrEOFConfigButtonEOF9414id9930.AnchorPoint = Vector2.new(0, 0.5)
+	I2ScrEOFConfigButtonEOF9414id9930.BackgroundColor3 = Color3.new(0.0980392, 0.0980392, 0.0980392)
+	I2ScrEOFConfigButtonEOF9414id9930.BorderColor3 = Color3.new(0, 0, 0)
+	I2ScrEOFConfigButtonEOF9414id9930.BorderSizePixel = 0
+	I2ScrEOFConfigButtonEOF9414id9930.Name = "ConfigButton"
+	I2ScrEOFConfigButtonEOF9414id9930.Position = UDim2.new(0.75, 0, 0.5, 0)
+	I2ScrEOFConfigButtonEOF9414id9930.Size = UDim2.new(0.0667060167, 0, 0.606418371, 0)
+	I2ScrEOFConfigButtonEOF9414id9930.Image = "rbxassetid://13300915301"
+
+	-- Time Taken: 0.016783000000003767s, Name: UICorner, Class: UICorner, Variable: I2ScrEOFUICornerEOF3808id4348 
+	local I2ScrEOFUICornerEOF3808id4348 = Instance.new("UICorner", I2ScrEOFConfigButtonEOF9414id9930)
+	I2ScrEOFUICornerEOF3808id4348.CornerRadius = UDim.new(0.200000003, 0)
+
+	-- Time Taken: 0s, Name: UIAspectRatioConstraint, Class: UIAspectRatioConstraint, Variable: I2ScrEOFUIAspectRatioConstraintEOF829id9724 
+	local I2ScrEOFUIAspectRatioConstraintEOF829id9724 = Instance.new("UIAspectRatioConstraint", I2ScrEOFConfigButtonEOF9414id9930)
+
+	-- Time Taken: 0.0009803000000090378s, Name: Tabs, Class: Folder, Variable: I2ScrEOFTabsEOF8825id7876 
+	local I2ScrEOFTabsEOF8825id7876 = Instance.new("Folder", I2ScrEOFTabAreaEOF3649id3055)
+	I2ScrEOFTabsEOF8825id7876.Name = "Tabs"
+
+	-- Time Taken: 0.2519006999999931s, Name: KS_TemplateTab, Class: ScrollingFrame, Variable: I2ScrEOFKS_TemplateTabEOF8250id6855 
+	local I2ScrEOFKS_TemplateTabEOF8250id6855 = Instance.new("ScrollingFrame", I2ScrEOFTabsEOF8825id7876)
+	I2ScrEOFKS_TemplateTabEOF8250id6855.Active = true
+	I2ScrEOFKS_TemplateTabEOF8250id6855.BackgroundColor3 = Color3.new(1, 1, 1)
+	I2ScrEOFKS_TemplateTabEOF8250id6855.BackgroundTransparency = 1
+	I2ScrEOFKS_TemplateTabEOF8250id6855.BorderColor3 = Color3.new(0, 0, 0)
+	I2ScrEOFKS_TemplateTabEOF8250id6855.BorderSizePixel = 0
+	I2ScrEOFKS_TemplateTabEOF8250id6855.Name = "KS_TemplateTab"
+	I2ScrEOFKS_TemplateTabEOF8250id6855.Position = UDim2.new(0, 0, 0.116666667, 0)
+	I2ScrEOFKS_TemplateTabEOF8250id6855.Size = UDim2.new(1, 0, 0.883333325, 0)
+	I2ScrEOFKS_TemplateTabEOF8250id6855.BottomImage = "http://www.roblox.com/asset/?id=10995799876"
+	I2ScrEOFKS_TemplateTabEOF8250id6855.CanvasSize = UDim2.new(0, 0, 0, 350)
+	I2ScrEOFKS_TemplateTabEOF8250id6855.MidImage = "http://www.roblox.com/asset/?id=10995799876"
+	I2ScrEOFKS_TemplateTabEOF8250id6855.ScrollBarImageColor3 = Color3.new(0.490196, 0.490196, 0.490196)
+	I2ScrEOFKS_TemplateTabEOF8250id6855.ScrollBarThickness = 3
+	I2ScrEOFKS_TemplateTabEOF8250id6855.ScrollingDirection = Enum.ScrollingDirection.Y
+	I2ScrEOFKS_TemplateTabEOF8250id6855.TopImage = "http://www.roblox.com/asset/?id=10995799876"
+
+	-- Time Taken: 0.04666930000001912s, Name: UIListLayout, Class: UIListLayout, Variable: I2ScrEOFUIListLayoutEOF2752id7125 
+	local I2ScrEOFUIListLayoutEOF2752id7125 = Instance.new("UIListLayout", I2ScrEOFKS_TemplateTabEOF8250id6855)
+	I2ScrEOFUIListLayoutEOF2752id7125.Padding = UDim.new(0, 8)
+	I2ScrEOFUIListLayoutEOF2752id7125.SortOrder = Enum.SortOrder.LayoutOrder
+	I2ScrEOFUIListLayoutEOF2752id7125.HorizontalAlignment = Enum.HorizontalAlignment.Center
+
+	-- Time Taken: 0.06586880000000406s, Name: Padding, Class: Frame, Variable: I2ScrEOFPaddingEOF6840id5163 
+	local I2ScrEOFPaddingEOF6840id5163 = Instance.new("Frame", I2ScrEOFKS_TemplateTabEOF8250id6855)
+	I2ScrEOFPaddingEOF6840id5163.BackgroundColor3 = Color3.new(1, 1, 1)
+	I2ScrEOFPaddingEOF6840id5163.BorderColor3 = Color3.new(0, 0, 0)
+	I2ScrEOFPaddingEOF6840id5163.BorderSizePixel = 0
+	I2ScrEOFPaddingEOF6840id5163.Name = "Padding"
+
+	-- Time Taken: 0.08641520000000469s, Name: ActionActivate, Class: Frame, Variable: I2ScrEOFActionActivateEOF6247id616 
+	local I2ScrEOFActionActivateEOF6247id616 = Instance.new("Frame", I2ScrEOFKS_TemplateTabEOF8250id6855)
+	I2ScrEOFActionActivateEOF6247id616:SetAttribute("ObjectType", "ActionActivate")
+	I2ScrEOFActionActivateEOF6247id616.BackgroundColor3 = Color3.new(0.0980392, 0.0980392, 0.0980392)
+	I2ScrEOFActionActivateEOF6247id616.BorderColor3 = Color3.new(0, 0, 0)
+	I2ScrEOFActionActivateEOF6247id616.BorderSizePixel = 0
+	I2ScrEOFActionActivateEOF6247id616.Name = "ActionActivate"
+	I2ScrEOFActionActivateEOF6247id616.Position = UDim2.new(0.333333343, 0, 0.177358493, 0)
+	I2ScrEOFActionActivateEOF6247id616.Size = UDim2.new(0.949999988, 0, 0, 30)
+
+	-- Time Taken: 0.017551699999984294s, Name: UICorner, Class: UICorner, Variable: I2ScrEOFUICornerEOF7271id2546 
+	local I2ScrEOFUICornerEOF7271id2546 = Instance.new("UICorner", I2ScrEOFActionActivateEOF6247id616)
+	I2ScrEOFUICornerEOF7271id2546.CornerRadius = UDim.new(0.200000003, 0)
+
+	-- Time Taken: 0.13886319999994612s, Name: Icon, Class: ImageLabel, Variable: I2ScrEOFIconEOF9356id8299 
+	local I2ScrEOFIconEOF9356id8299 = Instance.new("ImageLabel", I2ScrEOFActionActivateEOF6247id616)
+	I2ScrEOFIconEOF9356id8299.AnchorPoint = Vector2.new(0, 0.5)
+	I2ScrEOFIconEOF9356id8299.BackgroundColor3 = Color3.new(1, 1, 1)
+	I2ScrEOFIconEOF9356id8299.BackgroundTransparency = 1
+	I2ScrEOFIconEOF9356id8299.BorderColor3 = Color3.new(0, 0, 0)
+	I2ScrEOFIconEOF9356id8299.BorderSizePixel = 0
+	I2ScrEOFIconEOF9356id8299.Name = "Icon"
+	I2ScrEOFIconEOF9356id8299.Position = UDim2.new(0.00999999978, 0, 0.5, 0)
+	I2ScrEOFIconEOF9356id8299.Size = UDim2.new(0.104999997, 0, 0.850000024, 0)
+	I2ScrEOFIconEOF9356id8299.Image = "rbxassetid://18352620579"
+
+	-- Time Taken: 0.017417499999993424s, Name: UIAspectRatioConstraint, Class: UIAspectRatioConstraint, Variable: I2ScrEOFUIAspectRatioConstraintEOF752id891 
+	local I2ScrEOFUIAspectRatioConstraintEOF752id891 = Instance.new("UIAspectRatioConstraint", I2ScrEOFIconEOF9356id8299)
+	I2ScrEOFUIAspectRatioConstraintEOF752id891.DominantAxis = Enum.DominantAxis.Height
+
+	-- Time Taken: 0.24283790000001204s, Name: Label, Class: TextLabel, Variable: I2ScrEOFLabelEOF6013id963 
+	local I2ScrEOFLabelEOF6013id963 = Instance.new("TextLabel", I2ScrEOFActionActivateEOF6247id616)
+	I2ScrEOFLabelEOF6013id963.BackgroundColor3 = Color3.new(0.0588235, 0.0588235, 0.0588235)
+	I2ScrEOFLabelEOF6013id963.BackgroundTransparency = 1
+	I2ScrEOFLabelEOF6013id963.BorderColor3 = Color3.new(0, 0, 0)
+	I2ScrEOFLabelEOF6013id963.BorderSizePixel = 0
+	I2ScrEOFLabelEOF6013id963.Name = "Label"
+	I2ScrEOFLabelEOF6013id963.Position = UDim2.new(0.129824564, 0, 0.166666657, 0)
+	I2ScrEOFLabelEOF6013id963.Size = UDim2.new(0.870175421, 0, 0.666666627, 0)
+	I2ScrEOFLabelEOF6013id963.FontFace = Font.new("rbxasset://fonts/families/Roboto.json", Enum.FontWeight.Regular, Enum.FontStyle.Normal)
+	I2ScrEOFLabelEOF6013id963.Text = "Activate"
+	I2ScrEOFLabelEOF6013id963.TextColor3 = Color3.new(1, 1, 1)
+	I2ScrEOFLabelEOF6013id963.TextScaled = true
+	I2ScrEOFLabelEOF6013id963.TextSize = 14
+	I2ScrEOFLabelEOF6013id963.TextStrokeTransparency = 0
+	I2ScrEOFLabelEOF6013id963.TextWrapped = true
+	I2ScrEOFLabelEOF6013id963.TextXAlignment = Enum.TextXAlignment.Left
+
+	-- Time Taken: 0.15897000000003914s, Name: Activate, Class: TextButton, Variable: I2ScrEOFActivateEOF7385id4590 
+	local I2ScrEOFActivateEOF7385id4590 = Instance.new("TextButton", I2ScrEOFActionActivateEOF6247id616)
+	I2ScrEOFActivateEOF7385id4590.BackgroundColor3 = Color3.new(1, 1, 1)
+	I2ScrEOFActivateEOF7385id4590.BackgroundTransparency = 1
+	I2ScrEOFActivateEOF7385id4590.BorderColor3 = Color3.new(0, 0, 0)
+	I2ScrEOFActivateEOF7385id4590.BorderSizePixel = 0
+	I2ScrEOFActivateEOF7385id4590.Name = "Activate"
+	I2ScrEOFActivateEOF7385id4590.Size = UDim2.new(1, 0, 1, 0)
+	I2ScrEOFActivateEOF7385id4590.FontFace = Font.new("rbxasset://fonts/families/SourceSansPro.json", Enum.FontWeight.Regular, Enum.FontStyle.Normal)
+	I2ScrEOFActivateEOF7385id4590.TextColor3 = Color3.new(0, 0, 0)
+	I2ScrEOFActivateEOF7385id4590.TextSize = 14
+	I2ScrEOFActivateEOF7385id4590.TextTransparency = 1
+
+	-- Time Taken: 0.03261829999999577s, Name: UIAspectRatioConstraint, Class: UIAspectRatioConstraint, Variable: I2ScrEOFUIAspectRatioConstraintEOF9477id4894 
+	local I2ScrEOFUIAspectRatioConstraintEOF9477id4894 = Instance.new("UIAspectRatioConstraint", I2ScrEOFActionActivateEOF6247id616)
+	I2ScrEOFUIAspectRatioConstraintEOF9477id4894.AspectRatio = 9.494396209716797
+	I2ScrEOFUIAspectRatioConstraintEOF9477id4894.AspectType = Enum.AspectType.ScaleWithParentSize
+
+	-- Time Taken: 0.0862925000000132s, Name: ActionColorPick, Class: Frame, Variable: I2ScrEOFActionColorPickEOF8551id4253 
+	local I2ScrEOFActionColorPickEOF8551id4253 = Instance.new("Frame", I2ScrEOFKS_TemplateTabEOF8250id6855)
+	I2ScrEOFActionColorPickEOF8551id4253:SetAttribute("Value", Color3.new(1, 1, 1))
+	I2ScrEOFActionColorPickEOF8551id4253:SetAttribute("ObjectType", "ActionColorPick")
+	I2ScrEOFActionColorPickEOF8551id4253.BackgroundColor3 = Color3.new(0.0980392, 0.0980392, 0.0980392)
+	I2ScrEOFActionColorPickEOF8551id4253.BorderColor3 = Color3.new(0, 0, 0)
+	I2ScrEOFActionColorPickEOF8551id4253.BorderSizePixel = 0
+	I2ScrEOFActionColorPickEOF8551id4253.Name = "ActionColorPick"
+	I2ScrEOFActionColorPickEOF8551id4253.Position = UDim2.new(0.333333343, 0, 0.177358493, 0)
+	I2ScrEOFActionColorPickEOF8551id4253.Size = UDim2.new(0.949999988, 0, 0, 30)
+
+	-- Time Taken: 0.010260599999980968s, Name: UICorner, Class: UICorner, Variable: I2ScrEOFUICornerEOF9547id5461 
+	local I2ScrEOFUICornerEOF9547id5461 = Instance.new("UICorner", I2ScrEOFActionColorPickEOF8551id4253)
+	I2ScrEOFUICornerEOF9547id5461.CornerRadius = UDim.new(0.200000003, 0)
+
+	-- Time Taken: 0.2378422999999259s, Name: Label, Class: TextLabel, Variable: I2ScrEOFLabelEOF5193id5999 
+	local I2ScrEOFLabelEOF5193id5999 = Instance.new("TextLabel", I2ScrEOFActionColorPickEOF8551id4253)
+	I2ScrEOFLabelEOF5193id5999.BackgroundColor3 = Color3.new(0.0588235, 0.0588235, 0.0588235)
+	I2ScrEOFLabelEOF5193id5999.BackgroundTransparency = 1
+	I2ScrEOFLabelEOF5193id5999.BorderColor3 = Color3.new(0, 0, 0)
+	I2ScrEOFLabelEOF5193id5999.BorderSizePixel = 0
+	I2ScrEOFLabelEOF5193id5999.Name = "Label"
+	I2ScrEOFLabelEOF5193id5999.Position = UDim2.new(0.129824489, 0, 0.166666314, 0)
+	I2ScrEOFLabelEOF5193id5999.Size = UDim2.new(0.870175421, 0, 0.666666627, 0)
+	I2ScrEOFLabelEOF5193id5999.FontFace = Font.new("rbxasset://fonts/families/Roboto.json", Enum.FontWeight.Regular, Enum.FontStyle.Normal)
+	I2ScrEOFLabelEOF5193id5999.Text = "Color Pick"
+	I2ScrEOFLabelEOF5193id5999.TextColor3 = Color3.new(1, 1, 1)
+	I2ScrEOFLabelEOF5193id5999.TextScaled = true
+	I2ScrEOFLabelEOF5193id5999.TextSize = 14
+	I2ScrEOFLabelEOF5193id5999.TextStrokeTransparency = 0
+	I2ScrEOFLabelEOF5193id5999.TextWrapped = true
+	I2ScrEOFLabelEOF5193id5999.TextXAlignment = Enum.TextXAlignment.Left
+
+	-- Time Taken: 0.1555213999999978s, Name: Activate, Class: TextButton, Variable: I2ScrEOFActivateEOF4744id8522 
+	local I2ScrEOFActivateEOF4744id8522 = Instance.new("TextButton", I2ScrEOFActionColorPickEOF8551id4253)
+	I2ScrEOFActivateEOF4744id8522.BackgroundColor3 = Color3.new(1, 1, 1)
+	I2ScrEOFActivateEOF4744id8522.BackgroundTransparency = 1
+	I2ScrEOFActivateEOF4744id8522.BorderColor3 = Color3.new(0, 0, 0)
+	I2ScrEOFActivateEOF4744id8522.BorderSizePixel = 0
+	I2ScrEOFActivateEOF4744id8522.Name = "Activate"
+	I2ScrEOFActivateEOF4744id8522.Size = UDim2.new(1, 0, 1, 0)
+	I2ScrEOFActivateEOF4744id8522.FontFace = Font.new("rbxasset://fonts/families/SourceSansPro.json", Enum.FontWeight.Regular, Enum.FontStyle.Normal)
+	I2ScrEOFActivateEOF4744id8522.TextColor3 = Color3.new(0, 0, 0)
+	I2ScrEOFActivateEOF4744id8522.TextSize = 14
+	I2ScrEOFActivateEOF4744id8522.TextTransparency = 1
+
+	-- Time Taken: 0.1044605999999817s, Name: Icon, Class: ImageLabel, Variable: I2ScrEOFIconEOF1426id276 
+	local I2ScrEOFIconEOF1426id276 = Instance.new("ImageLabel", I2ScrEOFActionColorPickEOF8551id4253)
+	I2ScrEOFIconEOF1426id276.BackgroundColor3 = Color3.new(1, 1, 1)
+	I2ScrEOFIconEOF1426id276.BorderColor3 = Color3.new(0, 0, 0)
+	I2ScrEOFIconEOF1426id276.BorderSizePixel = 0
+	I2ScrEOFIconEOF1426id276.Name = "Icon"
+	I2ScrEOFIconEOF1426id276.Position = UDim2.new(0.0250000004, 0, 0.133000001, 0)
+	I2ScrEOFIconEOF1426id276.Size = UDim2.new(0.0700000003, 0, 0.666000009, 0)
+	I2ScrEOFIconEOF1426id276.Image = "rbxassetid://105955025341798"
+
+	-- Time Taken: 0.018545899999992344s, Name: UICorner, Class: UICorner, Variable: I2ScrEOFUICornerEOF3503id4728 
+	local I2ScrEOFUICornerEOF3503id4728 = Instance.new("UICorner", I2ScrEOFIconEOF1426id276)
+	I2ScrEOFUICornerEOF3503id4728.CornerRadius = UDim.new(0.200000003, 0)
+
+	-- Time Taken: 0.03400920000004248s, Name: UIAspectRatioConstraint, Class: UIAspectRatioConstraint, Variable: I2ScrEOFUIAspectRatioConstraintEOF7832id4756 
+	local I2ScrEOFUIAspectRatioConstraintEOF7832id4756 = Instance.new("UIAspectRatioConstraint", I2ScrEOFActionColorPickEOF8551id4253)
+	I2ScrEOFUIAspectRatioConstraintEOF7832id4756.AspectRatio = 9.494396209716797
+	I2ScrEOFUIAspectRatioConstraintEOF7832id4756.AspectType = Enum.AspectType.ScaleWithParentSize
+
+	-- Time Taken: 0.08547020000003158s, Name: ActionToggle, Class: Frame, Variable: I2ScrEOFActionToggleEOF2344id6702 
+	local I2ScrEOFActionToggleEOF2344id6702 = Instance.new("Frame", I2ScrEOFKS_TemplateTabEOF8250id6855)
+	I2ScrEOFActionToggleEOF2344id6702:SetAttribute("Value", false)
+	I2ScrEOFActionToggleEOF2344id6702:SetAttribute("ObjectType", "ActionToggle")
+	I2ScrEOFActionToggleEOF2344id6702.BackgroundColor3 = Color3.new(0.0980392, 0.0980392, 0.0980392)
+	I2ScrEOFActionToggleEOF2344id6702.BorderColor3 = Color3.new(0, 0, 0)
+	I2ScrEOFActionToggleEOF2344id6702.BorderSizePixel = 0
+	I2ScrEOFActionToggleEOF2344id6702.Name = "ActionToggle"
+	I2ScrEOFActionToggleEOF2344id6702.Position = UDim2.new(0.333333343, 0, 0.177358493, 0)
+	I2ScrEOFActionToggleEOF2344id6702.Size = UDim2.new(0.949999988, 0, 0, 30)
+
+	-- Time Taken: 0.016966599999989285s, Name: UICorner, Class: UICorner, Variable: I2ScrEOFUICornerEOF1931id9607 
+	local I2ScrEOFUICornerEOF1931id9607 = Instance.new("UICorner", I2ScrEOFActionToggleEOF2344id6702)
+	I2ScrEOFUICornerEOF1931id9607.CornerRadius = UDim.new(0.200000003, 0)
+
+	-- Time Taken: 0.0895503000000133s, Name: ToggleArea, Class: Frame, Variable: I2ScrEOFToggleAreaEOF1786id457 
+	local I2ScrEOFToggleAreaEOF1786id457 = Instance.new("Frame", I2ScrEOFActionToggleEOF2344id6702)
+	I2ScrEOFToggleAreaEOF1786id457.BackgroundColor3 = Color3.new(0.0588235, 0.0588235, 0.0588235)
+	I2ScrEOFToggleAreaEOF1786id457.BorderColor3 = Color3.new(0, 0, 0)
+	I2ScrEOFToggleAreaEOF1786id457.BorderSizePixel = 0
+	I2ScrEOFToggleAreaEOF1786id457.Name = "ToggleArea"
+	I2ScrEOFToggleAreaEOF1786id457.Position = UDim2.new(0.0175575763, 0, 0.133437574, 0)
+	I2ScrEOFToggleAreaEOF1786id457.Size = UDim2.new(0.140350878, 0, 0.666666627, 0)
+
+	-- Time Taken: 0.0173891000000026s, Name: UICorner, Class: UICorner, Variable: I2ScrEOFUICornerEOF3838id5967 
+	local I2ScrEOFUICornerEOF3838id5967 = Instance.new("UICorner", I2ScrEOFToggleAreaEOF1786id457)
+	I2ScrEOFUICornerEOF3838id5967.CornerRadius = UDim.new(0.200000003, 0)
+
+	-- Time Taken: 0.09721600000000308s, Name: Icon, Class: ImageLabel, Variable: I2ScrEOFIconEOF1627id3965 
+	local I2ScrEOFIconEOF1627id3965 = Instance.new("ImageLabel", I2ScrEOFToggleAreaEOF1786id457)
+	I2ScrEOFIconEOF1627id3965.BackgroundColor3 = Color3.new(1, 0.34902, 0.34902)
+	I2ScrEOFIconEOF1627id3965.BorderColor3 = Color3.new(0, 0, 0)
+	I2ScrEOFIconEOF1627id3965.BorderSizePixel = 0
+	I2ScrEOFIconEOF1627id3965.Name = "Icon"
+	I2ScrEOFIconEOF1627id3965.Position = UDim2.new(0.0500000007, 0, 0, 0)
+	I2ScrEOFIconEOF1627id3965.Size = UDim2.new(0.5, 0, 1, 0)
+	I2ScrEOFIconEOF1627id3965.Image = "rbxassetid://18352620579"
+
+	-- Time Taken: 0.01695119999999406s, Name: UICorner, Class: UICorner, Variable: I2ScrEOFUICornerEOF3110id6923 
+	local I2ScrEOFUICornerEOF3110id6923 = Instance.new("UICorner", I2ScrEOFIconEOF1627id3965)
+	I2ScrEOFUICornerEOF3110id6923.CornerRadius = UDim.new(0.200000003, 0)
+
+	-- Time Taken: 0.2381093000000476s, Name: Label, Class: TextLabel, Variable: I2ScrEOFLabelEOF1082id1543 
+	local I2ScrEOFLabelEOF1082id1543 = Instance.new("TextLabel", I2ScrEOFActionToggleEOF2344id6702)
+	I2ScrEOFLabelEOF1082id1543.BackgroundColor3 = Color3.new(0.0588235, 0.0588235, 0.0588235)
+	I2ScrEOFLabelEOF1082id1543.BackgroundTransparency = 1
+	I2ScrEOFLabelEOF1082id1543.BorderColor3 = Color3.new(0, 0, 0)
+	I2ScrEOFLabelEOF1082id1543.BorderSizePixel = 0
+	I2ScrEOFLabelEOF1082id1543.Name = "Label"
+	I2ScrEOFLabelEOF1082id1543.Position = UDim2.new(0.180105492, 0, 0.166666657, 0)
+	I2ScrEOFLabelEOF1082id1543.Size = UDim2.new(0.817543864, 0, 0.666666627, 0)
+	I2ScrEOFLabelEOF1082id1543.FontFace = Font.new("rbxasset://fonts/families/Roboto.json", Enum.FontWeight.Regular, Enum.FontStyle.Normal)
+	I2ScrEOFLabelEOF1082id1543.Text = "Toggle"
+	I2ScrEOFLabelEOF1082id1543.TextColor3 = Color3.new(1, 1, 1)
+	I2ScrEOFLabelEOF1082id1543.TextScaled = true
+	I2ScrEOFLabelEOF1082id1543.TextSize = 14
+	I2ScrEOFLabelEOF1082id1543.TextStrokeTransparency = 0
+	I2ScrEOFLabelEOF1082id1543.TextWrapped = true
+	I2ScrEOFLabelEOF1082id1543.TextXAlignment = Enum.TextXAlignment.Left
+
+	-- Time Taken: 0.15410439999999426s, Name: Activate, Class: TextButton, Variable: I2ScrEOFActivateEOF9936id2608 
+	local I2ScrEOFActivateEOF9936id2608 = Instance.new("TextButton", I2ScrEOFActionToggleEOF2344id6702)
+	I2ScrEOFActivateEOF9936id2608.BackgroundColor3 = Color3.new(1, 1, 1)
+	I2ScrEOFActivateEOF9936id2608.BackgroundTransparency = 1
+	I2ScrEOFActivateEOF9936id2608.BorderColor3 = Color3.new(0, 0, 0)
+	I2ScrEOFActivateEOF9936id2608.BorderSizePixel = 0
+	I2ScrEOFActivateEOF9936id2608.Name = "Activate"
+	I2ScrEOFActivateEOF9936id2608.Size = UDim2.new(1, 0, 1, 0)
+	I2ScrEOFActivateEOF9936id2608.FontFace = Font.new("rbxasset://fonts/families/SourceSansPro.json", Enum.FontWeight.Regular, Enum.FontStyle.Normal)
+	I2ScrEOFActivateEOF9936id2608.TextColor3 = Color3.new(0, 0, 0)
+	I2ScrEOFActivateEOF9936id2608.TextSize = 14
+	I2ScrEOFActivateEOF9936id2608.TextTransparency = 1
+
+	-- Time Taken: 0.03208970000000022s, Name: UIAspectRatioConstraint, Class: UIAspectRatioConstraint, Variable: I2ScrEOFUIAspectRatioConstraintEOF1224id2351 
+	local I2ScrEOFUIAspectRatioConstraintEOF1224id2351 = Instance.new("UIAspectRatioConstraint", I2ScrEOFActionToggleEOF2344id6702)
+	I2ScrEOFUIAspectRatioConstraintEOF1224id2351.AspectRatio = 9.494000434875488
+	I2ScrEOFUIAspectRatioConstraintEOF1224id2351.AspectType = Enum.AspectType.ScaleWithParentSize
+
+	-- Time Taken: 0.0890170999999782s, Name: ActionInput, Class: Frame, Variable: I2ScrEOFActionInputEOF3167id4482 
+	local I2ScrEOFActionInputEOF3167id4482 = Instance.new("Frame", I2ScrEOFKS_TemplateTabEOF8250id6855)
+	I2ScrEOFActionInputEOF3167id4482:SetAttribute("ObjectType", "ActionInput")
+	I2ScrEOFActionInputEOF3167id4482.BackgroundColor3 = Color3.new(0.0980392, 0.0980392, 0.0980392)
+	I2ScrEOFActionInputEOF3167id4482.BorderColor3 = Color3.new(0, 0, 0)
+	I2ScrEOFActionInputEOF3167id4482.BorderSizePixel = 0
+	I2ScrEOFActionInputEOF3167id4482.Name = "ActionInput"
+	I2ScrEOFActionInputEOF3167id4482.Position = UDim2.new(0.333333343, 0, 0.177358493, 0)
+	I2ScrEOFActionInputEOF3167id4482.Size = UDim2.new(0.949999988, 0, 0, 30)
+
+	-- Time Taken: 0.0166217999999958s, Name: UICorner, Class: UICorner, Variable: I2ScrEOFUICornerEOF2631id5732 
+	local I2ScrEOFUICornerEOF2631id5732 = Instance.new("UICorner", I2ScrEOFActionInputEOF3167id4482)
+	I2ScrEOFUICornerEOF2631id5732.CornerRadius = UDim.new(0.200000003, 0)
+
+	-- Time Taken: 0.2385225000000446s, Name: Label, Class: TextLabel, Variable: I2ScrEOFLabelEOF1679id1048 
+	local I2ScrEOFLabelEOF1679id1048 = Instance.new("TextLabel", I2ScrEOFActionInputEOF3167id4482)
+	I2ScrEOFLabelEOF1679id1048.BackgroundColor3 = Color3.new(0.0588235, 0.0588235, 0.0588235)
+	I2ScrEOFLabelEOF1679id1048.BackgroundTransparency = 1
+	I2ScrEOFLabelEOF1679id1048.BorderColor3 = Color3.new(0, 0, 0)
+	I2ScrEOFLabelEOF1679id1048.BorderSizePixel = 0
+	I2ScrEOFLabelEOF1679id1048.Name = "Label"
+	I2ScrEOFLabelEOF1679id1048.Position = UDim2.new(0.394267023, 0, 0.166666314, 0)
+	I2ScrEOFLabelEOF1679id1048.Size = UDim2.new(0.58468163, 0, 0.666666567, 0)
+	I2ScrEOFLabelEOF1679id1048.FontFace = Font.new("rbxasset://fonts/families/Roboto.json", Enum.FontWeight.Regular, Enum.FontStyle.Normal)
+	I2ScrEOFLabelEOF1679id1048.Text = "Input"
+	I2ScrEOFLabelEOF1679id1048.TextColor3 = Color3.new(1, 1, 1)
+	I2ScrEOFLabelEOF1679id1048.TextScaled = true
+	I2ScrEOFLabelEOF1679id1048.TextSize = 14
+	I2ScrEOFLabelEOF1679id1048.TextStrokeTransparency = 0
+	I2ScrEOFLabelEOF1679id1048.TextWrapped = true
+	I2ScrEOFLabelEOF1679id1048.TextXAlignment = Enum.TextXAlignment.Left
+
+	-- Time Taken: 0.2548998999999128s, Name: Input, Class: TextBox, Variable: I2ScrEOFInputEOF404id8805 
+	local I2ScrEOFInputEOF404id8805 = Instance.new("TextBox", I2ScrEOFActionInputEOF3167id4482)
+	I2ScrEOFInputEOF404id8805.BackgroundColor3 = Color3.new(0.0588235, 0.0588235, 0.0588235)
+	I2ScrEOFInputEOF404id8805.BorderColor3 = Color3.new(0, 0, 0)
+	I2ScrEOFInputEOF404id8805.BorderSizePixel = 0
+	I2ScrEOFInputEOF404id8805.Name = "Input"
+	I2ScrEOFInputEOF404id8805.Position = UDim2.new(0.024575904, 0, 0.133116871, 0)
+	I2ScrEOFInputEOF404id8805.Size = UDim2.new(0.351084292, 0, 0.667060196, 0)
+	I2ScrEOFInputEOF404id8805.FontFace = Font.new("rbxasset://fonts/families/Roboto.json", Enum.FontWeight.Regular, Enum.FontStyle.Normal)
+	I2ScrEOFInputEOF404id8805.PlaceholderColor3 = Color3.new(0.7, 0.7, 0.7)
+	I2ScrEOFInputEOF404id8805.PlaceholderText = "Input Text..."
+	I2ScrEOFInputEOF404id8805.Text = ""
+	I2ScrEOFInputEOF404id8805.TextColor3 = Color3.new(1, 1, 1)
+	I2ScrEOFInputEOF404id8805.TextScaled = true
+	I2ScrEOFInputEOF404id8805.TextSize = 14
+	I2ScrEOFInputEOF404id8805.TextStrokeTransparency = 0
+	I2ScrEOFInputEOF404id8805.TextWrapped = true
+	I2ScrEOFInputEOF404id8805.TextXAlignment = Enum.TextXAlignment.Left
+
+	-- Time Taken: 0.017860599999977467s, Name: UICorner, Class: UICorner, Variable: I2ScrEOFUICornerEOF4580id2245 
+	local I2ScrEOFUICornerEOF4580id2245 = Instance.new("UICorner", I2ScrEOFInputEOF404id8805)
+	I2ScrEOFUICornerEOF4580id2245.CornerRadius = UDim.new(0.200000003, 0)
+
+	-- Time Taken: 0.03162079999998468s, Name: UIAspectRatioConstraint, Class: UIAspectRatioConstraint, Variable: I2ScrEOFUIAspectRatioConstraintEOF7571id8734 
+	local I2ScrEOFUIAspectRatioConstraintEOF7571id8734 = Instance.new("UIAspectRatioConstraint", I2ScrEOFActionInputEOF3167id4482)
+	I2ScrEOFUIAspectRatioConstraintEOF7571id8734.AspectRatio = 9.494396209716797
+	I2ScrEOFUIAspectRatioConstraintEOF7571id8734.AspectType = Enum.AspectType.ScaleWithParentSize
+
+	-- Time Taken: 0.09062600000001453s, Name: ActionSlider, Class: Frame, Variable: I2ScrEOFActionSliderEOF8356id6236 
+	local I2ScrEOFActionSliderEOF8356id6236 = Instance.new("Frame", I2ScrEOFKS_TemplateTabEOF8250id6855)
+	I2ScrEOFActionSliderEOF8356id6236:SetAttribute("Value", 0)
+	I2ScrEOFActionSliderEOF8356id6236:SetAttribute("ObjectType", "ActionSlider")
+	I2ScrEOFActionSliderEOF8356id6236:SetAttribute("Percentage", 0)
+	I2ScrEOFActionSliderEOF8356id6236.BackgroundColor3 = Color3.new(0.0980392, 0.0980392, 0.0980392)
+	I2ScrEOFActionSliderEOF8356id6236.BorderColor3 = Color3.new(0, 0, 0)
+	I2ScrEOFActionSliderEOF8356id6236.BorderSizePixel = 0
+	I2ScrEOFActionSliderEOF8356id6236.Name = "ActionSlider"
+	I2ScrEOFActionSliderEOF8356id6236.Position = UDim2.new(0.333333343, 0, 0.177358493, 0)
+	I2ScrEOFActionSliderEOF8356id6236.Size = UDim2.new(0.949999988, 0, 0, 30)
+
+	-- Time Taken: 0.016462799999999334s, Name: UICorner, Class: UICorner, Variable: I2ScrEOFUICornerEOF8321id1921 
+	local I2ScrEOFUICornerEOF8321id1921 = Instance.new("UICorner", I2ScrEOFActionSliderEOF8356id6236)
+	I2ScrEOFUICornerEOF8321id1921.CornerRadius = UDim.new(0.200000003, 0)
+
+	-- Time Taken: 0.23125529999992978s, Name: Label, Class: TextLabel, Variable: I2ScrEOFLabelEOF5300id3528 
+	local I2ScrEOFLabelEOF5300id3528 = Instance.new("TextLabel", I2ScrEOFActionSliderEOF8356id6236)
+	I2ScrEOFLabelEOF5300id3528.BackgroundColor3 = Color3.new(0.0588235, 0.0588235, 0.0588235)
+	I2ScrEOFLabelEOF5300id3528.BackgroundTransparency = 1
+	I2ScrEOFLabelEOF5300id3528.BorderColor3 = Color3.new(0, 0, 0)
+	I2ScrEOFLabelEOF5300id3528.BorderSizePixel = 0
+	I2ScrEOFLabelEOF5300id3528.Name = "Label"
+	I2ScrEOFLabelEOF5300id3528.Position = UDim2.new(0.459791481, 0, 0.166666314, 0)
+	I2ScrEOFLabelEOF5300id3528.Size = UDim2.new(0.519156992, 0, 0.666666567, 0)
+	I2ScrEOFLabelEOF5300id3528.FontFace = Font.new("rbxasset://fonts/families/Roboto.json", Enum.FontWeight.Regular, Enum.FontStyle.Normal)
+	I2ScrEOFLabelEOF5300id3528.Text = "Slider"
+	I2ScrEOFLabelEOF5300id3528.TextColor3 = Color3.new(1, 1, 1)
+	I2ScrEOFLabelEOF5300id3528.TextScaled = true
+	I2ScrEOFLabelEOF5300id3528.TextSize = 14
+	I2ScrEOFLabelEOF5300id3528.TextStrokeTransparency = 0
+	I2ScrEOFLabelEOF5300id3528.TextWrapped = true
+	I2ScrEOFLabelEOF5300id3528.TextXAlignment = Enum.TextXAlignment.Left
+
+	-- Time Taken: 0.09936420000005342s, Name: SlideArea, Class: Frame, Variable: I2ScrEOFSlideAreaEOF333id2138 
+	local I2ScrEOFSlideAreaEOF333id2138 = Instance.new("Frame", I2ScrEOFActionSliderEOF8356id6236)
+	I2ScrEOFSlideAreaEOF333id2138.BackgroundColor3 = Color3.new(0, 1, 1)
+	I2ScrEOFSlideAreaEOF333id2138.BackgroundTransparency = 1
+	I2ScrEOFSlideAreaEOF333id2138.BorderColor3 = Color3.new(0, 0, 0)
+	I2ScrEOFSlideAreaEOF333id2138.BorderSizePixel = 0
+	I2ScrEOFSlideAreaEOF333id2138.Name = "SlideArea"
+	I2ScrEOFSlideAreaEOF333id2138.Position = UDim2.new(0.0249999706, 0, 0.132999808, 0)
+	I2ScrEOFSlideAreaEOF333id2138.Size = UDim2.new(0.265663385, 0, 0.666999996, 0)
+
+	-- Time Taken: 0.10412620000002448s, Name: SlideBar, Class: Frame, Variable: I2ScrEOFSlideBarEOF8843id3505 
+	local I2ScrEOFSlideBarEOF8843id3505 = Instance.new("Frame", I2ScrEOFSlideAreaEOF333id2138)
+	I2ScrEOFSlideBarEOF8843id3505.AnchorPoint = Vector2.new(0.5, 0.5)
+	I2ScrEOFSlideBarEOF8843id3505.BackgroundColor3 = Color3.new(0, 0.478431, 0.478431)
+	I2ScrEOFSlideBarEOF8843id3505.BorderColor3 = Color3.new(0, 0, 0)
+	I2ScrEOFSlideBarEOF8843id3505.BorderSizePixel = 0
+	I2ScrEOFSlideBarEOF8843id3505.Name = "SlideBar"
+	I2ScrEOFSlideBarEOF8843id3505.Position = UDim2.new(0.5, 0, 0.5, 0)
+	I2ScrEOFSlideBarEOF8843id3505.Size = UDim2.new(0.899999976, 0, 0.150000006, 0)
+
+	-- Time Taken: 0.01554190000001654s, Name: UICorner, Class: UICorner, Variable: I2ScrEOFUICornerEOF1112id6524 
+	local I2ScrEOFUICornerEOF1112id6524 = Instance.new("UICorner", I2ScrEOFSlideBarEOF8843id3505)
+	I2ScrEOFUICornerEOF1112id6524.CornerRadius = UDim.new(1, 0)
+
+	-- Time Taken: 0.08599850000001652s, Name: FillBar, Class: Frame, Variable: I2ScrEOFFillBarEOF4281id7281 
+	local I2ScrEOFFillBarEOF4281id7281 = Instance.new("Frame", I2ScrEOFSlideAreaEOF333id2138)
+	I2ScrEOFFillBarEOF4281id7281.AnchorPoint = Vector2.new(0, 0.5)
+	I2ScrEOFFillBarEOF4281id7281.BackgroundColor3 = Color3.new(0, 1, 1)
+	I2ScrEOFFillBarEOF4281id7281.BorderColor3 = Color3.new(0, 0, 0)
+	I2ScrEOFFillBarEOF4281id7281.BorderSizePixel = 0
+	I2ScrEOFFillBarEOF4281id7281.Name = "FillBar"
+	I2ScrEOFFillBarEOF4281id7281.Position = UDim2.new(0, 0, 0.5, 0)
+
+	-- Time Taken: 0.017478199999999333s, Name: UICorner, Class: UICorner, Variable: I2ScrEOFUICornerEOF8420id3648 
+	local I2ScrEOFUICornerEOF8420id3648 = Instance.new("UICorner", I2ScrEOFFillBarEOF4281id7281)
+	I2ScrEOFUICornerEOF8420id3648.CornerRadius = UDim.new(1, 0)
+
+	-- Time Taken: 0.17259029999996756s, Name: SlideButton, Class: TextButton, Variable: I2ScrEOFSlideButtonEOF2068id844 
+	local I2ScrEOFSlideButtonEOF2068id844 = Instance.new("TextButton", I2ScrEOFSlideAreaEOF333id2138)
+	I2ScrEOFSlideButtonEOF2068id844.AnchorPoint = Vector2.new(0, 0.5)
+	I2ScrEOFSlideButtonEOF2068id844.BackgroundColor3 = Color3.new(0, 1, 1)
+	I2ScrEOFSlideButtonEOF2068id844.BorderColor3 = Color3.new(0, 0, 0)
+	I2ScrEOFSlideButtonEOF2068id844.BorderSizePixel = 0
+	I2ScrEOFSlideButtonEOF2068id844.Name = "SlideButton"
+	I2ScrEOFSlideButtonEOF2068id844.Position = UDim2.new(3.57627869e-07, 0, 0.5, 0)
+	I2ScrEOFSlideButtonEOF2068id844.Size = UDim2.new(0.131970271, 0, 0.499350637, 0)
+	I2ScrEOFSlideButtonEOF2068id844.FontFace = Font.new("rbxasset://fonts/families/SourceSansPro.json", Enum.FontWeight.Regular, Enum.FontStyle.Normal)
+	I2ScrEOFSlideButtonEOF2068id844.TextColor3 = Color3.new(0, 0, 0)
+	I2ScrEOFSlideButtonEOF2068id844.TextSize = 14
+	I2ScrEOFSlideButtonEOF2068id844.TextTransparency = 1
+
+	-- Time Taken: 0.01717669999999316s, Name: UICorner, Class: UICorner, Variable: I2ScrEOFUICornerEOF3096id5694 
+	local I2ScrEOFUICornerEOF3096id5694 = Instance.new("UICorner", I2ScrEOFSlideButtonEOF2068id844)
+	I2ScrEOFUICornerEOF3096id5694.CornerRadius = UDim.new(1, 0)
+
+	-- Time Taken: 0.08073580000001357s, Name: UIDragDetector, Class: UIDragDetector, Variable: I2ScrEOFUIDragDetectorEOF3518id8305 
+	local I2ScrEOFUIDragDetectorEOF3518id8305 = Instance.new("UIDragDetector", I2ScrEOFSlideButtonEOF2068id844)
+	I2ScrEOFUIDragDetectorEOF3518id8305.BoundingBehavior = Enum.UIDragDetectorBoundingBehavior.EntireObject
+	I2ScrEOFUIDragDetectorEOF3518id8305.BoundingUI = I2ScrEOFSlideAreaEOF333id2138
+	I2ScrEOFUIDragDetectorEOF3518id8305.DragStyle = Enum.UIDragDetectorDragStyle.TranslateLine
+	I2ScrEOFUIDragDetectorEOF3518id8305.ResponseStyle = Enum.UIDragDetectorResponseStyle.Scale
+	I2ScrEOFUIDragDetectorEOF3518id8305.SelectionModeDragSpeed = UDim2.new(0, 0, 0, 0)
+
+	-- Time Taken: 0.23708759999993845s, Name: Input, Class: TextBox, Variable: I2ScrEOFInputEOF1299id5664 
+	local I2ScrEOFInputEOF1299id5664 = Instance.new("TextBox", I2ScrEOFActionSliderEOF8356id6236)
+	I2ScrEOFInputEOF1299id5664.BackgroundColor3 = Color3.new(0.0588235, 0.0588235, 0.0588235)
+	I2ScrEOFInputEOF1299id5664.BorderColor3 = Color3.new(0, 0, 0)
+	I2ScrEOFInputEOF1299id5664.BorderSizePixel = 0
+	I2ScrEOFInputEOF1299id5664.Name = "Input"
+	I2ScrEOFInputEOF1299id5664.Position = UDim2.new(0.294910848, 0, 0.166469872, 0)
+	I2ScrEOFInputEOF1299id5664.Size = UDim2.new(0.141565129, 0, 0.667060196, 0)
+	I2ScrEOFInputEOF1299id5664.FontFace = Font.new("rbxasset://fonts/families/Roboto.json", Enum.FontWeight.Regular, Enum.FontStyle.Normal)
+	I2ScrEOFInputEOF1299id5664.PlaceholderColor3 = Color3.new(0.7, 0.7, 0.7)
+	I2ScrEOFInputEOF1299id5664.PlaceholderText = "Input Number..."
+	I2ScrEOFInputEOF1299id5664.Text = ""
+	I2ScrEOFInputEOF1299id5664.TextColor3 = Color3.new(1, 1, 1)
+	I2ScrEOFInputEOF1299id5664.TextScaled = true
+	I2ScrEOFInputEOF1299id5664.TextSize = 14
+	I2ScrEOFInputEOF1299id5664.TextStrokeTransparency = 0
+	I2ScrEOFInputEOF1299id5664.TextWrapped = true
+
+	-- Time Taken: 0.016166400000003023s, Name: UICorner, Class: UICorner, Variable: I2ScrEOFUICornerEOF8740id5449 
+	local I2ScrEOFUICornerEOF8740id5449 = Instance.new("UICorner", I2ScrEOFInputEOF1299id5664)
+	I2ScrEOFUICornerEOF8740id5449.CornerRadius = UDim.new(0.200000003, 0)
+
+	-- Time Taken: 0.033512300000012374s, Name: UIAspectRatioConstraint, Class: UIAspectRatioConstraint, Variable: I2ScrEOFUIAspectRatioConstraintEOF971id650 
+	local I2ScrEOFUIAspectRatioConstraintEOF971id650 = Instance.new("UIAspectRatioConstraint", I2ScrEOFActionSliderEOF8356id6236)
+	I2ScrEOFUIAspectRatioConstraintEOF971id650.AspectRatio = 9.494396209716797
+	I2ScrEOFUIAspectRatioConstraintEOF971id650.AspectType = Enum.AspectType.ScaleWithParentSize
+
+	-- Time Taken: 0.07465979999997785s, Name: Divider, Class: Frame, Variable: I2ScrEOFDividerEOF6152id7132 
+	local I2ScrEOFDividerEOF6152id7132 = Instance.new("Frame", I2ScrEOFKS_TemplateTabEOF8250id6855)
+	I2ScrEOFDividerEOF6152id7132:SetAttribute("ObjectType", "Divider")
+	I2ScrEOFDividerEOF6152id7132.BackgroundColor3 = Color3.new(0.211765, 0.211765, 0.211765)
+	I2ScrEOFDividerEOF6152id7132.BorderColor3 = Color3.new(0, 0, 0)
+	I2ScrEOFDividerEOF6152id7132.BorderSizePixel = 0
+	I2ScrEOFDividerEOF6152id7132.Name = "Divider"
+	I2ScrEOFDividerEOF6152id7132.Size = UDim2.new(0.970000029, 0, 0, 2)
+
+	-- Time Taken: 0.08762130000005186s, Name: OutputText, Class: Frame, Variable: I2ScrEOFOutputTextEOF6971id660 
+	local I2ScrEOFOutputTextEOF6971id660 = Instance.new("Frame", I2ScrEOFKS_TemplateTabEOF8250id6855)
+	I2ScrEOFOutputTextEOF6971id660:SetAttribute("ObjectType", "OutputText")
+	I2ScrEOFOutputTextEOF6971id660.BackgroundColor3 = Color3.new(0.0980392, 0.0980392, 0.0980392)
+	I2ScrEOFOutputTextEOF6971id660.BorderColor3 = Color3.new(0, 0, 0)
+	I2ScrEOFOutputTextEOF6971id660.BorderSizePixel = 0
+	I2ScrEOFOutputTextEOF6971id660.Name = "OutputText"
+	I2ScrEOFOutputTextEOF6971id660.Position = UDim2.new(0.333333343, 0, 0.177358493, 0)
+	I2ScrEOFOutputTextEOF6971id660.Size = UDim2.new(0.949999988, 0, 0, 30)
+
+	-- Time Taken: 0.01788890000000265s, Name: UICorner, Class: UICorner, Variable: I2ScrEOFUICornerEOF7078id1355 
+	local I2ScrEOFUICornerEOF7078id1355 = Instance.new("UICorner", I2ScrEOFOutputTextEOF6971id660)
+	I2ScrEOFUICornerEOF7078id1355.CornerRadius = UDim.new(0.200000003, 0)
+
+	-- Time Taken: 0.2597501000000477s, Name: Label, Class: TextLabel, Variable: I2ScrEOFLabelEOF7039id2616 
+	local I2ScrEOFLabelEOF7039id2616 = Instance.new("TextLabel", I2ScrEOFOutputTextEOF6971id660)
+	I2ScrEOFLabelEOF7039id2616.AnchorPoint = Vector2.new(0.5, 0.5)
+	I2ScrEOFLabelEOF7039id2616.BackgroundColor3 = Color3.new(0.0588235, 0.0588235, 0.0588235)
+	I2ScrEOFLabelEOF7039id2616.BackgroundTransparency = 1
+	I2ScrEOFLabelEOF7039id2616.BorderColor3 = Color3.new(0, 0, 0)
+	I2ScrEOFLabelEOF7039id2616.BorderSizePixel = 0
+	I2ScrEOFLabelEOF7039id2616.Name = "Label"
+	I2ScrEOFLabelEOF7039id2616.Position = UDim2.new(0.5, 0, 0.5, 0)
+	I2ScrEOFLabelEOF7039id2616.Size = UDim2.new(0.949999988, 0, 0.666999996, 0)
+	I2ScrEOFLabelEOF7039id2616.FontFace = Font.new("rbxasset://fonts/families/Roboto.json", Enum.FontWeight.Regular, Enum.FontStyle.Normal)
+	I2ScrEOFLabelEOF7039id2616.Text = "Text"
+	I2ScrEOFLabelEOF7039id2616.TextColor3 = Color3.new(1, 1, 1)
+	I2ScrEOFLabelEOF7039id2616.TextScaled = true
+	I2ScrEOFLabelEOF7039id2616.TextSize = 14
+	I2ScrEOFLabelEOF7039id2616.TextStrokeTransparency = 0
+	I2ScrEOFLabelEOF7039id2616.TextWrapped = true
+	I2ScrEOFLabelEOF7039id2616.TextXAlignment = Enum.TextXAlignment.Left
+
+	-- Time Taken: 0.15940549999996279s, Name: Activate, Class: TextButton, Variable: I2ScrEOFActivateEOF856id247 
+	local I2ScrEOFActivateEOF856id247 = Instance.new("TextButton", I2ScrEOFOutputTextEOF6971id660)
+	I2ScrEOFActivateEOF856id247.BackgroundColor3 = Color3.new(1, 1, 1)
+	I2ScrEOFActivateEOF856id247.BackgroundTransparency = 1
+	I2ScrEOFActivateEOF856id247.BorderColor3 = Color3.new(0, 0, 0)
+	I2ScrEOFActivateEOF856id247.BorderSizePixel = 0
+	I2ScrEOFActivateEOF856id247.Name = "Activate"
+	I2ScrEOFActivateEOF856id247.Size = UDim2.new(1, 0, 1, 0)
+	I2ScrEOFActivateEOF856id247.FontFace = Font.new("rbxasset://fonts/families/SourceSansPro.json", Enum.FontWeight.Regular, Enum.FontStyle.Normal)
+	I2ScrEOFActivateEOF856id247.TextColor3 = Color3.new(0, 0, 0)
+	I2ScrEOFActivateEOF856id247.TextSize = 14
+	I2ScrEOFActivateEOF856id247.TextTransparency = 1
+
+	-- Time Taken: 0.0335362999999802s, Name: UIAspectRatioConstraint, Class: UIAspectRatioConstraint, Variable: I2ScrEOFUIAspectRatioConstraintEOF2597id1150 
+	local I2ScrEOFUIAspectRatioConstraintEOF2597id1150 = Instance.new("UIAspectRatioConstraint", I2ScrEOFOutputTextEOF6971id660)
+	I2ScrEOFUIAspectRatioConstraintEOF2597id1150.AspectRatio = 9.494396209716797
+	I2ScrEOFUIAspectRatioConstraintEOF2597id1150.AspectType = Enum.AspectType.ScaleWithParentSize
+
+	-- Time Taken: 0.12966939999998317s, Name: Header, Class: Frame, Variable: I2ScrEOFHeaderEOF4300id9245 
+	local I2ScrEOFHeaderEOF4300id9245 = Instance.new("Frame", I2ScrEOFKS_TemplateTabEOF8250id6855)
+	I2ScrEOFHeaderEOF4300id9245:SetAttribute("ObjectType", "Header")
+	I2ScrEOFHeaderEOF4300id9245.BackgroundColor3 = Color3.new(0.0980392, 0.0980392, 0.0980392)
+	I2ScrEOFHeaderEOF4300id9245.BackgroundTransparency = 1
+	I2ScrEOFHeaderEOF4300id9245.BorderColor3 = Color3.new(0, 0, 0)
+	I2ScrEOFHeaderEOF4300id9245.BorderSizePixel = 0
+	I2ScrEOFHeaderEOF4300id9245.Name = "Header"
+	I2ScrEOFHeaderEOF4300id9245.Position = UDim2.new(0.333333343, 0, 0.177358493, 0)
+	I2ScrEOFHeaderEOF4300id9245.Size = UDim2.new(0.970000029, 0, 0, 19)
+	I2ScrEOFHeaderEOF4300id9245.ClipsDescendants = true
+
+	-- Time Taken: 0.2601171999999963s, Name: Label, Class: TextLabel, Variable: I2ScrEOFLabelEOF9984id4786 
+	local I2ScrEOFLabelEOF9984id4786 = Instance.new("TextLabel", I2ScrEOFHeaderEOF4300id9245)
+	I2ScrEOFLabelEOF9984id4786.AnchorPoint = Vector2.new(0, 0.5)
+	I2ScrEOFLabelEOF9984id4786.BackgroundColor3 = Color3.new(0.0588235, 0.0588235, 0.0588235)
+	I2ScrEOFLabelEOF9984id4786.BackgroundTransparency = 1
+	I2ScrEOFLabelEOF9984id4786.BorderColor3 = Color3.new(0, 0, 0)
+	I2ScrEOFLabelEOF9984id4786.BorderSizePixel = 0
+	I2ScrEOFLabelEOF9984id4786.Name = "Label"
+	I2ScrEOFLabelEOF9984id4786.Position = UDim2.new(0.0549999997, 0, 0.5, 0)
+	I2ScrEOFLabelEOF9984id4786.Size = UDim2.new(1, 0, 1, 0)
+	I2ScrEOFLabelEOF9984id4786.FontFace = Font.new("rbxasset://fonts/families/Roboto.json", Enum.FontWeight.Regular, Enum.FontStyle.Normal)
+	I2ScrEOFLabelEOF9984id4786.Text = " Text"
+	I2ScrEOFLabelEOF9984id4786.TextColor3 = Color3.new(1, 1, 1)
+	I2ScrEOFLabelEOF9984id4786.TextScaled = true
+	I2ScrEOFLabelEOF9984id4786.TextSize = 14
+	I2ScrEOFLabelEOF9984id4786.TextStrokeTransparency = 0
+	I2ScrEOFLabelEOF9984id4786.TextWrapped = true
+	I2ScrEOFLabelEOF9984id4786.TextXAlignment = Enum.TextXAlignment.Left
+
+	-- Time Taken: 0.15717969999997194s, Name: Activate, Class: TextButton, Variable: I2ScrEOFActivateEOF5584id7703 
+	local I2ScrEOFActivateEOF5584id7703 = Instance.new("TextButton", I2ScrEOFHeaderEOF4300id9245)
+	I2ScrEOFActivateEOF5584id7703.BackgroundColor3 = Color3.new(1, 1, 1)
+	I2ScrEOFActivateEOF5584id7703.BackgroundTransparency = 1
+	I2ScrEOFActivateEOF5584id7703.BorderColor3 = Color3.new(0, 0, 0)
+	I2ScrEOFActivateEOF5584id7703.BorderSizePixel = 0
+	I2ScrEOFActivateEOF5584id7703.Name = "Activate"
+	I2ScrEOFActivateEOF5584id7703.Size = UDim2.new(1, 0, 1, 0)
+	I2ScrEOFActivateEOF5584id7703.FontFace = Font.new("rbxasset://fonts/families/SourceSansPro.json", Enum.FontWeight.Regular, Enum.FontStyle.Normal)
+	I2ScrEOFActivateEOF5584id7703.TextColor3 = Color3.new(0, 0, 0)
+	I2ScrEOFActivateEOF5584id7703.TextSize = 14
+	I2ScrEOFActivateEOF5584id7703.TextTransparency = 1
+
+	-- Time Taken: 0.09675260000000208s, Name: Frame, Class: Frame, Variable: I2ScrEOFFrameEOF2839id1590 
+	local I2ScrEOFFrameEOF2839id1590 = Instance.new("Frame", I2ScrEOFHeaderEOF4300id9245)
+	I2ScrEOFFrameEOF2839id1590.AnchorPoint = Vector2.new(0, 0.5)
+	I2ScrEOFFrameEOF2839id1590.BackgroundColor3 = Color3.new(0.211765, 0.211765, 0.211765)
+	I2ScrEOFFrameEOF2839id1590.BorderColor3 = Color3.new(0, 0, 0)
+	I2ScrEOFFrameEOF2839id1590.BorderSizePixel = 0
+	I2ScrEOFFrameEOF2839id1590.Position = UDim2.new(0, 0, 0.5, 0)
+	I2ScrEOFFrameEOF2839id1590.Size = UDim2.new(0, 15, 0, 2)
+
+	-- Time Taken: 0.11250379999998472s, Name: AdjFrame, Class: Frame, Variable: I2ScrEOFAdjFrameEOF5356id4100 
+	local I2ScrEOFAdjFrameEOF5356id4100 = Instance.new("Frame", I2ScrEOFHeaderEOF4300id9245)
+	I2ScrEOFAdjFrameEOF5356id4100.AnchorPoint = Vector2.new(0, 0.5)
+	I2ScrEOFAdjFrameEOF5356id4100.BackgroundColor3 = Color3.new(0.211765, 0.211765, 0.211765)
+	I2ScrEOFAdjFrameEOF5356id4100.BorderColor3 = Color3.new(0, 0, 0)
+	I2ScrEOFAdjFrameEOF5356id4100.BorderSizePixel = 0
+	I2ScrEOFAdjFrameEOF5356id4100.Name = "AdjFrame"
+	I2ScrEOFAdjFrameEOF5356id4100.Position = UDim2.new(0.209020615, 0, 0.5, 0)
+	I2ScrEOFAdjFrameEOF5356id4100.Size = UDim2.new(1, 0, 0, 2)
+
+	-- Time Taken: 0.03215119999998706s, Name: UIAspectRatioConstraint, Class: UIAspectRatioConstraint, Variable: I2ScrEOFUIAspectRatioConstraintEOF6062id208 
+	local I2ScrEOFUIAspectRatioConstraintEOF6062id208 = Instance.new("UIAspectRatioConstraint", I2ScrEOFHeaderEOF4300id9245)
+	I2ScrEOFUIAspectRatioConstraintEOF6062id208.AspectRatio = 15.306755065917969
+	I2ScrEOFUIAspectRatioConstraintEOF6062id208.AspectType = Enum.AspectType.ScaleWithParentSize
+
+	-- Time Taken: 0.10300100000000612s, Name: ActionDropDown, Class: Frame, Variable: I2ScrEOFActionDropDownEOF3447id4847 
+	local I2ScrEOFActionDropDownEOF3447id4847 = Instance.new("Frame", I2ScrEOFKS_TemplateTabEOF8250id6855)
+	I2ScrEOFActionDropDownEOF3447id4847:SetAttribute("Value", "")
+	I2ScrEOFActionDropDownEOF3447id4847:SetAttribute("ObjectType", "ActionDropDown")
+	I2ScrEOFActionDropDownEOF3447id4847.BackgroundColor3 = Color3.new(0.0980392, 0.0980392, 0.0980392)
+	I2ScrEOFActionDropDownEOF3447id4847.BorderColor3 = Color3.new(0, 0, 0)
+	I2ScrEOFActionDropDownEOF3447id4847.BorderSizePixel = 0
+	I2ScrEOFActionDropDownEOF3447id4847.Name = "ActionDropDown"
+	I2ScrEOFActionDropDownEOF3447id4847.Position = UDim2.new(0.333333343, 0, 0.177358493, 0)
+	I2ScrEOFActionDropDownEOF3447id4847.Size = UDim2.new(0.949999988, 0, 0, 30)
+	I2ScrEOFActionDropDownEOF3447id4847.ZIndex = 3
+
+	-- Time Taken: 0.011689300000000458s, Name: UICorner, Class: UICorner, Variable: I2ScrEOFUICornerEOF3305id472 
+	local I2ScrEOFUICornerEOF3305id472 = Instance.new("UICorner", I2ScrEOFActionDropDownEOF3447id4847)
+	I2ScrEOFUICornerEOF3305id472.CornerRadius = UDim.new(0.200000003, 0)
+
+	-- Time Taken: 0.25344800000007695s, Name: Label, Class: TextLabel, Variable: I2ScrEOFLabelEOF7052id5872 
+	local I2ScrEOFLabelEOF7052id5872 = Instance.new("TextLabel", I2ScrEOFActionDropDownEOF3447id4847)
+	I2ScrEOFLabelEOF7052id5872.BackgroundColor3 = Color3.new(0.0588235, 0.0588235, 0.0588235)
+	I2ScrEOFLabelEOF7052id5872.BackgroundTransparency = 1
+	I2ScrEOFLabelEOF7052id5872.BorderColor3 = Color3.new(0, 0, 0)
+	I2ScrEOFLabelEOF7052id5872.BorderSizePixel = 0
+	I2ScrEOFLabelEOF7052id5872.Name = "Label"
+	I2ScrEOFLabelEOF7052id5872.Position = UDim2.new(0.394267023, 0, 0.166666314, 0)
+	I2ScrEOFLabelEOF7052id5872.Size = UDim2.new(0.58468163, 0, 0.666666567, 0)
+	I2ScrEOFLabelEOF7052id5872.ZIndex = 4
+	I2ScrEOFLabelEOF7052id5872.FontFace = Font.new("rbxasset://fonts/families/Roboto.json", Enum.FontWeight.Regular, Enum.FontStyle.Normal)
+	I2ScrEOFLabelEOF7052id5872.Text = "Drop down"
+	I2ScrEOFLabelEOF7052id5872.TextColor3 = Color3.new(1, 1, 1)
+	I2ScrEOFLabelEOF7052id5872.TextScaled = true
+	I2ScrEOFLabelEOF7052id5872.TextSize = 14
+	I2ScrEOFLabelEOF7052id5872.TextStrokeTransparency = 0
+	I2ScrEOFLabelEOF7052id5872.TextWrapped = true
+	I2ScrEOFLabelEOF7052id5872.TextXAlignment = Enum.TextXAlignment.Left
+
+	-- Time Taken: 0.24434880000001158s, Name: Activate, Class: TextButton, Variable: I2ScrEOFActivateEOF4588id8711 
+	local I2ScrEOFActivateEOF4588id8711 = Instance.new("TextButton", I2ScrEOFActionDropDownEOF3447id4847)
+	I2ScrEOFActivateEOF4588id8711.AnchorPoint = Vector2.new(0, 0.5)
+	I2ScrEOFActivateEOF4588id8711.BackgroundColor3 = Color3.new(0.054902, 0.054902, 0.054902)
+	I2ScrEOFActivateEOF4588id8711.BorderColor3 = Color3.new(0, 0, 0)
+	I2ScrEOFActivateEOF4588id8711.BorderSizePixel = 0
+	I2ScrEOFActivateEOF4588id8711.Name = "Activate"
+	I2ScrEOFActivateEOF4588id8711.Position = UDim2.new(0.0250000004, 0, 0.5, 0)
+	I2ScrEOFActivateEOF4588id8711.Size = UDim2.new(0.351000011, 0, 0.666999996, 0)
+	I2ScrEOFActivateEOF4588id8711.ZIndex = 4
+	I2ScrEOFActivateEOF4588id8711.FontFace = Font.new("rbxasset://fonts/families/SourceSansPro.json", Enum.FontWeight.Regular, Enum.FontStyle.Normal)
+	I2ScrEOFActivateEOF4588id8711.Text = ""
+	I2ScrEOFActivateEOF4588id8711.TextColor3 = Color3.new(1, 1, 1)
+	I2ScrEOFActivateEOF4588id8711.TextScaled = true
+	I2ScrEOFActivateEOF4588id8711.TextSize = 14
+	I2ScrEOFActivateEOF4588id8711.TextWrapped = true
+	I2ScrEOFActivateEOF4588id8711.TextYAlignment = Enum.TextYAlignment.Top
+
+	-- Time Taken: 0.01662999999999215s, Name: UICorner, Class: UICorner, Variable: I2ScrEOFUICornerEOF2161id5035 
+	local I2ScrEOFUICornerEOF2161id5035 = Instance.new("UICorner", I2ScrEOFActivateEOF4588id8711)
+	I2ScrEOFUICornerEOF2161id5035.CornerRadius = UDim.new(0.200000003, 0)
+
+	-- Time Taken: 0.1581418000000383s, Name: Icon, Class: ImageLabel, Variable: I2ScrEOFIconEOF9937id3393 
+	local I2ScrEOFIconEOF9937id3393 = Instance.new("ImageLabel", I2ScrEOFActionDropDownEOF3447id4847)
+	I2ScrEOFIconEOF9937id3393.AnchorPoint = Vector2.new(0, 0.5)
+	I2ScrEOFIconEOF9937id3393.BackgroundColor3 = Color3.new(1, 1, 1)
+	I2ScrEOFIconEOF9937id3393.BackgroundTransparency = 1
+	I2ScrEOFIconEOF9937id3393.BorderColor3 = Color3.new(0, 0, 0)
+	I2ScrEOFIconEOF9937id3393.BorderSizePixel = 0
+	I2ScrEOFIconEOF9937id3393.Name = "Icon"
+	I2ScrEOFIconEOF9937id3393.Position = UDim2.new(0.0350000001, 0, 0.5, 0)
+	I2ScrEOFIconEOF9937id3393.Size = UDim2.new(0.0526626445, 0, 0.500295162, 0)
+	I2ScrEOFIconEOF9937id3393.ZIndex = 7
+	I2ScrEOFIconEOF9937id3393.Image = "rbxassetid://4726772330"
+
+	-- Time Taken: 0.2709628000000066s, Name: Value, Class: TextLabel, Variable: I2ScrEOFValueEOF2424id2576 
+	local I2ScrEOFValueEOF2424id2576 = Instance.new("TextLabel", I2ScrEOFActionDropDownEOF3447id4847)
+	I2ScrEOFValueEOF2424id2576.AnchorPoint = Vector2.new(0, 0.5)
+	I2ScrEOFValueEOF2424id2576.BackgroundColor3 = Color3.new(1, 1, 1)
+	I2ScrEOFValueEOF2424id2576.BackgroundTransparency = 1
+	I2ScrEOFValueEOF2424id2576.BorderColor3 = Color3.new(0, 0, 0)
+	I2ScrEOFValueEOF2424id2576.BorderSizePixel = 0
+	I2ScrEOFValueEOF2424id2576.Name = "Value"
+	I2ScrEOFValueEOF2424id2576.Position = UDim2.new(0.101371728, 0, 0.500000179, 0)
+	I2ScrEOFValueEOF2424id2576.Size = UDim2.new(0.274628282, 0, 0.666999996, 0)
+	I2ScrEOFValueEOF2424id2576.ZIndex = 4
+	I2ScrEOFValueEOF2424id2576.FontFace = Font.new("rbxasset://fonts/families/SourceSansPro.json", Enum.FontWeight.Regular, Enum.FontStyle.Normal)
+	I2ScrEOFValueEOF2424id2576.Text = "Value 1"
+	I2ScrEOFValueEOF2424id2576.TextColor3 = Color3.new(1, 1, 1)
+	I2ScrEOFValueEOF2424id2576.TextScaled = true
+	I2ScrEOFValueEOF2424id2576.TextSize = 14
+	I2ScrEOFValueEOF2424id2576.TextWrapped = true
+	I2ScrEOFValueEOF2424id2576.TextXAlignment = Enum.TextXAlignment.Left
+	I2ScrEOFValueEOF2424id2576.TextYAlignment = Enum.TextYAlignment.Top
+
+	-- Time Taken: 0.16173839999996176s, Name: InputArea, Class: Frame, Variable: I2ScrEOFInputAreaEOF9992id5155 
+	local I2ScrEOFInputAreaEOF9992id5155 = Instance.new("Frame", I2ScrEOFActionDropDownEOF3447id4847)
+	I2ScrEOFInputAreaEOF9992id5155.AnchorPoint = Vector2.new(0, 0.5)
+	I2ScrEOFInputAreaEOF9992id5155.BackgroundColor3 = Color3.new(1, 1, 1)
+	I2ScrEOFInputAreaEOF9992id5155.BackgroundTransparency = 1
+	I2ScrEOFInputAreaEOF9992id5155.BorderColor3 = Color3.new(0, 0, 0)
+	I2ScrEOFInputAreaEOF9992id5155.BorderSizePixel = 0
+	I2ScrEOFInputAreaEOF9992id5155.Name = "InputArea"
+	I2ScrEOFInputAreaEOF9992id5155.Position = UDim2.new(0.0250000004, 0, 0.5, 0)
+	I2ScrEOFInputAreaEOF9992id5155.Size = UDim2.new(0.351000011, 0, 0.666999996, 0)
+	I2ScrEOFInputAreaEOF9992id5155.Visible = false
+	I2ScrEOFInputAreaEOF9992id5155.ZIndex = 4
+
+	-- Time Taken: 0.013367799999997487s, Name: UIListLayout, Class: UIListLayout, Variable: I2ScrEOFUIListLayoutEOF9497id6516 
+	local I2ScrEOFUIListLayoutEOF9497id6516 = Instance.new("UIListLayout", I2ScrEOFInputAreaEOF9992id5155)
+	I2ScrEOFUIListLayoutEOF9497id6516.SortOrder = Enum.SortOrder.LayoutOrder
+
+	-- Time Taken: 0.23161229999993793s, Name: Cancel, Class: TextButton, Variable: I2ScrEOFCancelEOF4574id2785 
+	local I2ScrEOFCancelEOF4574id2785 = Instance.new("TextButton", I2ScrEOFInputAreaEOF9992id5155)
+	I2ScrEOFCancelEOF4574id2785.BackgroundColor3 = Color3.new(0.196078, 0.196078, 0.196078)
+	I2ScrEOFCancelEOF4574id2785.BorderColor3 = Color3.new(0, 0, 0)
+	I2ScrEOFCancelEOF4574id2785.BorderSizePixel = 0
+	I2ScrEOFCancelEOF4574id2785.Name = "Cancel"
+	I2ScrEOFCancelEOF4574id2785.Position = UDim2.new(0.0250000004, 0, 0.5, 0)
+	I2ScrEOFCancelEOF4574id2785.Size = UDim2.new(1, 0, 1, 0)
+	I2ScrEOFCancelEOF4574id2785.ZIndex = 5
+	I2ScrEOFCancelEOF4574id2785.FontFace = Font.new("rbxasset://fonts/families/SourceSansPro.json", Enum.FontWeight.Regular, Enum.FontStyle.Normal)
+	I2ScrEOFCancelEOF4574id2785.Text = "Cancel"
+	I2ScrEOFCancelEOF4574id2785.TextColor3 = Color3.new(1, 0.341176, 0.341176)
+	I2ScrEOFCancelEOF4574id2785.TextScaled = true
+	I2ScrEOFCancelEOF4574id2785.TextSize = 14
+	I2ScrEOFCancelEOF4574id2785.TextWrapped = true
+	I2ScrEOFCancelEOF4574id2785.TextYAlignment = Enum.TextYAlignment.Top
+
+	-- Time Taken: 0.01644319999999766s, Name: UICorner, Class: UICorner, Variable: I2ScrEOFUICornerEOF954id2021 
+	local I2ScrEOFUICornerEOF954id2021 = Instance.new("UICorner", I2ScrEOFCancelEOF4574id2785)
+	I2ScrEOFUICornerEOF954id2021.CornerRadius = UDim.new(0.200000003, 0)
+
+	-- Time Taken: 0.2393056000000513s, Name: Value, Class: TextButton, Variable: I2ScrEOFValueEOF493id8448 
+	local I2ScrEOFValueEOF493id8448 = Instance.new("TextButton", I2ScrEOFInputAreaEOF9992id5155)
+	I2ScrEOFValueEOF493id8448:SetAttribute("Value", "")
+	I2ScrEOFValueEOF493id8448.BackgroundColor3 = Color3.new(0.196078, 0.196078, 0.196078)
+	I2ScrEOFValueEOF493id8448.BorderColor3 = Color3.new(0, 0, 0)
+	I2ScrEOFValueEOF493id8448.BorderSizePixel = 0
+	I2ScrEOFValueEOF493id8448.Name = "Value"
+	I2ScrEOFValueEOF493id8448.Position = UDim2.new(0.0250000004, 0, 0.5, 0)
+	I2ScrEOFValueEOF493id8448.Size = UDim2.new(1, 0, 1, 0)
+	I2ScrEOFValueEOF493id8448.ZIndex = 8
+	I2ScrEOFValueEOF493id8448.FontFace = Font.new("rbxasset://fonts/families/SourceSansPro.json", Enum.FontWeight.Regular, Enum.FontStyle.Normal)
+	I2ScrEOFValueEOF493id8448.Text = "Value 1"
+	I2ScrEOFValueEOF493id8448.TextColor3 = Color3.new(1, 1, 1)
+	I2ScrEOFValueEOF493id8448.TextScaled = true
+	I2ScrEOFValueEOF493id8448.TextSize = 14
+	I2ScrEOFValueEOF493id8448.TextWrapped = true
+	I2ScrEOFValueEOF493id8448.TextYAlignment = Enum.TextYAlignment.Top
+
+	-- Time Taken: 0.016715500000003658s, Name: UICorner, Class: UICorner, Variable: I2ScrEOFUICornerEOF1767id275 
+	local I2ScrEOFUICornerEOF1767id275 = Instance.new("UICorner", I2ScrEOFValueEOF493id8448)
+	I2ScrEOFUICornerEOF1767id275.CornerRadius = UDim.new(0.200000003, 0)
+
+	-- Time Taken: 0.03384189999999876s, Name: UIAspectRatioConstraint, Class: UIAspectRatioConstraint, Variable: I2ScrEOFUIAspectRatioConstraintEOF675id8594 
+	local I2ScrEOFUIAspectRatioConstraintEOF675id8594 = Instance.new("UIAspectRatioConstraint", I2ScrEOFActionDropDownEOF3447id4847)
+	I2ScrEOFUIAspectRatioConstraintEOF675id8594.AspectRatio = 9.494396209716797
+	I2ScrEOFUIAspectRatioConstraintEOF675id8594.AspectType = Enum.AspectType.ScaleWithParentSize
+
+	-- Time Taken: 0.2495075000000213s, Name: Title, Class: TextLabel, Variable: I2ScrEOFTitleEOF496id6041 
+	local I2ScrEOFTitleEOF496id6041 = Instance.new("TextLabel", I2ScrEOFMainEOF6129id7412)
+	I2ScrEOFTitleEOF496id6041.BackgroundColor3 = Color3.new(1, 1, 1)
+	I2ScrEOFTitleEOF496id6041.BackgroundTransparency = 1
+	I2ScrEOFTitleEOF496id6041.BorderColor3 = Color3.new(0, 0, 0)
+	I2ScrEOFTitleEOF496id6041.BorderSizePixel = 0
+	I2ScrEOFTitleEOF496id6041.Name = "Title"
+	I2ScrEOFTitleEOF496id6041.Position = UDim2.new(0.0241715498, 0, 0.0226021316, 0)
+	I2ScrEOFTitleEOF496id6041.Size = UDim2.new(0.277777791, 0, 0.0666666701, 0)
+	I2ScrEOFTitleEOF496id6041.FontFace = Font.new("rbxasset://fonts/families/Roboto.json", Enum.FontWeight.Bold, Enum.FontStyle.Normal)
+	I2ScrEOFTitleEOF496id6041.RichText = true
+	I2ScrEOFTitleEOF496id6041.Text = "KHLib UI"
+	I2ScrEOFTitleEOF496id6041.TextColor3 = Color3.new(1, 1, 1)
+	I2ScrEOFTitleEOF496id6041.TextScaled = true
+	I2ScrEOFTitleEOF496id6041.TextSize = 14
+	I2ScrEOFTitleEOF496id6041.TextWrapped = true
+	I2ScrEOFTitleEOF496id6041.TextXAlignment = Enum.TextXAlignment.Left
+
+	-- Time Taken: 0.21849350000002232s, Name: TabSelection, Class: ScrollingFrame, Variable: I2ScrEOFTabSelectionEOF1506id337 
+	local I2ScrEOFTabSelectionEOF1506id337 = Instance.new("ScrollingFrame", I2ScrEOFMainEOF6129id7412)
+	I2ScrEOFTabSelectionEOF1506id337.Active = true
+	I2ScrEOFTabSelectionEOF1506id337.BackgroundColor3 = Color3.new(1, 1, 1)
+	I2ScrEOFTabSelectionEOF1506id337.BackgroundTransparency = 1
+	I2ScrEOFTabSelectionEOF1506id337.BorderColor3 = Color3.new(0, 0, 0)
+	I2ScrEOFTabSelectionEOF1506id337.BorderSizePixel = 0
+	I2ScrEOFTabSelectionEOF1506id337.Name = "TabSelection"
+	I2ScrEOFTabSelectionEOF1506id337.Position = UDim2.new(0, 0, 0.116999999, 0)
+	I2ScrEOFTabSelectionEOF1506id337.Size = UDim2.new(0.333333343, 0, 0.883333325, 0)
+	I2ScrEOFTabSelectionEOF1506id337.BottomImage = "http://www.roblox.com/asset/?id=10995799876"
+	I2ScrEOFTabSelectionEOF1506id337.CanvasSize = UDim2.new(0, 0, 3, 0)
+	I2ScrEOFTabSelectionEOF1506id337.MidImage = "http://www.roblox.com/asset/?id=10995799876"
+	I2ScrEOFTabSelectionEOF1506id337.ScrollBarImageColor3 = Color3.new(0.490196, 0.490196, 0.490196)
+	I2ScrEOFTabSelectionEOF1506id337.ScrollBarThickness = 2
+	I2ScrEOFTabSelectionEOF1506id337.TopImage = "http://www.roblox.com/asset/?id=10995799876"
+
+	-- Time Taken: 0.049803299999979345s, Name: UIListLayout, Class: UIListLayout, Variable: I2ScrEOFUIListLayoutEOF4023id8075 
+	local I2ScrEOFUIListLayoutEOF4023id8075 = Instance.new("UIListLayout", I2ScrEOFTabSelectionEOF1506id337)
+	I2ScrEOFUIListLayoutEOF4023id8075.Padding = UDim.new(0.0111111114, 0)
+	I2ScrEOFUIListLayoutEOF4023id8075.SortOrder = Enum.SortOrder.LayoutOrder
+	I2ScrEOFUIListLayoutEOF4023id8075.HorizontalAlignment = Enum.HorizontalAlignment.Center
+
+	-- Time Taken: 0.22175799999993728s, Name: KS_TemplateTab, Class: TextButton, Variable: I2ScrEOFKS_TemplateTabEOF5023id2773 
+	local I2ScrEOFKS_TemplateTabEOF5023id2773 = Instance.new("TextButton", I2ScrEOFTabSelectionEOF1506id337)
+	I2ScrEOFKS_TemplateTabEOF5023id2773.BackgroundColor3 = Color3.new(1, 1, 1)
+	I2ScrEOFKS_TemplateTabEOF5023id2773.BackgroundTransparency = 0.75
+	I2ScrEOFKS_TemplateTabEOF5023id2773.BorderColor3 = Color3.new(0, 0, 0)
+	I2ScrEOFKS_TemplateTabEOF5023id2773.BorderSizePixel = 0
+	I2ScrEOFKS_TemplateTabEOF5023id2773.Name = "KS_TemplateTab"
+	I2ScrEOFKS_TemplateTabEOF5023id2773.Size = UDim2.new(0.933000028, 0, 0.0222222228, 0)
+	I2ScrEOFKS_TemplateTabEOF5023id2773.FontFace = Font.new("rbxasset://fonts/families/Roboto.json", Enum.FontWeight.Bold, Enum.FontStyle.Normal)
+	I2ScrEOFKS_TemplateTabEOF5023id2773.Text = " Template Tab"
+	I2ScrEOFKS_TemplateTabEOF5023id2773.TextColor3 = Color3.new(1, 1, 1)
+	I2ScrEOFKS_TemplateTabEOF5023id2773.TextScaled = true
+	I2ScrEOFKS_TemplateTabEOF5023id2773.TextSize = 14
+	I2ScrEOFKS_TemplateTabEOF5023id2773.TextStrokeTransparency = 9
+	I2ScrEOFKS_TemplateTabEOF5023id2773.TextWrapped = true
+
+	-- Time Taken: 0.017483400000003257s, Name: UICorner, Class: UICorner, Variable: I2ScrEOFUICornerEOF9805id280 
+	local I2ScrEOFUICornerEOF9805id280 = Instance.new("UICorner", I2ScrEOFKS_TemplateTabEOF5023id2773)
+	I2ScrEOFUICornerEOF9805id280.CornerRadius = UDim.new(0.25, 0)
+
+	-- Time Taken: 0.016332899999980555s, Name: UIAspectRatioConstraint, Class: UIAspectRatioConstraint, Variable: I2ScrEOFUIAspectRatioConstraintEOF2396id6527 
+	local I2ScrEOFUIAspectRatioConstraintEOF2396id6527 = Instance.new("UIAspectRatioConstraint", I2ScrEOFMainEOF6129id7412)
+	I2ScrEOFUIAspectRatioConstraintEOF2396id6527.AspectRatio = 1.5
+
+	-- Time Taken: 0s, Name: UIDragDetector, Class: UIDragDetector, Variable: I2ScrEOFUIDragDetectorEOF4469id2419 
+	local I2ScrEOFUIDragDetectorEOF4469id2419 = Instance.new("UIDragDetector", I2ScrEOFMainEOF6129id7412)
+
+	-- Time Taken: 0.012155899999982012s, Name: UISizeConstraint, Class: UISizeConstraint, Variable: I2ScrEOFUISizeConstraintEOF9575id7628 
+	local I2ScrEOFUISizeConstraintEOF9575id7628 = Instance.new("UISizeConstraint", I2ScrEOFMainEOF6129id7412)
+	I2ScrEOFUISizeConstraintEOF9575id7628.MinSize = Vector2.new(400, 266)
+
+	-- Time Taken: 0s, Name: UIScale, Class: UIScale, Variable: I2ScrEOFUIScaleEOF7189id57 
+	local I2ScrEOFUIScaleEOF7189id57 = Instance.new("UIScale", I2ScrEOFMainEOF6129id7412)
 end
 
 return I2ScrBuilder
