@@ -1380,7 +1380,7 @@ function TabActions:NewActionSlider(Config: NewActionToggleConfig)
 		
 		NewObject.Instance.Input.Text = tostring(Amount)
 		if not NewObject.Config.DoNotSnap or ForceSnap then
-			NewObject.Instance.SlideArea.SlideButton.Position = UDim2.new(math.clamp((Amount / NewObject.Config.MaxValue) * Threshold, 0, Threshold), 0, 0.5, 0)
+			NewObject.Instance.SlideArea.SlideButton.Position = UDim2.new(math.clamp(((Amount - NewObject.Config.MinValue)  / (NewObject.Config.MaxValue - NewObject.Config.MinValue)) * Threshold, 0, Threshold), 0, 0.5, 0)
 			NewObject.Instance.SlideArea.FillBar.Size = UDim2.new(NewObject.Instance.SlideArea.SlideButton.Position.X.Scale, 0, 0.15, 0)
 		end
 	end
@@ -1450,8 +1450,8 @@ function TabActions:NewActionSlider(Config: NewActionToggleConfig)
 	
 	-- (!) Deprecated / Aliases For Support only
 	function NewObject:VisualUpdate() NewObject:Update() end -- (!) Deprecated
-	function NewObject:GetSliderAmount() NewObject:GetValue() end -- (!) Deprecated
-	function NewObject:GetSliderPercentage() NewObject:GetPercentage() end -- (!) Deprecated
+	function NewObject:GetSliderAmount() return NewObject:GetValue() end -- (!) Deprecated
+	function NewObject:GetSliderPercentage() return NewObject:GetPercentage() end -- (!) Deprecated
 	
 	NewObject.Root = self
 	self.Objects[NewObject.Config.ID] = NewObject
