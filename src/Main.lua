@@ -13,7 +13,7 @@ function KSLib:GetInfo(): {library: string, version: {number}, uiversion: number
 	}
 end
 
-local Builder = loadstring(game:HttpGet("https://raw.githubusercontent.com/KoalaGuyy/Koala-Library/refs/heads/main/src/Builder/BuilderController.lua"))()
+local Builder = require(script.Parent.Builder.BuilderController)
 
 local DumpLocation = game.Players.LocalPlayer.PlayerGui
 local DumpFolder = DumpLocation:FindFirstChild("$KSLibDUMP")
@@ -852,7 +852,7 @@ function TabActions:NewHeader(Config: NewHeaderConfig)
 			Vector2.new(math.huge, NewObject.Instance.Label.AbsoluteSize.Y)
 		).X
 		
-		NewObject.Instance.AdjFrame.Position = UDim2.new(0, AdjFrameX + 15, 0.5, 0)
+		NewObject.Instance.AdjFrame.Position = UDim2.new(0.055, AdjFrameX, 0.5, 0)
 	end
 
 	NewObject:Update()
