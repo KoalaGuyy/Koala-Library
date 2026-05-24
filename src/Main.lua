@@ -13,7 +13,7 @@ function KSLib:GetInfo(): {library: string, version: {number}, uiversion: number
 	}
 end
 
-local Builder = require(script.Parent.Builder.BuilderController)
+local Builder = loadstring(game:HttpGet("https://raw.githubusercontent.com/KoalaGuyy/Koala-Library/refs/heads/main/src/Builder/BuilderController.lua"))()
 
 local DumpLocation = game.Players.LocalPlayer.PlayerGui
 local DumpFolder = DumpLocation:FindFirstChild("$KSLibDUMP")
@@ -822,7 +822,7 @@ type NewHeaderConfig = {
 }
 
 -- Creates a visual division of items similar to NewDivider although has text
-function TabActions:NewHeader(Config)
+function TabActions:NewHeader(Config: NewHeaderConfig)
 	local NewObject = {}
 
 	-- Set up Configurations
@@ -1351,7 +1351,7 @@ type NewActionSliderConfig = NewOutputTextConfig & {
 }
 
 -- Creates a slider where users can input numbers in a range
-function TabActions:NewActionSlider(Config: NewActionToggleConfig)
+function TabActions:NewActionSlider(Config: NewActionSliderConfig)
 	local NewObject = {}
 	
 	-- Set up configurations
@@ -1436,7 +1436,9 @@ function TabActions:NewActionSlider(Config: NewActionToggleConfig)
 			end
 			
 			NewObject.Instance.SlideArea.FillBar.Size = UDim2.new(NewObject.Instance.SlideArea.SlideButton.Position.X.Scale, 0, 0.15, 0)
-			NewObject.Instance.Input.Text = tostring(Amount)	
+			NewObject.Instance.Input.Text = tostring(Amount)
+			
+			NewObject.Instance:SetAttribute("Value", Amount)
 		until DragEnded
 		
 		DragEndEvent:Disconnect()
