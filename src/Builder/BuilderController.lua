@@ -39,7 +39,7 @@ function BuilderController:RequestService(ServiceName)
 	elseif typeof(Service) == "Instance" and Service:IsA("ModuleScript") then
 		return require(Service :: ModuleScript)
 	else
-		return loadstring(game:GetHttp(Service))()
+		return loadstring(game:HttpGet(Service))()
 	end
 end
 
@@ -49,7 +49,7 @@ function BuilderController:Build(Location)
 		if typeof(v) == "Instance" then
 			require(v):Build(Location)
 		else
-			loadstring(game:GetHttp(v))():Build(Location)
+			loadstring(game:HttpGet(v))():Build(Location)
 		end
 	end
 end
