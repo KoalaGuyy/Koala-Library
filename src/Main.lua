@@ -15,7 +15,8 @@ end
 
 local Builder = loadstring(game:HttpGet("https://raw.githubusercontent.com/KoalaGuyy/Koala-Library/refs/heads/main/src/Builder/BuilderController.lua"))()
 
-local DumpLocation = game.Players.LocalPlayer.PlayerGui
+local DumpLocation = game.Players.LocalPlayer.PlayerScripts
+local UILocation = game.Players.LocalPlayer.PlayerGui
 local DumpFolder = DumpLocation:FindFirstChild("$KSLibDUMP")
 local Services = {}
 
@@ -45,14 +46,14 @@ function KSLib:SetBuilder(NewBuilder)
 end
 
 -- Required for KSLib to start, initializes and prepares KSLib for use. Returns an error if initialized twice.
-function KSLib:Initialize(NewDumpLocation: Instance?, InstaLoad: boolean?)
+function KSLib:Initialize(NewDumpLocation: Instance?, InstaLoad: boolean?, NewUILocation)
 	if KSLib:IsReady() then
 		error("KSLib is already initialized.", 2)
 	end
 	
 	local ScreenGuiLoad = Instance.new("ScreenGui")
 	ScreenGuiLoad.Name = "KSLibLoadingView"
-	ScreenGuiLoad.Parent = NewDumpLocation or DumpLocation
+	ScreenGuiLoad.Parent = NewUILocation or UILocation
 	ScreenGuiLoad.DisplayOrder = 99999
 	
 	local Frame = Instance.new("Frame")
@@ -722,7 +723,7 @@ end
 
 -- Updates the UI to the new configurations
 function LibUI:Update()
-	self.Instance.Parent = self.Config.Location or DumpLocation
+	self.Instance.Parent = self.Config.Location or UILocation
 	self.Instance.Main.Title.Text = self.Config.Title or "Koala Scripts"
 	--?self.ButtonIcon is deprecated use self.Config.ButtonIcon instead
 	self.Instance.ButtonActivation.Icon.Image = self.Config.ButtonIcon or self.ButtonIcon or "rbxassetid://15016878198"
@@ -909,6 +910,7 @@ end
 type NewOutputTextConfig = {
 	ID: string?,
 	Text: string?,
+	DisallowSaving: boolean?,
 	Description: string? -- Alias of Text (!) Do not use Deprecated only for support
 }
 
