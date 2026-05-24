@@ -13,7 +13,7 @@ function KSLib:GetInfo(): {library: string, version: {number}, uiversion: number
 	}
 end
 
-local Builder = loadstring(game:HttpGet("https://raw.githubusercontent.com/KoalaGuyy/Koala-Library/refs/heads/main/src/Builder/BuilderController.lua"))()
+local Builder = require(script.Parent.Builder.BuilderController)
 
 local DumpLocation = game.Players.LocalPlayer.PlayerGui
 local DumpFolder = DumpLocation:FindFirstChild("$KSLibDUMP")
@@ -319,24 +319,45 @@ function KSLib.New(Config: {any})
 		end
 	end)
 	
+	local LoadFileSystem = ConfigTab:NewActionActivate({ID = "LoadFileSytem", Icon = "http://www.roblox.com/asset/?id=99385102861455", Text = "Load Current Data"})
+	LoadFileSystem:OnInputChanged(function()
+		if DumpFolder and DumpFolder:GetAttribute("FileName") then
+			KSLib:GetService("SavingService"):Load(DumpFolder:GetAttribute("FileName"))
+			KSLibUI:NewNotification({NotifyType = "Status", Title = "Request Sent", Text = "A Request had been sent to the Saving Service to load your saved configurations"})
+		else
+			KSLibUI:NewNotification({NotifyType = "StatusWarning", Title = "Script does not support the File Sytem", Text = "Your script does not allow loading files to the game"})
+		end
+	end)
+	
 	local SaveFileSystem = ConfigTab:NewActionActivate({ID = "SaveFileSystem", Icon = "http://www.roblox.com/asset/?id=11768914234", Text = "Save All Objects To File Sytem"})
 	SaveFileSystem:OnInputChanged(function()
 		if DumpFolder and DumpFolder:GetAttribute("FileName") then
 			KSLib:GetService("SavingService"):Save(DumpFolder:GetAttribute("FileName"))
+			KSLibUI:NewNotification({NotifyType = "Status", Title = "Request Sent", Text = "A Request had been sent to the Saving Service to save your configurations"})
 		else
 			KSLibUI:NewNotification({NotifyType = "StatusWarning", Title = "Script does not support the File Sytem", Text = "Your script does not allow saving to the File System"})
 		end
 	end)
 	
-	local LoadFileSystem = ConfigTab:NewActionActivate({ID = "LoadFileSytem", Icon = "http://www.roblox.com/asset/?id=99385102861455", Text = "Load Current Data"})
-	LoadFileSystem:OnInputChanged(function()
+	local DeleteSaveFileSystem = ConfigTab:NewActionActivate({ID = "DeleteSaveFileSystem", Icon = "http://www.roblox.com/asset/?id=14714840208", Text = "Delete Current Data"})
+	DeleteSaveFileSystem:OnInputChanged(function()
 		if DumpFolder and DumpFolder:GetAttribute("FileName") then
-			KSLib:GetService("SavingService"):Load(DumpFolder:GetAttribute("FileName"))
+			pcall(function()
+				if isfile(DumpFolder:GetAttribute("FileName")) then
+					if KSLibUI:NewDialogBox({Title = "Deleting Data", Text = "Are you sure you want to Delete your Configurations?"}).Response == "YesButton" then
+						delfile(DumpFolder:GetAttribute("FileName"))
+						KSLibUI:NewNotification({NotifyType = "Status", Title = "Configurations Deleted", Text = "Your data had been deleted"})
+					end
+				else
+					KSLibUI:NewNotification({NotifyType = "StatusError", Title = "No Configuration Data", Text = "There is no Configuration Data to delete"})
+				end
+			end)
 		else
-			KSLibUI:NewNotification({NotifyType = "StatusWarning", Title = "Script does not support the File Sytem", Text = "Your script does not allow loading files to the game"})
+			KSLibUI:NewNotification({NotifyType = "StatusWarning", Title = "Script does not support the File Sytem", Text = "Your script does not allow saving to the File System"})
 		end
 	end)
-		
+	
+	
 	KSLibUI.Instance.Main.TabArea.TabInfoArea.ConfigButton.Activated:Connect(function()
 		KSLibUI:SwitchTab(ConfigTab.Instance, ConfigTab.Config.Title)
 	end)
