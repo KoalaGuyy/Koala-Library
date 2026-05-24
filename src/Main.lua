@@ -13,7 +13,7 @@ function KSLib:GetInfo(): {library: string, version: {number}, uiversion: number
 	}
 end
 
-local Builder = require(script.Parent.Builder.BuilderController)
+local Builder = loadstring(game:HttpGet("https://raw.githubusercontent.com/KoalaGuyy/Koala-Library/refs/heads/main/src/Builder/BuilderController.lua"))()
 
 local DumpLocation = game.Players.LocalPlayer.PlayerGui
 local DumpFolder = DumpLocation:FindFirstChild("$KSLibDUMP")
