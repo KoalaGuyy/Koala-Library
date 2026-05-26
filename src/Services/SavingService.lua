@@ -22,13 +22,7 @@ function Service:Save(FileName)
 	end)
 	
 	if not Success then
-		pcall(function()
-			game:GetService("StarterGui"):SetCore("SendNotification", {
-				Title = "Saving Service Error";
-				Text = "Failed to save to a File, FileSystem is probably not supported.";
-				Duration = 3
-			})
-		end)
+		return "Failure"
 	end
 end
 
@@ -55,22 +49,17 @@ function Service:Load(FileName)
 						Object:SetValue(v)
 						if Object.Update and typeof(Object.Update) == "function" then
 							Object:Update(true)
-							print("woosh2")
 						end
 					end
 				end
 			end
+		else
+			return "NoFile"
 		end
 	end)
 	
 	if not Success then
-		pcall(function()
-			game:GetService("StarterGui"):SetCore("SendNotification", {
-				Title = "Saving Service Error";
-				Text = "Failed to load File, FileSystem is probably not supported.";
-				Duration = 3
-			})
-		end)
+		return "Failure"
 	end
 end
 
