@@ -1,3 +1,5 @@
+-- This comment is only to see if github's CDN had updated (1)
+
 local KSLib = {}
 local LibUI = {}
 LibUI.__index = LibUI
@@ -1119,7 +1121,7 @@ function TabActions:NewActionDropDown(Config: NewActionDropDownConfig)
 	local TotalHeight = 0
 	local LastTotalHeight = 0
 	local GotNewTab = self
-	function NewObject:UpdateValues()
+	function NewObject:UpdateValues(OverrideSelected)
 		TotalHeight = 0
 		for i, v in pairs(Connections) do
 			v:Disconnect()
@@ -1139,7 +1141,7 @@ function TabActions:NewActionDropDown(Config: NewActionDropDownConfig)
 			
 			TotalHeight += NewValue.AbsoluteSize.Y
 			
-			if not GotFirst then
+			if not GotFirst and OverrideSelected then
 				GotFirst = true
 				NewObject.Instance.Value.Text = v.Name
 				NewObject.Instance:SetAttribute("Value", v.Value)
