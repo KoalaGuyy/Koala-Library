@@ -106,7 +106,7 @@ end
 function KSLib:ReadyUp(FileName)
 	if not DumpFolder:HasTag("HadLoaded") and DumpFolder:HasTag("InstaLoadFalse") then
 		DumpFolder:AddTag("HadLoaded")
-		DumpFolder:SetAttribute("FileName", `${FileName}_${game.Players.LocalPlayer.UserId}.json`) -- (i) please take note that this userid is only for your (sesion / client / computer) we do not collect any valuable information and we do not have enough resources to even collect any information
+		DumpFolder:SetAttribute("FileName", `{FileName}_{game.Players.LocalPlayer.UserId}.json`) -- (i) please take note that this userid is only for your (sesion / client / computer) we do not collect any valuable information and we do not have enough resources to even collect any information
 		
 		local Debounce = 0
 		
@@ -158,7 +158,7 @@ function KSLib:ToPath(Object)
 			Node = Node.Root
 		elseif Node ~= KSLib then
 			if Node.Config and Node.Config.ID then
-				warn(`Got no root and had Config.ID but never reached KSLib? , ${Node.Config.ID}`)
+				warn(`Got no root and had Config.ID but never reached KSLib? , {Node.Config.ID}`)
 			end
 			return nil
 		end
@@ -190,7 +190,7 @@ function KSLib:GetService(ServiceName)
 			local RequestedService = Builder:RequestService(ServiceName)
 			
 			if not RequestedService then
-				error(`Cannot find ${ServiceName}, did you got the name and version right?`, 2)
+				error(`Cannot find {ServiceName}, did you got the name and version right?`, 2)
 			else
 				Services[ServiceName] = RequestedService
 			end
@@ -325,18 +325,28 @@ function KSLib.New(Config: {any})
 	local LoadFileSystem = ConfigTab:NewActionActivate({ID = "LoadFileSytem", Icon = "http://www.roblox.com/asset/?id=99385102861455", Text = "Load Current Data"})
 	LoadFileSystem:OnInputChanged(function()
 		if DumpFolder and DumpFolder:GetAttribute("FileName") then
-			KSLib:GetService("SavingService"):Load(DumpFolder:GetAttribute("FileName"))
-			KSLibUI:NewNotification({NotifyType = "Status", Title = "Request Sent", Text = "A Request had been sent to the Saving Service to load your saved configurations"})
+			local Result = KSLib:GetService("SavingService"):Load(DumpFolder:GetAttribute("FileName"))
+			if Result == "NoFile" then
+				KSLibUI:NewNotification({NotifyType = "SatusWarning", Title = "Failed to Load", Text = "You do not have saved configuration data"})
+			elseif Result == "Failure" then
+				KSLibUI:NewNotification({NotifyType = "StatusError", Title = "Failed to Load", Text = "Filesystem is probably not supported"})
+			else
+				KSLibUI:NewNotification({NotifyType = "Status", Title = "Loaded Successfully", Text = "Saved configuration data had been loaded to this session"})
+			end
 		else
-			KSLibUI:NewNotification({NotifyType = "StatusWarning", Title = "Script does not support the File Sytem", Text = "Your script does not allow loading files to the game"})
+			KSLibUI:NewNotification({NotifyType = "StatusError", Title = "Script does not support the File Sytem", Text = "Your script does not allow loading files to the game"})
 		end
 	end)
 	
 	local SaveFileSystem = ConfigTab:NewActionActivate({ID = "SaveFileSystem", Icon = "http://www.roblox.com/asset/?id=11768914234", Text = "Save All Objects To File Sytem"})
 	SaveFileSystem:OnInputChanged(function()
 		if DumpFolder and DumpFolder:GetAttribute("FileName") then
-			KSLib:GetService("SavingService"):Save(DumpFolder:GetAttribute("FileName"))
-			KSLibUI:NewNotification({NotifyType = "Status", Title = "Request Sent", Text = "A Request had been sent to the Saving Service to save your configurations"})
+			local Result = KSLib:GetService("SavingService"):Save(DumpFolder:GetAttribute("FileName"))
+			if Result == "Failure" then
+				KSLibUI:NewNotification({NotifyType = "StatusError", Title = "Failed to Load", Text = "Filesystem is probably not supported"})
+			else
+				KSLibUI:NewNotification({NotifyType = "Status", Title = "Saved Successfully", Text = "Your configurations had been saved"})
+			end
 		else
 			KSLibUI:NewNotification({NotifyType = "StatusWarning", Title = "Script does not support the File Sytem", Text = "Your script does not allow saving to the File System"})
 		end
@@ -1434,7 +1444,7 @@ function TabActions:NewActionSlider(Config: NewActionSliderConfig)
 				Amount = math.round(Amount)
 			else
 				Amount = math.round(Amount * 100) / 100
-				if math.abs(Amount) < 0.49 then
+				if math.abs(Amount) < 0.01 then
 					Amount = 0
 				end 
 			end
