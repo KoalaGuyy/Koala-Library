@@ -17,7 +17,7 @@ local Builder = loadstring(game:HttpGet("https://raw.githubusercontent.com/Koala
 
 local DumpLocation = game.Players.LocalPlayer.PlayerScripts
 local UILocation = game.Players.LocalPlayer.PlayerGui
-local DumpFolder = DumpLocation:FindFirstChild("$KSLibDUMP")
+local DumpFolder = nil
 local SavedUILoading = nil
 local Services = {}
 
