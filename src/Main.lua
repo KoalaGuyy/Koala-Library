@@ -15,7 +15,7 @@ function KSLib:GetInfo(): {library: string, version: {number}, uiversion: number
 	}
 end
 
-local Builder = require(script.Parent.Builder.BuilderController)
+local Builder = loadstring(game:HttpGet("https://raw.githubusercontent.com/KoalaGuyy/Koala-Library/refs/heads/main/src/Builder/BuilderController.lua"))()
 
 local DumpLocation = game.Players.LocalPlayer.PlayerScripts
 local UILocation = game.Players.LocalPlayer.PlayerGui
@@ -1211,6 +1211,11 @@ function TabActions:NewActionDropDown(Config: NewActionDropDownConfig)
 	-- Returns the current value of the DropDown
 	function NewObject:GetValue(): any?
 		return NewObject.Instance:GetAttribute("Value")
+	end
+	
+	-- Returns the Name of the value
+	function NewObject:GetName(): string
+		return NewObject.Instance.Value.Text
 	end
 	
 	NewObject.ObjectType = "DropDown"
