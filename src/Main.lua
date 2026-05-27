@@ -15,7 +15,7 @@ function KSLib:GetInfo(): {library: string, version: {number}, uiversion: number
 	}
 end
 
-local Builder = loadstring(game:HttpGet("https://raw.githubusercontent.com/KoalaGuyy/Koala-Library/refs/heads/main/src/Builder/BuilderController.lua"))()
+local Builder = require(script.Parent.Builder.BuilderController)
 
 local DumpLocation = game.Players.LocalPlayer.PlayerScripts
 local UILocation = game.Players.LocalPlayer.PlayerGui
@@ -114,7 +114,7 @@ function KSLib:ReadyUp(FileName)
 		
 		local Node = {}
 		local function BuildTree(Object)
-			if Object.Objects then
+			if Object.Objects and (not Object.Config or not Object.Config.DoNotSave) then
 				for i, v in pairs(Object.Objects) do
 					Debounce += 1
 					if Debounce >= 100 then
@@ -123,7 +123,7 @@ function KSLib:ReadyUp(FileName)
 					end
 					BuildTree(v)
 				end
-			elseif Object.Config and Object.Config.ID then
+			elseif Object.Config and Object.Config.ID and not Object.Config.DoNotSave then
 				table.insert(Node, KSLib:ToPath(Object))
 			end
 			return Node
@@ -271,14 +271,14 @@ function KSLib.New(Config: {any})
 	
 	KSLibUI.Instance.ButtonActivation.Activated:Connect(function()
 		if KSLibUI.Instance.Main.Visible then
-			KSLibUI:SetVisibility(false)
+			KSLibUI:SetVisibility(false, true)
 		else
-			KSLibUI:SetVisibility(true)
+			KSLibUI:SetVisibility(true, true)
 		end
 	end)
 	
 	KSLibUI.Instance.Main.TabArea.TabInfoArea.WindowOptions.Minimize.Activated:Connect(function()
-		KSLibUI:SetVisibility(false)
+		KSLibUI:SetVisibility(false, true)
 	end)
 	
 	local DestroyOnCloseRun = {}
@@ -303,7 +303,7 @@ function KSLib.New(Config: {any})
 			end
 			DestroyOnCloseRunning = false
 		else
-			KSLibUI:SetVisibility(false)
+			KSLibUI:SetVisibility(false, true)
 		end
 	end)
 	
@@ -833,7 +833,8 @@ end
 -- New Header Area
 type NewHeaderConfig = {
 	ID: string?,
-	Text: string?
+	Text: string?,
+	DoNotSave: boolean?
 }
 
 -- Creates a visual division of items similar to NewDivider although has text
@@ -886,7 +887,8 @@ end
 
 -- New Divider Area
 type NewDividerConfig = {
-	ID: string?
+	ID: string?,
+	DoNotSave: boolean?
 }
 
 -- Creates a visual division of items
@@ -924,8 +926,9 @@ end
 type NewOutputTextConfig = {
 	ID: string?,
 	Text: string?,
+	DoNotSave: boolean?,
 	DisallowSaving: boolean?,
-	Description: string? -- Alias of Text (!) Do not use Deprecated only for support
+	Description: string? -- Alias of Text (!) Do not use Deprecated, only for support
 }
 
 local function OutputTextBase(self, Config)
@@ -953,6 +956,7 @@ local function OutputTextBase(self, Config)
 
 	NewObject:Update()
 	
+	NewObject.ObjectType = "OutputText"
 	NewObject.Root = self
 	self:UpdateTabScale()
 
@@ -1013,6 +1017,9 @@ local function ActionActivateBase(self, Config)
 
 	-- (!) Deprecated / Aliases For Support only
 	function NewObject:OnActivated(Func) return NewObject:OnInputChanged(Func) end -- (i) Not deprecated but alias
+	
+	NewObject.ObjectType = "ActionActivate"
+	NewObject.Root = self
 
 	return NewObject
 end
@@ -1076,6 +1083,7 @@ function TabActions:NewActionColorPick(Config: NewActionColorPickConfig)
 		return NewObject.Instance:GetAttribute("Value")
 	end
 	
+	NewObject.ObjectType = "ColorPick"
 	NewObject.Root = self
 	self.Objects[NewObject.Config.ID] = NewObject
 	
@@ -1159,7 +1167,7 @@ function TabActions:NewActionDropDown(Config: NewActionDropDownConfig)
 		end
 	end
 	
-	NewObject:UpdateValues()
+	NewObject:UpdateValues(true)
 	
 	-- Set up functions handled by kslib
 	NewObject.Instance.InputArea.Cancel.Activated:Connect(function()
@@ -1205,6 +1213,7 @@ function TabActions:NewActionDropDown(Config: NewActionDropDownConfig)
 		return NewObject.Instance:GetAttribute("Value")
 	end
 	
+	NewObject.ObjectType = "DropDown"
 	NewObject.Root = self
 	self.Objects[NewObject.Config.ID] = NewObject
 	
@@ -1263,6 +1272,9 @@ local function ActionInputBase(self, Config)
 
 	-- (!) Deprecated / Aliases For Support only
 	function NewObject:GetUserInput(): string return NewObject:GetValue() end -- (!) Deprecated
+	
+	NewObject.ObjectType = "ActionInput"
+	NewObject.Root = self
 
 	return NewObject
 end
@@ -1339,7 +1351,7 @@ function TabActions:NewActionToggle(Config: NewActionToggleConfig)
 		end
 	end
 
-	-- Returns the current value of the DropDown
+	-- Returns the current value of the Toggle
 	function NewObject:GetValue(): boolean
 		return NewObject.Instance:GetAttribute("Value")
 	end
@@ -1349,6 +1361,7 @@ function TabActions:NewActionToggle(Config: NewActionToggleConfig)
 	function NewObject:GetUserInput(): boolean return NewObject:GetValue() end -- (!) Deprecated
 	function NewObject:VisualUpdate() return NewObject:Update() end  -- (!) Deprecated
 	
+	NewObject.ObjectType = "ActionToggle"
 	NewObject.Root = self
 	self.Objects[NewObject.Config.ID] = NewObject
 
@@ -1492,6 +1505,7 @@ function TabActions:NewActionSlider(Config: NewActionSliderConfig)
 	function NewObject:GetSliderAmount() return NewObject:GetValue() end -- (!) Deprecated
 	function NewObject:GetSliderPercentage() return NewObject:GetPercentage() end -- (!) Deprecated
 	
+	NewObject.ObjectType = "ActionSlider"
 	NewObject.Root = self
 	self.Objects[NewObject.Config.ID] = NewObject
 	
