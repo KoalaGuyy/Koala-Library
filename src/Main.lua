@@ -1,4 +1,4 @@
--- This comment is only to see if github's CDN had updated (1)
+-- This comment is only to see if github's CDN had updated (0)
 
 local KSLib = {}
 local LibUI = {}
@@ -1083,7 +1083,7 @@ function TabActions:NewActionColorPick(Config: NewActionColorPickConfig)
 		return NewObject.Instance:GetAttribute("Value")
 	end
 	
-	NewObject.ObjectType = "ColorPick"
+	NewObject.ObjectType = "ActionColorPick"
 	NewObject.Root = self
 	self.Objects[NewObject.Config.ID] = NewObject
 	
@@ -1218,7 +1218,7 @@ function TabActions:NewActionDropDown(Config: NewActionDropDownConfig)
 		return NewObject.Instance.Value.Text
 	end
 	
-	NewObject.ObjectType = "DropDown"
+	NewObject.ObjectType = "ActionDropDown"
 	NewObject.Root = self
 	self.Objects[NewObject.Config.ID] = NewObject
 	
