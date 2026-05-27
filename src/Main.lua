@@ -271,14 +271,14 @@ function KSLib.New(Config: {any})
 	
 	KSLibUI.Instance.ButtonActivation.Activated:Connect(function()
 		if KSLibUI.Instance.Main.Visible then
-			KSLibUI:SetVisibility(false, true)
+			KSLibUI:SetVisibility(false, false)
 		else
-			KSLibUI:SetVisibility(true, true)
+			KSLibUI:SetVisibility(true, false)
 		end
 	end)
 	
 	KSLibUI.Instance.Main.TabArea.TabInfoArea.WindowOptions.Minimize.Activated:Connect(function()
-		KSLibUI:SetVisibility(false, true)
+		KSLibUI:SetVisibility(false, false)
 	end)
 	
 	local DestroyOnCloseRun = {}
@@ -303,7 +303,7 @@ function KSLib.New(Config: {any})
 			end
 			DestroyOnCloseRunning = false
 		else
-			KSLibUI:SetVisibility(false, true)
+			KSLibUI:SetVisibility(false, false)
 		end
 	end)
 	
