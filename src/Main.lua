@@ -1,4 +1,4 @@
--- This comment is only to see if github's CDN had updated (0)
+-- This comment is only to see if github's CDN had updated (1)
 
 local KSLib = {}
 local LibUI = {}
@@ -53,12 +53,12 @@ function KSLib:Initialize(NewDumpLocation: Instance?, InstaLoad: boolean?, NewUI
 	if KSLib:IsReady() then
 		error("KSLib is already initialized.", 2)
 	end
-	
+
 	local ScreenGuiLoad = Instance.new("ScreenGui")
 	ScreenGuiLoad.Name = "KSLibLoadingView"
 	ScreenGuiLoad.Parent = NewUILocation or UILocation
 	ScreenGuiLoad.DisplayOrder = 99999
-	
+
 	local Frame = Instance.new("Frame")
 	Frame.BackgroundColor3 = Color3.new(0, 0, 0)
 	Frame.BackgroundTransparency = 0.5
@@ -66,14 +66,14 @@ function KSLib:Initialize(NewDumpLocation: Instance?, InstaLoad: boolean?, NewUI
 	Frame.Position = UDim2.new(0.5, 0, 0.5, 0)
 	Frame.Size = UDim2.new(0.156, 0, 0.174, 0)
 	Frame.Parent = ScreenGuiLoad
-	
+
 	local UIDragDetector = Instance.new("UIDragDetector")
 	UIDragDetector.Parent = Frame
-	
+
 	local UICorner = Instance.new("UICorner")
 	UICorner.CornerRadius = UDim.new(0.1, 0)
 	UICorner.Parent = Frame
-	
+
 	local TextLabel = Instance.new("TextLabel")
 	TextLabel.BackgroundColor3 = Color3.fromRGB(50, 50, 50)
 	TextLabel.Position = UDim2.new(-0.05, 0, -0.1, 0)
@@ -82,17 +82,17 @@ function KSLib:Initialize(NewDumpLocation: Instance?, InstaLoad: boolean?, NewUI
 	TextLabel.TextScaled = true
 	TextLabel.Size = UDim2.new(1, 0, 1, 0)
 	TextLabel.Parent = Frame
-	
+
 	UICorner:Clone().Parent = TextLabel
-	
+
 	DumpFolder = Instance.new("Folder")
 	DumpFolder.Name = "$KSLibDUMP"
 	DumpFolder.Parent = NewDumpLocation or DumpLocation
-	
+
 	Builder:Build(DumpFolder)
-	
+
 	KSLib.Objects = {}
-	
+
 	if InstaLoad ~= false then
 		ScreenGuiLoad:Destroy()
 		DumpFolder:AddTag("HadLoaded")
@@ -100,7 +100,7 @@ function KSLib:Initialize(NewDumpLocation: Instance?, InstaLoad: boolean?, NewUI
 		SavedUILoading = ScreenGuiLoad
 		DumpFolder:AddTag("InstaLoadFalse")
 	end
-	
+
 	return
 end
 
@@ -109,9 +109,9 @@ function KSLib:ReadyUp(FileName)
 	if not DumpFolder:HasTag("HadLoaded") and DumpFolder:HasTag("InstaLoadFalse") then
 		DumpFolder:AddTag("HadLoaded")
 		DumpFolder:SetAttribute("FileName", `{FileName}_{game.Players.LocalPlayer.UserId}.json`) -- (i) please take note that this userid is only for your (sesion / client / computer) we do not collect any valuable information and we do not have enough resources to even collect any information
-		
+
 		local Debounce = 0
-		
+
 		local Node = {}
 		local function BuildTree(Object)
 			if Object.Objects and (not Object.Config or not Object.Config.DoNotSave) then
@@ -131,13 +131,13 @@ function KSLib:ReadyUp(FileName)
 
 		KSLib:GetService("SavingService").ToSave = BuildTree(KSLib)
 		KSLib:GetService("SavingService").KSLib = KSLib
-		
+
 		KSLib:GetService("SavingService"):Load(DumpFolder:GetAttribute("FileName"))
-		
+
 		for i, v in pairs(KSLib.Objects) do
 			v.Instance.Enabled = true
 		end
-		
+
 		if SavedUILoading then
 			SavedUILoading:Destroy()
 		end
@@ -172,7 +172,7 @@ end
 -- Returns an object via path
 function KSLib:LookUp(Path: string): {any}
 	local Objects = Path:split("/")
-	
+
 	local Node = KSLib
 	for i, v in ipairs(Objects) do
 		if Node.Objects and Node.Objects[v] then
@@ -181,7 +181,7 @@ function KSLib:LookUp(Path: string): {any}
 			return nil
 		end
 	end
-	
+
 	return Node
 end
 
@@ -190,14 +190,14 @@ function KSLib:GetService(ServiceName)
 	if KSLib:IsReady() then
 		if not Services[ServiceName] then
 			local RequestedService = Builder:RequestService(ServiceName)
-			
+
 			if not RequestedService then
 				error(`Cannot find {ServiceName}, did you got the name and version right?`, 2)
 			else
 				Services[ServiceName] = RequestedService
 			end
 		end
-		
+
 		return Services[ServiceName]
 	else
 		error("Cannot get service when KSLib is not yet initialized.", 2)
@@ -222,21 +222,21 @@ function KSLib.New(Config: {any})
 	if not KSLib:IsReady() then
 		error("Cannot find KSLib.", 2)
 	end
-	
+
 	local KSLibUI = setmetatable({}, LibUI)
 	KSLibUI.Objects = {}
-	
+
 	KSLibUI.Config = Config or {}
 	KSLibUI.Config.Location = KSLibUI.Config.Location or DumpLocation
-	
+
 	-- set up id
 	KSLibUI.Config.ID = KSLibUI.ID or KSLib:GetNewID()
 	if KSLib.Objects[KSLibUI.Config.ID] or string.find(KSLibUI.Config.ID, "/") then
 		error("Got a non-unique ID or an invalid ID", 2)
 	end
-	
+
 	KSLibUI.Instance = Instance.new("ScreenGui")
-	
+
 	-- Put Dump to ScreenGui
 	for i, v in pairs(DumpFolder:GetChildren()) do
 		local NewClone = v:Clone()
@@ -256,7 +256,7 @@ function KSLib.New(Config: {any})
 	KSLibUI.Instance.Main.TabSelection.KS_TemplateTab:Destroy()
 	KSLibUI.Instance.PopupDialog:Destroy()
 	KSLibUI.Instance.ColorPick:Destroy()
-	
+
 	-- Setup Notification Area
 	KSLibUI.Instance.NotificationArea.Visible = true
 	for i, v in pairs(KSLibUI.Instance.NotificationArea:GetChildren()) do
@@ -264,11 +264,11 @@ function KSLib.New(Config: {any})
 			v:Destroy()
 		end
 	end
-	
+
 	KSLibUI.CurrentTab = nil
-	
+
 	KSLibUI:Update()
-	
+
 	KSLibUI.Instance.ButtonActivation.Activated:Connect(function()
 		if KSLibUI.Instance.Main.Visible then
 			KSLibUI:SetVisibility(false, false)
@@ -276,24 +276,24 @@ function KSLib.New(Config: {any})
 			KSLibUI:SetVisibility(true, false)
 		end
 	end)
-	
+
 	KSLibUI.Instance.Main.TabArea.TabInfoArea.WindowOptions.Minimize.Activated:Connect(function()
 		KSLibUI:SetVisibility(false, false)
 	end)
-	
+
 	local DestroyOnCloseRun = {}
 	local DestroyOnCloseRunning = false
-	
+
 	-- Runs the function in the first parameter before the UI is destroyed by the Destroy Button
 	function KSLibUI:BeforeDestroyed(Func: () -> any)
 		table.insert(DestroyOnCloseRun, Func)
 	end
-	
+
 	KSLibUI.Instance.Main.TabArea.TabInfoArea.WindowOptions.DestroyButton.Activated:Connect(function()
 		if KSLibUI.Config.DestroyOnClose then
 			if DestroyOnCloseRunning then return end
 			DestroyOnCloseRunning = true
-			KSLibUI:NewNotification({NotifyType = "StatusWarning", Title = "Destroying UI", Text = "You are about to destroy the UI!", Delay = 1})
+			KSLibUI:NewNotification({NotifyType = "StatusWarning", Title = "Destroying UI", Text = "You are about to destroy the UI!", Duration = 1})
 			if KSLibUI:NewDialogBox({Title = "Destroying UI", Text = "Are you sure you want to Destroy the UI?"}).Response == "YesButton" then
 				for i, v in DestroyOnCloseRun do
 					v()
@@ -306,24 +306,24 @@ function KSLib.New(Config: {any})
 			KSLibUI:SetVisibility(false, false)
 		end
 	end)
-	
+
 	-- Add the Config Tab
 	local ConfigTab = KSLibUI:NewTab({ID = "KS_ConfigTab", Title = "Configurations"})
 	ConfigTab.Button.Visible = false
-	
+
 	ConfigTab:NewHeader({ID = "KSLibConfigHeader", Text = "Koala Library Configurations"})
-	
+
 	local Github = ConfigTab:NewActionActivate({ID = "GithubLink", Icon = "http://www.roblox.com/asset/?id=102816031861909", Text = "Koala Library ©2026 KoalaGuyy, v" .. KSLib:GetInfo().version.major .. "." .. KSLib:GetInfo().version.minor .. "."  .. KSLib:GetInfo().version.patch})
 	Github:OnInputChanged(function()
 		local success, response = pcall(function()
 			setclipboard("https://github.com/KoalaGuyy/Koala-Library")
 		end)
-		
+
 		if not success then
 			KSLibUI:NewNotification({NotifyType = "StatusError", Title = "Your executor does not allow SetClipboard", Text = "\"https://github.com/KoalaGuyy/Koala-Library\""})
 		end
 	end)
-	
+
 	local LoadFileSystem = ConfigTab:NewActionActivate({ID = "LoadFileSytem", Icon = "http://www.roblox.com/asset/?id=99385102861455", Text = "Load Current Data"})
 	LoadFileSystem:OnInputChanged(function()
 		if DumpFolder and DumpFolder:GetAttribute("FileName") then
@@ -339,7 +339,7 @@ function KSLib.New(Config: {any})
 			KSLibUI:NewNotification({NotifyType = "StatusError", Title = "Script does not support the File Sytem", Text = "Your script does not allow loading files to the game"})
 		end
 	end)
-	
+
 	local SaveFileSystem = ConfigTab:NewActionActivate({ID = "SaveFileSystem", Icon = "http://www.roblox.com/asset/?id=11768914234", Text = "Save All Objects To File Sytem"})
 	SaveFileSystem:OnInputChanged(function()
 		if DumpFolder and DumpFolder:GetAttribute("FileName") then
@@ -353,7 +353,7 @@ function KSLib.New(Config: {any})
 			KSLibUI:NewNotification({NotifyType = "StatusWarning", Title = "Script does not support the File Sytem", Text = "Your script does not allow saving to the File System"})
 		end
 	end)
-	
+
 	local DeleteSaveFileSystem = ConfigTab:NewActionActivate({ID = "DeleteSaveFileSystem", Icon = "http://www.roblox.com/asset/?id=14714840208", Text = "Delete Current Data"})
 	DeleteSaveFileSystem:OnInputChanged(function()
 		if DumpFolder and DumpFolder:GetAttribute("FileName") then
@@ -371,15 +371,15 @@ function KSLib.New(Config: {any})
 			KSLibUI:NewNotification({NotifyType = "StatusWarning", Title = "Script does not support the File Sytem", Text = "Your script does not allow saving to the File System"})
 		end
 	end)
-	
-	
+
+
 	KSLibUI.Instance.Main.TabArea.TabInfoArea.ConfigButton.Activated:Connect(function()
 		KSLibUI:SwitchTab(ConfigTab.Instance, ConfigTab.Config.Title)
 	end)
-	
+
 	KSLibUI.Root = KSLib
 	KSLib.Objects[KSLibUI.Config.ID] = KSLibUI
-	
+
 	return KSLibUI
 end
 
@@ -391,18 +391,18 @@ function LibUI:SetVisibility(Visiblity, Animated)
 	if self.SetVisiblityOnAnimation == nil then
 		self.SetVisiblityOnAnimation = false
 	end
-	
+
 	if Visiblity then
 		if Animated and not self.SetVisiblityOnAnimation then
 			self.SetVisiblityOnAnimation = true
-			
+
 			local TransparencyTable = KSLib:GetService("AnimationService").Transparency:GetTransparencyTable(self.Instance.Main, true)
 			KSLib:GetService("AnimationService").Transparency:SetTransparency(1, self.Instance.Main, true)
-			
+
 			self.Instance.Main.Visible = true
 			KSLib:GetService("AnimationService").Transparency:TweenTransparencyTable(TweenInfo.new(0.25), TransparencyTable)
 			task.wait(0.25)
-			
+
 			self.SetVisiblityOnAnimation = false
 		elseif not self.SetVisiblityOnAnimation then
 			self.Instance.Main.Visible = true
@@ -410,14 +410,14 @@ function LibUI:SetVisibility(Visiblity, Animated)
 	else
 		if Animated and not self.SetVisiblityOnAnimation then
 			self.SetVisiblityOnAnimation = true
-			
+
 			local TransparencyTable = KSLib:GetService("AnimationService").Transparency:GetTransparencyTable(self.Instance.Main, true)
 
 			KSLib:GetService("AnimationService").Transparency:TweenTransparency(1, TweenInfo.new(0.25), self.Instance.Main, true)
 			task.wait(0.3)
 			self.Instance.Main.Visible = false
 			KSLib:GetService("AnimationService").Transparency:SetTransparencyTable(TransparencyTable)
-			
+
 			self.SetVisiblityOnAnimation = false
 		elseif not self.SetVisiblityOnAnimation then
 			self.Instance.Main.Visible = false
@@ -433,7 +433,7 @@ type NewNotificationConfig = {
 	NotifyType: string?,
 	Muted: boolean?,
 	Volume: number?,
-	Delay: number?,
+	Duration: number?,
 	Custom: {
 		Notification: Instance,
 		SoundID: string,
@@ -444,22 +444,22 @@ type NewNotificationConfig = {
 -- Sends a new notification to the player
 function LibUI:NewNotification(Config: NewNotificationConfig)
 	local Notify = {}
-	
+
 	-- Set up default configuration
 	Notify.Config = Config or {}
-	
+
 	Notify.Config.NotifyType = Notify.Config.NotifyType or "Status"
 	Notify.Config.Muted = Notify.Config.Muted or false
 	Notify.Config.Volume = Notify.Config.Volume or 1
-	Notify.Config.Delay = Notify.Config.Delay or 3
+	Notify.Config.Duration = Notify.Config.Duration or 3
 	Notify.Config.Title = Notify.Config.Title or "Notification"
 	Notify.Config.Text = Notify.Config.Text or "Description"
-	
+
 	Notify.Config.Custom = {}
 	Notify.Config.Custom.Notification = Notify.Config.Custom.Notification or DumpFolder.NotificationArea.Status
 	Notify.Config.Custom.SoundID = Notify.Config.Custom.SoundID or "rbxassetid://117653664939966"
 	Notify.Config.Custom.SoundVolume = Notify.Config.Custom.SoundVolume or 1.25
-	
+
 	local function NotifyFunc(Notification, SoundID, SoundVolume)
 		if not Notify.Config.Muted then
 			local NotificationSound = Instance.new("Sound")
@@ -474,39 +474,39 @@ function LibUI:NewNotification(Config: NewNotificationConfig)
 				Connection:Disconnect()
 			end)
 		end
-		
+
 		local NewNotification = Notification:Clone()
 		NewNotification.Visible = true
 		NewNotification.Parent = self.Instance.NotificationArea
-		
+
 		local RemoveButtonConnection
 		RemoveButtonConnection = NewNotification.RemoveButton.Activated:Connect(function()
 			NewNotification:Destroy()
 			RemoveButtonConnection:Disconnect()
 		end)
-		
+
 		coroutine.wrap(function()
 			local TransparencyTable = KSLib:GetService("AnimationService").Transparency:GetTransparencyTable(NewNotification, true)
 			KSLib:GetService("AnimationService").Transparency:SetTransparency(1, NewNotification, true)
 			KSLib:GetService("AnimationService").Transparency:TweenTransparencyTable(TweenInfo.new(0.5), TransparencyTable)
-			
+
 			task.wait(0.5)
-			task.wait(Notify.Config.Delay)
+			task.wait(Notify.Config.Duration)
 			KSLib:GetService("AnimationService").Transparency:TweenTransparency(1, TweenInfo.new(0.75), NewNotification, true)
-			
+
 			task.wait(1)
 			NewNotification:Destroy()
 			RemoveButtonConnection:Disconnect()
 		end)()
-		
+
 		NewNotification.Title.Text = Notify.Config.Title
 		NewNotification.Description.Text = Notify.Config.Text
-		
+
 		return NewNotification
 	end
-	
+
 	local Notification = nil
-	
+
 	if Notify.Config.NotifyType == "Status" then
 		Notification = NotifyFunc(DumpFolder.NotificationArea.Status, "rbxassetid://117653664939966", 1.25)
 	elseif Notify.Config.NotifyType == "StatusWarning" then
@@ -527,7 +527,7 @@ function LibUI:NewNotification(Config: NewNotificationConfig)
 	end
 
 	Notify.Instance = Notification
-	
+
 	return Notify
 end
 
@@ -543,63 +543,63 @@ type NewDialogBoxConfig = {
 -- Creates a new Dialog Box, Pauses the current thread until user sends a response.
 function LibUI:NewDialogBox(Config: NewDialogBoxConfig)
 	local Connections = {}
-	
+
 	local DialogBox = {}
-	
+
 	-- Set up default configuration
 	DialogBox.Config = Config or {}
-	
+
 	DialogBox.Config.ButtonType = DialogBox.Config.ButtonType or "YesButton,NoButton"
 	DialogBox.Config.Title = DialogBox.Config.Title or "KSLib Popup Dialog"
 	DialogBox.Config.Text = DialogBox.Config.Text or ""
 	if DialogBox.Config.AllowDestroy == nil then
 		DialogBox.Config.AllowDestroy = true
 	end
-	
+
 	-- Setup DialogBox
 	DialogBox.Instance = DumpFolder.PopupDialog:Clone()
 	DialogBox.Instance.TopBar.Title.Text = DialogBox.Config.Title
 	DialogBox.Instance.Description.Text = DialogBox.Config.Text
-	
+
 	for i, v in pairs(DialogBox.Instance.ButtonArea:GetChildren()) do
 		if not v:IsA("UIListLayout") then
 			v:Destroy()
 		end
 	end
-	
+
 	local Buttons = string.split(DialogBox.Config.ButtonType, ",")
 	for i, v in pairs(Buttons) do
 		if DumpFolder.PopupDialog.ButtonArea:FindFirstChild(v) then
 			local NewButton = DumpFolder.PopupDialog.ButtonArea:FindFirstChild(v):Clone()
 			NewButton.Parent = DialogBox.Instance.ButtonArea
-			
+
 			table.insert(Connections, NewButton.Activated:Connect(function()
 				DialogBox.Response = v
 			end))
 		end
 	end
-	
+
 	if DialogBox.Config.AllowDestroy then
 		table.insert(Connections, DialogBox.Instance.TopBar.DestroyButton.Activated:Connect(function()
 			DialogBox.Response = "Destroyed"
 		end))
 	end
-	
+
 	DialogBox.Instance.Parent = self.Instance
-	
+
 	KSLib:GetService("AnimationService").TextFont:AutoSizeFont(DialogBox.Instance.Description, 21, 105)
-	
+
 	repeat
 		task.wait()
 	until DialogBox.Response
-	
+
 	for i, v in pairs(Connections) do
 		v:Disconnect()
 	end
-	
+
 	DialogBox.Instance:Destroy()
 	DialogBox.Instance = nil
-	
+
 	return DialogBox
 end
 
@@ -611,26 +611,26 @@ type NewColorPickDialogConfig = {
 -- Creates a new colorpick dialog, pauses the current thread until user submits a responded color
 function LibUI:NewColorPickDialog(Config: NewColorPickDialogConfig)
 	local Connections = {}
-	
+
 	local ColorPick = {}
-	
+
 	-- Set up Configurations
 	ColorPick.Config = Config or {}
 	ColorPick.Config.StartingColor = ColorPick.Config.StartingColor or Color3.new(1, 1, 1)
-	
+
 	if self.Instance:FindFirstChild("ColorPick") then
 		ColorPick.Response = ColorPick.Config.StartingColor
 		ColorPick.ResponseType = "Existing"
-		
+
 		return ColorPick
 	end
-	
+
 	-- Set up Instance
 	ColorPick.Instance = DumpFolder.ColorPick:Clone()
 	ColorPick.Instance.Parent = self.Instance
 	ColorPick.Response = ColorPick.Config.StartingColor
 	ColorPick.ResponseType = nil
-	
+
 	-- Update
 	local function UpdateButtonsText()
 		if ColorPick.Response ~= nil then
@@ -641,24 +641,24 @@ function LibUI:NewColorPickDialog(Config: NewColorPickDialogConfig)
 			ColorPick.Instance.ColorVisual.BackgroundColor3 = ColorPick.Response
 		end
 	end
-	
+
 	UpdateButtonsText()
-	
+
 	-- Set up Buttons
 	table.insert(Connections, ColorPick.Instance.HexInput.FocusLost:Connect(function()
 		local LastColor = ColorPick.Response
 		local Success, Response = pcall(function()
 			ColorPick.Response = Color3.fromHex(ColorPick.Instance.HexInput.Text)
 		end)
-		
+
 		if not Success then
 			self:NewNotification({NotifyType = "StatusError", Title = "Failed to use Hex Code", Text = "Did you got the Hex Code Wrong?"})
 			ColorPick.Response = LastColor
 		end
-		
+
 		UpdateButtonsText()
 	end))
-	
+
 	table.insert(Connections, ColorPick.Instance.RedInput.FocusLost:Connect(function()
 		local LastColor = ColorPick.Response
 		local Success, Response = pcall(function()
@@ -668,15 +668,15 @@ function LibUI:NewColorPickDialog(Config: NewColorPickDialogConfig)
 				math.floor(ColorPick.Response.B * 255)
 			)
 		end)
-		
+
 		if not Success then
 			self:NewNotification({NotifyType = "StatusError", Title = "Failed to use (R)GB Code", Text = "Did you got the RGB Code Wrong?"})
 			ColorPick.Response = LastColor
 		end
-		
+
 		UpdateButtonsText()
 	end))
-	
+
 	table.insert(Connections, ColorPick.Instance.GreenInput.FocusLost:Connect(function()
 		local LastColor = ColorPick.Response
 		local Success, Response = pcall(function()
@@ -694,7 +694,7 @@ function LibUI:NewColorPickDialog(Config: NewColorPickDialogConfig)
 
 		UpdateButtonsText()
 	end))
-	
+
 	table.insert(Connections, ColorPick.Instance.BlueInput.FocusLost:Connect(function()
 		local LastColor = ColorPick.Response
 		local Success, Response = pcall(function()
@@ -712,26 +712,26 @@ function LibUI:NewColorPickDialog(Config: NewColorPickDialogConfig)
 
 		UpdateButtonsText()
 	end))
-	
+
 	table.insert(Connections, ColorPick.Instance.Submit.Activated:Connect(function()
 		ColorPick.ResponseType = "Submitted"
 	end))
-	
+
 	table.insert(Connections, ColorPick.Instance.Cancel.Activated:Connect(function()
 		ColorPick.ResponseType = "Canceled"
 	end))
-	
+
 	repeat
 		task.wait()
 	until ColorPick.ResponseType ~= nil
-	
+
 	for i, v in pairs(Connections) do
 		v:Disconnect()
 	end
-	
+
 	ColorPick.Instance:Destroy()
 	ColorPick.Instance = nil
-	
+
 	return ColorPick
 end
 
@@ -752,13 +752,13 @@ function LibUI:SwitchTab(Tab: Frame, TabName: string)
 			v.Visible = false
 		end
 	end
-	
+
 	for i, v in pairs(self.Instance.Main.TabSelection:GetChildren()) do
 		if v:IsA("TextButton") then
 			v.BackgroundColor3 = Color3.fromRGB(140, 140, 140)
 		end
 	end
-	
+
 	Tab.Visible = true
 	self.Instance.Main.TabArea.TabInfoArea.TabTitle.Text = TabName or ""
 	self.Instance.Main.TabSelection:FindFirstChild(Tab.Name).BackgroundColor3 = Color3.fromRGB(255, 255, 255)
@@ -774,17 +774,17 @@ function LibUI:NewTab(Config: {any})
 	local NewTab = setmetatable({}, TabActions)
 	NewTab.Objects = {}
 	NewTab.Root = self
-	
+
 	-- Set up Configurations
 	NewTab.Config = Config or {}
 	NewTab.Config.Title = NewTab.Config.Title or NewTab.Config.Name or "Tab"
-	
+
 	-- Set up ID 
 	NewTab.Config.ID = NewTab.Config.ID or KSLib:GetNewID()
 	if self.Objects[NewTab.Config.ID] or string.find(NewTab.Config.ID, "/") then
 		error("Got a non-unique ID or an invalid ID", 2)
 	end
-	
+
 	NewTab.Instance = DumpFolder.Main.TabArea.Tabs.KS_TemplateTab:Clone()
 	NewTab.Instance.Name = NewTab.Config.ID or "Tab"
 	for i, v in pairs(NewTab.Instance:GetChildren()) do
@@ -794,37 +794,37 @@ function LibUI:NewTab(Config: {any})
 	end
 	NewTab.Instance.CanvasSize = UDim2.new(0, 0, 0, 0)
 	NewTab.Instance.Parent = self.Instance.Main.TabArea.Tabs
-	
+
 	NewTab.Button = DumpFolder.Main.TabSelection.KS_TemplateTab:Clone()
 	NewTab.Button.Parent = self.Instance.Main.TabSelection
-	
+
 	-- Updates the Tab to its new configurations
 	function NewTab:Update()
 		NewTab.Button.Name = NewTab.Config.ID
 		NewTab.Button.Text = NewTab.Config.Title or "Tab"
 	end
-	
+
 	NewTab.Offset = NewTab.Offset or UDim2.new(0, 0, 0, 0)
 	function NewTab:UpdateTabScale()
 		NewTab.Instance.CanvasSize = UDim2.new(0, 0, 0, NewTab.Instance.UIListLayout.AbsoluteContentSize.Y + 8) + NewTab.Offset
 	end
-	
+
 	game.Workspace.CurrentCamera:GetPropertyChangedSignal("ViewportSize"):Connect(function()
 		task.wait(1/20)
 		NewTab:UpdateTabScale()
 	end)
-	
+
 	NewTab:Update()
-	
+
 	self:SwitchTab(NewTab.Instance, NewTab.Config.Title)
-	
+
 	NewTab.Button.Activated:Connect(function()
 		self:SwitchTab(NewTab.Instance, NewTab.Config.Title)
 	end)
-	
+
 	-- Lastly add tab to objects for discovery in self.Objects
 	self.Objects[NewTab.Config.ID] = NewTab
-		
+
 	return NewTab
 end
 
@@ -859,7 +859,7 @@ function TabActions:NewHeader(Config: NewHeaderConfig)
 	function NewObject:Update()
 		NewObject.Instance.Name = NewObject.Config.ID
 		NewObject.Instance.Label.Text = " " .. NewObject.Config.Text .. " "
-		
+
 		task.wait(1/20)
 		local AdjFrameX = game:GetService("TextService"):GetTextSize(
 			NewObject.Instance.Label.Text,
@@ -867,17 +867,17 @@ function TabActions:NewHeader(Config: NewHeaderConfig)
 			NewObject.Instance.Label.Font,
 			Vector2.new(math.huge, NewObject.Instance.Label.AbsoluteSize.Y)
 		).X
-		
+
 		NewObject.Instance.AdjFrame.Position = UDim2.new(0.055, AdjFrameX, 0.5, 0)
 	end
 
 	NewObject:Update()
-	
+
 	game.Workspace.CurrentCamera:GetPropertyChangedSignal("ViewportSize"):Connect(function()
 		task.wait(1/20)
 		NewObject:Update()
 	end)
-	
+
 	NewObject.Root = self
 	self:UpdateTabScale()
 	self.Objects[NewObject.Config.ID] = NewObject
@@ -894,31 +894,31 @@ type NewDividerConfig = {
 -- Creates a visual division of items
 function TabActions:NewDivider(Config: NewDividerConfig)
 	local NewObject = {}
-	
+
 	-- Set up Configurations
 	NewObject.Config = Config or {}
-	
+
 	-- Set up ID
 	NewObject.Config.ID = NewObject.Config.ID or KSLib:GetNewID()
 	if self.Objects[NewObject.Config.ID] or string.find(NewObject.Config.ID, "/") then
 		error("Got a non-unique ID or an invalid ID", 2)
 	end
-	
+
 	-- Set up Instance
 	NewObject.Instance = DumpFolder.Main.TabArea.Tabs.KS_TemplateTab.Divider:Clone()
 	NewObject.Instance.Parent = self.Instance
-	
+
 	-- Updates the Object
 	function NewObject:Update()
 		NewObject.Instance.Name = NewObject.Config.ID
 	end
-	
+
 	NewObject:Update()
-	
+
 	NewObject.Root = self
 	self:UpdateTabScale()
 	self.Objects[NewObject.Config.ID] = NewObject
-	
+
 	return NewObject
 end
 
@@ -955,7 +955,7 @@ local function OutputTextBase(self, Config)
 	end
 
 	NewObject:Update()
-	
+
 	NewObject.ObjectType = "OutputText"
 	NewObject.Root = self
 	self:UpdateTabScale()
@@ -987,7 +987,7 @@ local function ActionActivateBase(self, Config)
 
 	local InheritedObject = OutputTextBase(self, NewObject.Config)
 	NewObject.Instance = InheritedObject.Instance
-	
+
 	NewObject.Config.CustomInstanceIcon = NewObject.Config.CustomInstanceIcon or NewObject.Instance.Icon
 
 	-- Updates the Object
@@ -1017,7 +1017,7 @@ local function ActionActivateBase(self, Config)
 
 	-- (!) Deprecated / Aliases For Support only
 	function NewObject:OnActivated(Func) return NewObject:OnInputChanged(Func) end -- (i) Not deprecated but alias
-	
+
 	NewObject.ObjectType = "ActionActivate"
 	NewObject.Root = self
 
@@ -1038,25 +1038,25 @@ type NewActionColorPickConfig = NewOutputTextConfig
 -- Creates an action where users can choose a color
 function TabActions:NewActionColorPick(Config: NewActionColorPickConfig)
 	local NewObject = {}
-	
+
 	-- Set up Configurations
 	NewObject.Config = Config or {}
 	NewObject.Config.Icon = NewObject.Config.Icon or "rbxassetid://105955025341798"
-	
+
 	-- Inherit from TabActions & Set up Instance
 	NewObject.Config.CustomInstance = NewObject.Config.CustomInstance or DumpFolder.Main.TabArea.Tabs.KS_TemplateTab.ActionColorPick:Clone()
-	
+
 	local InheritedObject = ActionActivateBase(self, NewObject.Config)
 	NewObject.Instance = InheritedObject.Instance
-	
+
 	-- Updates the Object
 	function NewObject:Update()
 		InheritedObject:Update()
 		NewObject.Instance.Icon.BackgroundColor3 = NewObject.Instance:GetAttribute("Value")
 	end
-	
+
 	NewObject:Update()
-	
+
 	-- Set up functions handled by KSLib
 	InheritedObject:OnInputChanged(function()
 		local ColorPickDialog = self.Root:NewColorPickDialog({StartingColor = NewObject.Instance:GetAttribute("Value")})
@@ -1065,7 +1065,7 @@ function TabActions:NewActionColorPick(Config: NewActionColorPickConfig)
 			NewObject:Update()	
 		end
 	end)
-	
+
 	-- Runs the function in the first parameter when the value gets changed
 	function NewObject:OnInputChanged(Func: () -> ()): RBXScriptConnection
 		return NewObject.Instance:GetAttributeChangedSignal("Value"):Connect(Func)
@@ -1082,11 +1082,11 @@ function TabActions:NewActionColorPick(Config: NewActionColorPickConfig)
 	function NewObject:GetValue(): Color3
 		return NewObject.Instance:GetAttribute("Value")
 	end
-	
+
 	NewObject.ObjectType = "ActionColorPick"
 	NewObject.Root = self
 	self.Objects[NewObject.Config.ID] = NewObject
-	
+
 	return NewObject
 end
 
@@ -1105,7 +1105,7 @@ local OnDropDown = false
 
 function TabActions:NewActionDropDown(Config: NewActionDropDownConfig)
 	local NewObject = {}
-	
+
 	-- Set up Configurations
 	NewObject.Config = Config or {}
 	NewObject.Config.Icon = NewObject.Config.Icon or "rbxassetid://4726772330"
@@ -1113,7 +1113,7 @@ function TabActions:NewActionDropDown(Config: NewActionDropDownConfig)
 
 	-- Inherit from TabActions & Set up Instance
 	NewObject.Config.CustomInstance = NewObject.Config.CustomInstance or DumpFolder.Main.TabArea.Tabs.KS_TemplateTab.ActionDropDown:Clone()
-	
+
 	local OutputTextInheritance = OutputTextBase(self, NewObject.Config)
 	NewObject.Instance = OutputTextInheritance.Instance
 
@@ -1124,7 +1124,7 @@ function TabActions:NewActionDropDown(Config: NewActionDropDownConfig)
 	end
 
 	NewObject:Update()
-	
+
 	local Connections = {}
 	local TotalHeight = 0
 	local LastTotalHeight = 0
@@ -1141,20 +1141,20 @@ function TabActions:NewActionDropDown(Config: NewActionDropDownConfig)
 			end
 		end
 		local GotFirst = false
-		
+
 		for i, v in ipairs(NewObject.Config.Values) do
 			local NewValue = DumpFolder.Main.TabArea.Tabs.KS_TemplateTab.ActionDropDown.InputArea.Value:Clone()
 			NewValue.Text = tostring(v.Name)
 			NewValue.Parent = NewObject.Instance.InputArea
-			
+
 			TotalHeight += NewValue.AbsoluteSize.Y
-			
+
 			if not GotFirst and OverrideSelected then
 				GotFirst = true
 				NewObject.Instance.Value.Text = v.Name
 				NewObject.Instance:SetAttribute("Value", v.Value)
 			end
-			
+
 			table.insert(Connections, NewValue.Activated:Connect(function()
 				OnDropDown = false
 				NewObject.Instance:SetAttribute("Value", v.Value)
@@ -1167,8 +1167,10 @@ function TabActions:NewActionDropDown(Config: NewActionDropDownConfig)
 		end
 	end
 	
+	NewObject.Instance.Value.Text = ""
+	NewObject.Instance:SetAttribute("Value", nil)
 	NewObject:UpdateValues(true)
-	
+
 	-- Set up functions handled by kslib
 	NewObject.Instance.InputArea.Cancel.Activated:Connect(function()
 		OnDropDown = false
@@ -1177,7 +1179,7 @@ function TabActions:NewActionDropDown(Config: NewActionDropDownConfig)
 		self.Offset -= UDim2.new(0, 0, 0, LastTotalHeight)
 		self:UpdateTabScale()
 	end)
-	
+
 	NewObject.Instance.Activate.Activated:Connect(function()
 		if OnDropDown then return end
 		OnDropDown = true
@@ -1187,19 +1189,19 @@ function TabActions:NewActionDropDown(Config: NewActionDropDownConfig)
 		self.Offset += UDim2.new(0, 0, 0, TotalHeight)
 		self:UpdateTabScale()
 	end)
-	
+
 	-- Set up Functions
-	
+
 	-- Runs the function in the first parameter when the value gets changed
 	function NewObject:OnInputChanged(Func: () -> ()): RBXScriptConnection
 		return NewObject.Instance:GetAttributeChangedSignal("Value"):Connect(Func)
 	end
-	
+
 	-- Returns true if the user is selecting a new value
 	function NewObject:IsSelecting(): boolean
 		return NewObject.Instance.InputArea.Visible
 	end
-	
+
 	-- Sets the value of the DropDown without the need of manual user input
 	function NewObject:SetValue(Name: string, Value: any?)
 		if typeof(Name) == "string" then
@@ -1207,21 +1209,21 @@ function TabActions:NewActionDropDown(Config: NewActionDropDownConfig)
 			NewObject.Instance.Value.Text = Name
 		end
 	end
-	
+
 	-- Returns the current value of the DropDown
 	function NewObject:GetValue(): any?
 		return NewObject.Instance:GetAttribute("Value")
 	end
-	
+
 	-- Returns the Name of the value
 	function NewObject:GetName(): string
 		return NewObject.Instance.Value.Text
 	end
-	
+
 	NewObject.ObjectType = "ActionDropDown"
 	NewObject.Root = self
 	self.Objects[NewObject.Config.ID] = NewObject
-	
+
 	return NewObject
 end
 
@@ -1277,7 +1279,7 @@ local function ActionInputBase(self, Config)
 
 	-- (!) Deprecated / Aliases For Support only
 	function NewObject:GetUserInput(): string return NewObject:GetValue() end -- (!) Deprecated
-	
+
 	NewObject.ObjectType = "ActionInput"
 	NewObject.Root = self
 
@@ -1313,7 +1315,7 @@ function TabActions:NewActionToggle(Config: NewActionToggleConfig)
 	-- Inherit from TabActions & Set up Instance
 	NewObject.Config.CustomInstance = NewObject.Config.CustomInstance or DumpFolder.Main.TabArea.Tabs.KS_TemplateTab.ActionToggle:Clone()
 	NewObject.Config.CustomInstanceIcon = NewObject.Config.CustomInstanceIcon or NewObject.Config.CustomInstance.ToggleArea.Icon
-	
+
 	local InheritedObject = ActionActivateBase(self, NewObject.Config)
 	NewObject.Instance = InheritedObject.Instance
 
@@ -1339,7 +1341,7 @@ function TabActions:NewActionToggle(Config: NewActionToggleConfig)
 	NewObject.Instance:GetAttributeChangedSignal("Value"):Connect(function()
 		NewObject:Update()
 	end)
-	
+
 	InheritedObject:OnInputChanged(function()
 		NewObject.Instance:SetAttribute("Value", not NewObject.Instance:GetAttribute("Value"))
 	end)
@@ -1365,7 +1367,7 @@ function TabActions:NewActionToggle(Config: NewActionToggleConfig)
 	function NewObject:SetUserInput(Value: boolean) return NewObject:SetValue(Value) end -- (!) Deprecated
 	function NewObject:GetUserInput(): boolean return NewObject:GetValue() end -- (!) Deprecated
 	function NewObject:VisualUpdate() return NewObject:Update() end  -- (!) Deprecated
-	
+
 	NewObject.ObjectType = "ActionToggle"
 	NewObject.Root = self
 	self.Objects[NewObject.Config.ID] = NewObject
@@ -1387,7 +1389,7 @@ type NewActionSliderConfig = NewOutputTextConfig & {
 -- Creates a slider where users can input numbers in a range
 function TabActions:NewActionSlider(Config: NewActionSliderConfig)
 	local NewObject = {}
-	
+
 	-- Set up configurations
 	NewObject.Config = Config or {}
 	NewObject.Config.MinValue = NewObject.Config.MinValue or 0
@@ -1397,27 +1399,27 @@ function TabActions:NewActionSlider(Config: NewActionSliderConfig)
 	NewObject.Config.BypassInputMax = NewObject.Config.BypassInputMax or false
 	NewObject.Config.BypassInputMin = NewObject.Config.BypassInputMin or false
 	NewObject.Config.PlaceholderText = NewObject.Config.PlaceholderText
-	
+
 	local Threshold = 0.868
-	
+
 	-- Inherit from TabActions & Set up Instance
 	NewObject.Config.CustomInstance = NewObject.Config.CustomInstance or DumpFolder.Main.TabArea.Tabs.KS_TemplateTab.ActionSlider:Clone()
 
 	local InheritedObject = ActionInputBase(self, NewObject.Config)
 	NewObject.Instance = InheritedObject.Instance
-	
+
 	-- Updates the object
 	function NewObject:Update(ForceSnap: boolean?)
 		InheritedObject:Update()
-		
+
 		if not NewObject.Config.AllowDecimal then
 			NewObject.Instance:SetAttribute("Value", math.round(NewObject.Instance:GetAttribute("Value")))
 		else
 			NewObject.Instance:SetAttribute("Value", math.round(NewObject.Instance:GetAttribute("Value") * 100) / 100)
 		end
-		
+
 		local Amount = tonumber(NewObject.Instance:GetAttribute("Value"))
-		
+
 		-- Check Minimum and Maximum
 		if Amount < NewObject.Config.MinValue then
 			if typeof(NewObject.Config.BypassInputMin) == "number" then
@@ -1432,31 +1434,31 @@ function TabActions:NewActionSlider(Config: NewActionSliderConfig)
 				Amount = math.min(Amount, NewObject.Config.MaxValue)
 			end
 		end
-		
+
 		NewObject.Instance.Input.Text = tostring(Amount)
 		if not NewObject.Config.DoNotSnap or ForceSnap then
 			NewObject.Instance.SlideArea.SlideButton.Position = UDim2.new(math.clamp(((Amount - NewObject.Config.MinValue)  / (NewObject.Config.MaxValue - NewObject.Config.MinValue)) * Threshold, 0, Threshold), 0, 0.5, 0)
 			NewObject.Instance.SlideArea.FillBar.Size = UDim2.new(NewObject.Instance.SlideArea.SlideButton.Position.X.Scale, 0, 0.15, 0)
 		end
 	end
-	
+
 	NewObject.Instance:SetAttribute("Value", NewObject.Config.DefaultValue)
 	NewObject:Update(true)
-	
+
 	-- Set up Functions handled by KSLib
 	InheritedObject:OnInputChanged(function()
 		NewObject.Instance:SetAttribute("Value", tonumber(InheritedObject:GetUserInput()) or NewObject.Config.DefaultValue)
 		NewObject:Update(true)
 	end)
-	
+
 	NewObject.Instance.SlideArea.SlideButton.UIDragDetector.DragStart:Connect(function()
 		local DragEnded = false
 		local DragEndEvent = NewObject.Instance.SlideArea.SlideButton.UIDragDetector.DragEnd:Connect(function()
 			DragEnded = true
 		end)
-		
+
 		local Amount = NewObject.Config.DefaultValue
-		
+
 		repeat
 			task.wait()
 			Amount = ((NewObject.Instance.SlideArea.SlideButton.Position.X.Scale / Threshold) * (NewObject.Config.MaxValue - NewObject.Config.MinValue)) + NewObject.Config.MinValue
@@ -1468,28 +1470,28 @@ function TabActions:NewActionSlider(Config: NewActionSliderConfig)
 					Amount = 0
 				end 
 			end
-			
+
 			NewObject.Instance.SlideArea.FillBar.Size = UDim2.new(NewObject.Instance.SlideArea.SlideButton.Position.X.Scale, 0, 0.15, 0)
 			NewObject.Instance.Input.Text = tostring(Amount)
-			
+
 			NewObject.Instance:SetAttribute("Value", Amount)
 		until DragEnded
-		
+
 		DragEndEvent:Disconnect()
 		NewObject.Instance:SetAttribute("Value", Amount)
-		
+
 		NewObject:Update()
 	end)
-	
+
 	-- Set up Functions
 	function NewObject:OnInputChanged(Func: () -> ())
 		return NewObject.Instance:GetAttributeChangedSignal("Value"):Connect(Func)
 	end
-	
+
 	function NewObject:GetValue(): number
 		return NewObject.Instance:GetAttribute("Value")
 	end
-	
+
 	function NewObject:GetPercentage(UseBypass: boolean?): number
 		if not UseBypass then
 			return math.clamp(NewObject.Instance:GetAttribute("Value") / (NewObject.Config.MaxValue), 0, 1)
@@ -1498,22 +1500,22 @@ function TabActions:NewActionSlider(Config: NewActionSliderConfig)
 		end
 		return 0
 	end
-	
+
 	function NewObject:SetValue(Value: number)
 		if typeof(Value) == "number" then
 			NewObject.Instance:SetAttribute("Value", Value)
 		end
 	end
-	
+
 	-- (!) Deprecated / Aliases For Support only
 	function NewObject:VisualUpdate() NewObject:Update() end -- (!) Deprecated
 	function NewObject:GetSliderAmount() return NewObject:GetValue() end -- (!) Deprecated
 	function NewObject:GetSliderPercentage() return NewObject:GetPercentage() end -- (!) Deprecated
-	
+
 	NewObject.ObjectType = "ActionSlider"
 	NewObject.Root = self
 	self.Objects[NewObject.Config.ID] = NewObject
-	
+
 	return NewObject
 end
 
