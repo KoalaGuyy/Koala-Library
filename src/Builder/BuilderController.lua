@@ -10,7 +10,8 @@ local Builders = {
 
 local Services = {
 	["AnimationService"] = "https://raw.githubusercontent.com/KoalaGuyy/Koala-Library/refs/heads/main/src/Services/AnimationService.lua",
-	["SavingService"] = "https://raw.githubusercontent.com/KoalaGuyy/Koala-Library/refs/heads/main/src/Services/SavingService.lua"
+	["SavingService"] = "https://raw.githubusercontent.com/KoalaGuyy/Koala-Library/refs/heads/main/src/Services/SavingService.lua",
+	["ConfigTabService"] = "https://raw.githubusercontent.com/KoalaGuyy/Koala-Library/refs/heads/main/src/Services/ConfigTabService.lua"
 }
 
 function BuilderController:SetBuilders(NewBuilders)
