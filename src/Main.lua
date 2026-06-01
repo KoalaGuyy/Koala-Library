@@ -7,11 +7,16 @@ LibUI.__index = LibUI
 -- # For Information:
 
 -- Returns a dictionary with the elements called "library", "version", "sUNCRequirements." Read more at the documentation.
-function KSLib:GetInfo(): {library: string, version: {number}, uiversion: number, builder: number, executorstested: {number}}
+function KSLib:GetInfo(): {github: {owner: string, repo: string}, library: string, version: {major: string, minor: string, patch: string}, sUNCRequirements: {string}, sUNCOptionals: {string}}
 	return {
+		github = {
+			owner = "KoalaGuyy",
+			repo = "Koala-Library"
+		},
 		library = "KoalaScripts",
 		version = { major = "2", minor = "1", patch = "0" },
-		sUNCRequirements = {}
+		sUNCRequirements = {},
+		sUNCOptionals = {"isfile", "readfile", "writefile"}
 	}
 end
 
@@ -307,78 +312,11 @@ function KSLib.New(Config: {any})
 		end
 	end)
 
-	-- Add the Config Tab
-	local ConfigTab = KSLibUI:NewTab({ID = "KS_ConfigTab", Title = "Configurations"})
-	ConfigTab.Button.Visible = false
-
-	ConfigTab:NewHeader({ID = "KSLibConfigHeader", Text = "Koala Library Configurations"})
-
-	local Github = ConfigTab:NewActionActivate({ID = "GithubLink", Icon = "http://www.roblox.com/asset/?id=102816031861909", Text = "Koala Library ©2026 KoalaGuyy, v" .. KSLib:GetInfo().version.major .. "." .. KSLib:GetInfo().version.minor .. "."  .. KSLib:GetInfo().version.patch})
-	Github:OnInputChanged(function()
-		local success, response = pcall(function()
-			setclipboard("https://github.com/KoalaGuyy/Koala-Library")
-		end)
-
-		if not success then
-			KSLibUI:NewNotification({NotifyType = "StatusError", Title = "Your executor does not allow SetClipboard", Text = "\"https://github.com/KoalaGuyy/Koala-Library\""})
-		end
-	end)
-
-	local LoadFileSystem = ConfigTab:NewActionActivate({ID = "LoadFileSytem", Icon = "http://www.roblox.com/asset/?id=99385102861455", Text = "Load Current Data"})
-	LoadFileSystem:OnInputChanged(function()
-		if DumpFolder and DumpFolder:GetAttribute("FileName") then
-			local Result = KSLib:GetService("SavingService"):Load(DumpFolder:GetAttribute("FileName"))
-			if Result == "NoFile" then
-				KSLibUI:NewNotification({NotifyType = "SatusWarning", Title = "Failed to Load", Text = "You do not have saved configuration data"})
-			elseif Result == "Failure" then
-				KSLibUI:NewNotification({NotifyType = "StatusError", Title = "Failed to Load", Text = "Filesystem is probably not supported"})
-			else
-				KSLibUI:NewNotification({NotifyType = "Status", Title = "Loaded Successfully", Text = "Saved configuration data had been loaded to this session"})
-			end
-		else
-			KSLibUI:NewNotification({NotifyType = "StatusError", Title = "Script does not support the File Sytem", Text = "Your script does not allow loading files to the game"})
-		end
-	end)
-
-	local SaveFileSystem = ConfigTab:NewActionActivate({ID = "SaveFileSystem", Icon = "http://www.roblox.com/asset/?id=11768914234", Text = "Save All Objects To File Sytem"})
-	SaveFileSystem:OnInputChanged(function()
-		if DumpFolder and DumpFolder:GetAttribute("FileName") then
-			local Result = KSLib:GetService("SavingService"):Save(DumpFolder:GetAttribute("FileName"))
-			if Result == "Failure" then
-				KSLibUI:NewNotification({NotifyType = "StatusError", Title = "Failed to Load", Text = "Filesystem is probably not supported"})
-			else
-				KSLibUI:NewNotification({NotifyType = "Status", Title = "Saved Successfully", Text = "Your configurations had been saved"})
-			end
-		else
-			KSLibUI:NewNotification({NotifyType = "StatusWarning", Title = "Script does not support the File Sytem", Text = "Your script does not allow saving to the File System"})
-		end
-	end)
-
-	local DeleteSaveFileSystem = ConfigTab:NewActionActivate({ID = "DeleteSaveFileSystem", Icon = "http://www.roblox.com/asset/?id=14714840208", Text = "Delete Current Data"})
-	DeleteSaveFileSystem:OnInputChanged(function()
-		if DumpFolder and DumpFolder:GetAttribute("FileName") then
-			pcall(function()
-				if isfile(DumpFolder:GetAttribute("FileName")) then
-					if KSLibUI:NewDialogBox({Title = "Deleting Data", Text = "Are you sure you want to Delete your Configurations?"}).Response == "YesButton" then
-						delfile(DumpFolder:GetAttribute("FileName"))
-						KSLibUI:NewNotification({NotifyType = "Status", Title = "Configurations Deleted", Text = "Your data had been deleted"})
-					end
-				else
-					KSLibUI:NewNotification({NotifyType = "StatusError", Title = "No Configuration Data", Text = "There is no Configuration Data to delete"})
-				end
-			end)
-		else
-			KSLibUI:NewNotification({NotifyType = "StatusWarning", Title = "Script does not support the File Sytem", Text = "Your script does not allow saving to the File System"})
-		end
-	end)
-
-
-	KSLibUI.Instance.Main.TabArea.TabInfoArea.ConfigButton.Activated:Connect(function()
-		KSLibUI:SwitchTab(ConfigTab.Instance, ConfigTab.Config.Title)
-	end)
-
 	KSLibUI.Root = KSLib
 	KSLib.Objects[KSLibUI.Config.ID] = KSLibUI
+	
+	-- Add the Config Tab
+	KSLib:GetService("ConfigTabService"):BuildConfigTab(KSLibUI)
 
 	return KSLibUI
 end
@@ -1166,7 +1104,7 @@ function TabActions:NewActionDropDown(Config: NewActionDropDownConfig)
 			end))
 		end
 	end
-	
+
 	NewObject.Instance.Value.Text = ""
 	NewObject.Instance:SetAttribute("Value", nil)
 	NewObject:UpdateValues(true)
