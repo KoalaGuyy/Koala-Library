@@ -4,7 +4,7 @@ Service.TabServicesOrder = {"BuildSavingServiceTab"}
 Service.TabServices = {}
 
 -- Builds config for saving service
-function Service.TabServices:BuildSavingServiceTab(ConfigTab)
+function Service.TabServices.BuildSavingServiceTab(ConfigTab)
 	local KSLibUI = ConfigTab.Root
 	local KSLib = KSLibUI.Root
 	local DumpFolder = KSLib:GetDumpFolder()
