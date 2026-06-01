@@ -30,14 +30,20 @@ function Service:Save(FileName)
 	if not Success then
 		return "Failure"
 	end
+	return Result
 end
 
-function Service:Load(FileName)
+function Service:Load(FileName, IsData)
 	local Success, Result = pcall(function()
 		if not Service.KSLib then return "GotNoKSLib" end
 		
 		if isfile(FileName) then
-			local Data = game:GetService("HttpService"):JSONDecode(readfile(FileName))
+			local Data
+			if IsData then
+				Data = FileName
+			else
+				Data = game:GetService("HttpService"):JSONDecode(readfile(FileName))
+			end
 			
 			if Data.Version ~= Service.Version then return "WrongSavingVersion" end
 			
@@ -73,6 +79,7 @@ function Service:Load(FileName)
 	if not Success then
 		return "Failure"
 	end
+	return Result
 end
 
 return Service
