@@ -25,8 +25,8 @@ Koala UI Library is a UI Library that makes users interaction easier. This docum
 In order to use the library you must put this to the top of your code:
 
 ```lua
--- You can change the variable name "KHLib" to another name
-local KHLib = loadstring(game:HttpGet("https://pastebin.com/raw/BkRLnxZW"))():getKHLib("vx.x.x")
+-- You can change the variable name "KSLib" to another name
+local KSLib = loadstring(game:HttpGet("https://pastebin.com/raw/BkRLnxZW"))():getKHLib("vx.x.x")
 ```
 
 **Notes:**
@@ -42,10 +42,10 @@ local KHLib = loadstring(game:HttpGet("https://pastebin.com/raw/BkRLnxZW"))():ge
 After adding the library to your script, you need to initialize it:
 
 ```lua
-KHLib:Initialize() -- Initializes the library for functional use
+KSLib:Initialize(nil, false) -- Initializes the library for functional use
 ```
 
-This creates a "Dump Folder" — this is where the library gets its objects or UI.
+This creates a "Dump Folder" — this is where the library gets its objects or UI. Initialize has 3 arguments it can take. 1st argument is where the dump folder will be (defaults to LocalPlayer.PlayerScripts). 2nd argument is if it should instaloads (defaults to true). Instaload would need `KSLib:ReadyUp(FileName)` to be ran, should be ran after your script had finished making all the buttons, ui, and etc. We recommend turning off instaload so that your script **can support saving configurations** at `KSLib:ReadyUp(FileName)` argument FileName should be a string this is where Koala Library saves it. 
 
 **Notes:**
 
