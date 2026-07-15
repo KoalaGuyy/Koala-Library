@@ -12,19 +12,17 @@ Returns a table of information about the library. It does not need the library t
 
 **Returned Value of the Function: (Array)**
 
-| Element         | Type   | Description                                                                                 |
-| --------------- | ------ | ------------------------------------------------------------------------------------------- |
-| library         | String | The library name.                                                                           |
-| version         | Array  | Table with elements named "major", "minor" and "patch", showing the version of the library. |
-| uiversion       | Int    | A number that contains the builder version                                                  |
-| builder         | String | A string to the link of the builder                                                         |
-| executorstested | Array  | Table consisting of executors where the library was tested                                  |
+| Element          | Type   | Description                                                                                                                                                   |
+| ---------------- | ------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| github           | Dict   | Dictionary with elements named owner and repo showing the github repo name.                                                                                   |
+| library          | String | The library name.                                                                                                                                             |
+| version          | Dict   | Dictionoary with elements named "major", "minor" and "patch" with values of string, showing the version of the library.                                       |
+| sUNCRequirements | Array  | A list of functions from sUNC that the library requires, heavily depends on it and needs it, without those supported the library may not work.                |
+| sUNCOptionals    | Array  | A list of functions from sUNC that the library uses, if those functions are not supported some features may get disabled but most of the library still works. |
 
 **Notes:**
 
 - `KSLib:GetInfo()` does not need KSLib to be initialized at first.
-- The array in executorstested returns a table with the name of executors tested as the keys of the table with a value of 0-2.
-- The values of executorstested has this format: 0: works & tested; 1: not working, will be fixed in a patch; 2: not working, has a chance to be fixed in another major or minor version.
 
 <br>
 
@@ -32,11 +30,7 @@ Returns a table of information about the library. It does not need the library t
 
 **Description:**
 
-Checks if the library has already been initialized, or for more specification it checks if it already has a "dump folder"
-
-This function is useless for now as you cannot directly change DumpFolder without using `KSLib:Initialize()` nor does it find other dump folder that already exists in the explorer, it only checks if the variable "DumpFolder" is not nil.
-
-This function will be fixed in the next minor update for KSLib.
+Checks if the library has already been initialized, or for more specification it checks if it already has a "dump folder". Useful for Koala-Library services.
 
 **Example Use:**
 
