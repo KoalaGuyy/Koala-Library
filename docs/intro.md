@@ -51,4 +51,6 @@ This creates a "Dump Folder" — this is where the library gets its objects or U
 
 - If your code tries to create a new UI without initializing it first, it will throw an error.
 
-[Next](features.md)
+Other Markdowns:
+[KSLib](kslib.md)
+[LibUI](libui.md)
