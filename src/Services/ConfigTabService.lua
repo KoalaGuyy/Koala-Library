@@ -1,12 +1,29 @@
 local Service = {}
 
+local GlobalSaveName = "KSLibGlobals.json"
+local GlobalSaveVersion = "gss_v1"
 local ToSave = {}
 
 Service.TabServicesOrder = {"BuildSavingServiceTab", "BuildNotificationServiceTab"}
 Service.TabServices = {}
 
-function SaveConfigTab(KSLib)
-	KSLib:GetService("SavingService"):CustomSave("KSLibGlobals.json", ToSave)
+local function SaveConfigTab()
+	for i, v in pairs(ToSave) do
+		local Data = {}
+		
+		for i, v in pairs(ToSave) do
+			if v and v.GetValue and typeof(v.GetValue) == "function" then
+				if v.ObjectType == "ActionDropDown" then
+					Data[v] = {v:GetName(), v:GetValue()}
+				elseif v.ObjectType == "ActionColorPick" then
+					Data[v] = {v:GetValue().R, v:GetValue().G, v:GetValue().B}
+				else
+					Data[v] = v:GetValue()
+				end
+			end
+		end
+		writefile(GlobalSaveName, game:GetService("HttpService"):JSONEncode({["Version"] = GlobalSaveVersion, ["Data"] = Data}))
+	end
 end
 
 -- Builds config for saving service
@@ -125,7 +142,7 @@ function Service.TabServices.BuildNotificationServiceTab(ConfigTab)
 	
 	-- Use Legacy Position Button
 	local UseLegacyPosition = NewTab:NewActionToggle({ID = "UseLegacyPosition", Text = "Use Legacy Position"})
-	table.insert(ToSave, KSLib:ToPath(UseLegacyPosition))
+	ToSave["NS_ULP"] = UseLegacyPosition
 	UseLegacyPosition:OnInputChanged(function()
 		SaveConfigTab(KSLib)
 		if UseLegacyPosition:GetValue() then
@@ -178,7 +195,27 @@ function Service:BuildConfigTab(KSLibUI)
 	end)
 	
 	-- Load Save
-	KSLibUI.Root:GetService("SavingService"):Load("KSLibGlobals.json")
+	pcall(function()
+		if isfile(GlobalSaveName) then
+			local Data = game:GetService("HttpService"):JSONDecode(readfile(GlobalSaveName))
+			if Data.Version ~= GlobalSaveVersion then return end
+			for i, v in Data.Data do
+				local Object = ToSave[i]
+				if Object then
+					if Object.ObjectType == "ActionDropDown" and v[1] and v[2] then
+						Object:SetValue(v[1], v[2])
+					elseif Object.ObjectType == "ActionColorPick" and v[1] and v[2] and v[3] then
+						Object:SetValue(Color3.new(v[1], v[2], v[3]))
+					else
+						Object:SetValue(v)
+					end
+					if Object.Update and typeof(Object.Update) == "function" then
+						Object:Update()
+					end
+				end
+			end
+		end
+	end)
 end
 
 return Service
