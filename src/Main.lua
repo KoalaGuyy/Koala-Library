@@ -416,6 +416,7 @@ function LibUI:NewNotification(Config: NewNotificationConfig)
 		local NewNotification = Notification:Clone()
 		NewNotification.Visible = true
 		NewNotification.Parent = self.Instance.NotificationArea
+		NewNotification.LayoutOrder = -math.floor(os.clock() * 1000)
 
 		local RemoveButtonConnection
 		RemoveButtonConnection = NewNotification.RemoveButton.Activated:Connect(function()
