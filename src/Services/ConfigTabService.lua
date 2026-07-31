@@ -1,7 +1,13 @@
 local Service = {}
 
-Service.TabServicesOrder = {"BuildSavingServiceTab"}
+local ToSave = {}
+
+Service.TabServicesOrder = {"BuildSavingServiceTab", "BuildNotificationServiceTab"}
 Service.TabServices = {}
+
+function SaveConfigTab(KSLib)
+	KSLib:GetService("SavingService"):CustomSave("KSLibGlobals", ToSave)
+end
 
 -- Builds config for saving service
 function Service.TabServices.BuildSavingServiceTab(ConfigTab)
@@ -107,6 +113,38 @@ function Service.TabServices.BuildSavingServiceTab(ConfigTab)
 	end)
 end
 
+function Service.TabServices.BuildNotificationServiceTab(ConfigTab)
+	local KSLibUI = ConfigTab.Root
+	local KSLib = KSLibUI.Root
+	local DumpFolder = KSLib:GetDumpFolder()
+	
+	-- Tab (UI)
+	local NewTabButton = ConfigTab:NewActionActivate({ID = "TabButton_NotificationService", Icon = "http://www.roblox.com/asset/?id=8756129246", Text = "Saving Service"})
+	local NewTab = ConfigTab.Root:NewTab({ID = "KS_ConfigTab_NotificationService", Title = "Notification Service Configurations", DoNotSave = true})
+	NewTab.Button.Visible = false
+	
+	-- Use Legacy Position Button
+	local UseLegacyPosition = NewTab:NewActionToggle({ID = "UseLegacyPosition", Text = "Use Legacy Position"})
+	table.insert(ToSave, KSLib:ToPath(UseLegacyPosition))
+	UseLegacyPosition:OnInputChanged(function()
+		SaveConfigTab(KSLib)
+		if UseLegacyPosition:GetValue() then
+			KSLibUI.Instance.NotificationArea.AnchorPoint = Vector2.new(1, 1)
+			KSLibUI.Instance.NotificationArea.Position = UDim2.new(0.98, 0, 0.97, 0)
+			KSLibUI.Instance.NotificationArea.UIListLayout.VerticalAlignment = Enum.VerticalAlignment.Bottom
+		else
+			KSLibUI.Instance.NotificationArea.AnchorPoint = Vector2.new(1, 0)
+			KSLibUI.Instance.NotificationArea.Position = UDim2.new(0.225, 0,0.03, 0)
+			KSLibUI.Instance.NotificationArea.UIListLayout.VerticalAlignment = Enum.VerticalAlignment.Top
+		end
+	end)
+	
+	-- Set up new tab button
+	NewTabButton:OnInputChanged(function()
+		ConfigTab.Root:SwitchTab(NewTab.Instance, NewTab.Config.Title)
+	end)
+end
+
 -- Builds the config tab
 function Service:BuildConfigTab(KSLibUI)
 	local ConfigTab = KSLibUI:NewTab({ID = "KS_ConfigTab", Title = "Global Configurations", DoNotSave = true})
@@ -138,6 +176,9 @@ function Service:BuildConfigTab(KSLibUI)
 	KSLibUI.Instance.Main.TabArea.TabInfoArea.ConfigButton.Activated:Connect(function()
 		KSLibUI:SwitchTab(ConfigTab.Instance, ConfigTab.Config.Title)
 	end)
+	
+	-- Load Save
+	KSLibUI.Root:GetService("SavingService"):Load("KSLibGlobals")
 end
 
 return Service
