@@ -10,7 +10,7 @@ function I2ScrBuilder:Build(I2ScrEOFLocation: Instance)
 	I2ScrEOFNotificationAreaEOF7717id4351.BorderColor3 = Color3.new(0, 0, 0)
 	I2ScrEOFNotificationAreaEOF7717id4351.BorderSizePixel = 0
 	I2ScrEOFNotificationAreaEOF7717id4351.Name = "NotificationArea"
-	I2ScrEOFNotificationAreaEOF7717id4351.Position = UDim2.new(0.224999994, 0, 0.0299999993, 0)
+	I2ScrEOFNotificationAreaEOF7717id4351.Position = UDim2.new(0.224999994, 0, 0.15, 0)
 	I2ScrEOFNotificationAreaEOF7717id4351.Size = UDim2.new(0.194999993, 0, 0.949999988, 0)
 	I2ScrEOFNotificationAreaEOF7717id4351.ZIndex = 12
 
