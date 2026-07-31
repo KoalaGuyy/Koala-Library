@@ -151,7 +151,7 @@ function Service.TabServices.BuildNotificationServiceTab(ConfigTab)
 			KSLibUI.Instance.NotificationArea.UIListLayout.VerticalAlignment = Enum.VerticalAlignment.Bottom
 		else
 			KSLibUI.Instance.NotificationArea.AnchorPoint = Vector2.new(1, 0)
-			KSLibUI.Instance.NotificationArea.Position = UDim2.new(0.225, 0,0.03, 0)
+			KSLibUI.Instance.NotificationArea.Position = UDim2.new(0.225, 0, 0.15, 0)
 			KSLibUI.Instance.NotificationArea.UIListLayout.VerticalAlignment = Enum.VerticalAlignment.Top
 		end
 	end)
