@@ -6,7 +6,7 @@ Service.TabServicesOrder = {"BuildSavingServiceTab", "BuildNotificationServiceTa
 Service.TabServices = {}
 
 function SaveConfigTab(KSLib)
-	KSLib:GetService("SavingService"):CustomSave("KSLibGlobals", ToSave)
+	KSLib:GetService("SavingService"):CustomSave("KSLibGlobals.json", ToSave)
 end
 
 -- Builds config for saving service
@@ -119,7 +119,7 @@ function Service.TabServices.BuildNotificationServiceTab(ConfigTab)
 	local DumpFolder = KSLib:GetDumpFolder()
 	
 	-- Tab (UI)
-	local NewTabButton = ConfigTab:NewActionActivate({ID = "TabButton_NotificationService", Icon = "http://www.roblox.com/asset/?id=8756129246", Text = "Saving Service"})
+	local NewTabButton = ConfigTab:NewActionActivate({ID = "TabButton_NotificationService", Icon = "rbxassetid://111630714337304", Text = "Notification Service"})
 	local NewTab = ConfigTab.Root:NewTab({ID = "KS_ConfigTab_NotificationService", Title = "Notification Service Configurations", DoNotSave = true})
 	NewTab.Button.Visible = false
 	
@@ -178,7 +178,7 @@ function Service:BuildConfigTab(KSLibUI)
 	end)
 	
 	-- Load Save
-	KSLibUI.Root:GetService("SavingService"):Load("KSLibGlobals")
+	KSLibUI.Root:GetService("SavingService"):Load("KSLibGlobals.json")
 end
 
 return Service
