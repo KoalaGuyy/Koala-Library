@@ -416,7 +416,9 @@ function LibUI:NewNotification(Config: NewNotificationConfig)
 		local NewNotification = Notification:Clone()
 		NewNotification.Visible = true
 		NewNotification.Parent = self.Instance.NotificationArea
-		NewNotification.LayoutOrder = -math.floor(os.clock() * 1000)
+		if not KSLib.Objects.KS_ConfigTab_NotificationService.Objects.UseLegacyPosition:GetValue() then
+			NewNotification.LayoutOrder = -math.floor(os.clock() * 1000)
+		end
 
 		local RemoveButtonConnection
 		RemoveButtonConnection = NewNotification.RemoveButton.Activated:Connect(function()
