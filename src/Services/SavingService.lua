@@ -4,14 +4,14 @@ Service.ToSave = nil
 Service.KSLib = nil
 Service.Version = "ss_v1"
 
-function Service:Save(FileName)
+function Service:CustomSave(FileName, ToSave)
 	local Success, Result = pcall(function()
-		if not Service.ToSave then return "GotNothingToSave" end
+		if not ToSave then return "GotNothingToSave" end
 		if not Service.KSLib then return "GotNoKSLib" end
-		
+
 		local Data = {}
 
-		for i, v in pairs(Service.ToSave) do
+		for i, v in pairs(ToSave) do
 			local Object = Service.KSLib:LookUp(v)
 			if Object and Object.GetValue and typeof(Object.GetValue) == "function" then
 				if Object.ObjectType == "ActionDropDown" then
@@ -23,7 +23,7 @@ function Service:Save(FileName)
 				end
 			end
 		end
-		
+
 		writefile(FileName, game:GetService("HttpService"):JSONEncode({["Version"] = Service.Version, ["Data"] = Data}))
 	end)
 	
@@ -31,6 +31,10 @@ function Service:Save(FileName)
 		return "Failure"
 	end
 	return Result
+end
+
+function Service:Save(FileName)
+	return Service:CustomSave(FileName, Service.ToSave)
 end
 
 function Service:Load(FileName, IsData)
