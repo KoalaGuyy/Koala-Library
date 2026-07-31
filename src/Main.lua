@@ -416,7 +416,7 @@ function LibUI:NewNotification(Config: NewNotificationConfig)
 		local NewNotification = Notification:Clone()
 		NewNotification.Visible = true
 		NewNotification.Parent = self.Instance.NotificationArea
-		if not KSLib.Objects.KS_ConfigTab_NotificationService.Objects.UseLegacyPosition:GetValue() then
+		if not self.Objects.KS_ConfigTab_NotificationService.Objects.UseLegacyPosition:GetValue() then
 			NewNotification.LayoutOrder = -math.floor(os.clock() * 1000)
 		end
 
