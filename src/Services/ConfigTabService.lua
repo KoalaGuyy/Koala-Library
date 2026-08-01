@@ -4,8 +4,9 @@ local GlobalSaveName = "KSLibGlobals.json"
 local GlobalSaveVersion = "gss_v1"
 local ToSave = {}
 
-Service.TabServicesOrder = {"BuildSavingServiceTab", "BuildNotificationServiceTab"}
+Service.TabServicesOrder = {"BuildSavingServiceTab", "BuildNotificationServiceTab", "BuildDisplayServiceTab"}
 Service.TabServices = {}
+Service.Public = {}
 
 local function SaveConfigTab()
 	for i, v in pairs(ToSave) do
@@ -130,6 +131,7 @@ function Service.TabServices.BuildSavingServiceTab(ConfigTab)
 	end)
 end
 
+-- Builds config for notification service
 function Service.TabServices.BuildNotificationServiceTab(ConfigTab)
 	local KSLibUI = ConfigTab.Root
 	local KSLib = KSLibUI.Root
@@ -155,6 +157,24 @@ function Service.TabServices.BuildNotificationServiceTab(ConfigTab)
 			KSLibUI.Instance.NotificationArea.UIListLayout.VerticalAlignment = Enum.VerticalAlignment.Top
 		end
 	end)
+	
+	-- Set up new tab button
+	NewTabButton:OnInputChanged(function()
+		ConfigTab.Root:SwitchTab(NewTab.Instance, NewTab.Config.Title)
+	end)
+end
+
+-- Builds config for display service
+function Service.TabService.BuildDisplayServiceTab(ConfigTab)
+	local KSLibUI = ConfigTab.Root
+	local KSLib = KSLibUI.Root
+	local DumpFolder = KSLib:GetDumpFolder()
+
+	-- Tab (UI)
+	local NewTabButton = ConfigTab:NewActionActivate({ID = "TabButton_DisplayService", Icon = "rbxassetid://81009835607540", Text = "Display Service"})
+	local NewTab = ConfigTab.Root:NewTab({ID = "KS_ConfigTab_DisplayService", Title = "Display Service Configurations", DoNotSave = true})
+	NewTab.Button.Visible = false
+	Service.Public["DSTab"] = NewTab
 	
 	-- Set up new tab button
 	NewTabButton:OnInputChanged(function()
