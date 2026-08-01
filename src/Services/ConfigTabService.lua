@@ -165,7 +165,7 @@ function Service.TabServices.BuildNotificationServiceTab(ConfigTab)
 end
 
 -- Builds config for display service
-function Service.TabService.BuildDisplayServiceTab(ConfigTab)
+function Service.TabServices.BuildDisplayServiceTab(ConfigTab)
 	local KSLibUI = ConfigTab.Root
 	local KSLib = KSLibUI.Root
 	local DumpFolder = KSLib:GetDumpFolder()
